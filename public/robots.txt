@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.denturesdirect.ca/sitemap.xml
+
+# Block internal and build routes
+Disallow: /api/
+Disallow: /_next/
+Disallow: /temp_maps.html
