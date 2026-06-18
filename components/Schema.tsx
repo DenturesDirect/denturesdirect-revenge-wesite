@@ -51,8 +51,8 @@ export default function AdvancedSchema({ locale }: SchemaProps) {
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": "43.7465",
-      "longitude": "-79.4012"
+      "latitude": "43.7335",
+      "longitude": "-79.5255"
     },
     "description": "Premium 100% impression-free digital dentures using intraoral scanners and in-house CNC milling. Official CDCP provider serving Toronto, North York, Etobicoke, and the GTA.",
     "telephone": "+1-416-245-7474",
@@ -60,8 +60,9 @@ export default function AdvancedSchema({ locale }: SchemaProps) {
     "url": "https://www.denturesdirect.ca",
     // Google Business Profile CID: 9263902258767914897
     "sameAs": [
-        "https://www.facebook.com/DenturesDirect",
-        "https://www.instagram.com/DenturesDirect",
+        "https://www.facebook.com/profile.php?id=61582079577837",
+        "https://www.instagram.com/denturesdirecttoronto",
+        "https://www.youtube.com/@denturesdirect-toronto",
         "https://www.linkedin.com/company/Dentures-Direct"
       ],
     "image": "https://www.denturesdirect.ca/dentures-direct-toronto-logo.png",

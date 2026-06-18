@@ -1,24 +1,36 @@
-import React from 'react';
+﻿import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 
-export const metadata: Metadata = {
-  title: 'Digital acrylic partial dentures Toronto | Affordable Partials North York',
-  description: 'Affordable Digital acrylic partial dentures in Toronto. Fast, custom fabrication at Dentures Direct in North York. Perfect for transitional or budget-friendly care.',
-  openGraph: {
-    title: 'Digital acrylic partial dentures Toronto – Dentures Direct',
-    description: 'Affordable Digital acrylic partial dentures, custom-made in our North York on-site lab. Budget-friendly denture care in Toronto.',
-    url: 'https://www.denturesdirect.ca/en/denture-services/acrylic-partial-dentures',
-    siteName: 'Dentures Direct',
-    type: 'website',
-    images: [{
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
+    acc[lang] = `https://www.denturesdirect.ca/${lang}/denture-services/acrylic-partial-dentures`;
+    return acc;
+  }, {} as Record<string, string>);
+
+  return {
+    title: 'Digital acrylic partial dentures Toronto | Affordable Partials North York',
+    description: 'Affordable Digital acrylic partial dentures in Toronto. Fast, custom fabrication at Dentures Direct in North York. Perfect for transitional or budget-friendly care.',
+    keywords: '',
+    alternates: {
+      canonical: `https://www.denturesdirect.ca/${locale}/denture-services/acrylic-partial-dentures`,
+      languages,
+    },
+    openGraph: {
+      title: 'Digital acrylic partial dentures Toronto – Dentures Direct',
+      description: 'Affordable Digital acrylic partial dentures, custom-made in our North York on-site lab. Budget-friendly denture care in Toronto.',
+      url: `https://www.denturesdirect.ca/${locale}/denture-services/acrylic-partial-dentures`,
+      siteName: 'Dentures Direct',
+      type: 'website',
+      images: [{
       url: '/acrylic-partial-denture-user.jpg',
       width: 1200,
       height: 630,
       alt: 'Digital acrylic partial dentures – Dentures Direct Toronto',
     }],
-  },
-};
+    },
+  };
+}
 
 export default function AcrylicPartialDenturesPage() {
   return (

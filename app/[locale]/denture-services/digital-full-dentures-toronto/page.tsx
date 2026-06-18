@@ -1,24 +1,36 @@
-import React from 'react';
+﻿import React from 'react';
 import { Metadata } from 'next';
 import Image from 'next/image';
 
-export const metadata: Metadata = {
-  title: 'Digital Full Dentures Toronto | Precision Milled Digital Complete Dentures',
-  description: 'Dentures Direct specializes in precision digital full dentures in Toronto. Milled to 3-micron tolerance using impression-free techniques for a flawless fit in North York.',
-  openGraph: {
-    title: 'Digital Full Dentures Toronto – Dentures Direct',
-    description: 'Precision digital full dentures milled to 3-micron tolerance. 100% impression-free at our North York clinic.',
-    url: 'https://www.denturesdirect.ca/en/denture-services/full-complete-dentures',
-    siteName: 'Dentures Direct',
-    type: 'website',
-    images: [{
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
+    acc[lang] = `https://www.denturesdirect.ca/${lang}/denture-services/full-complete-dentures`;
+    return acc;
+  }, {} as Record<string, string>);
+
+  return {
+    title: 'Digital Full Dentures Toronto | Precision Milled Digital Complete Dentures',
+    description: 'Dentures Direct specializes in precision digital full dentures in Toronto. Milled to 3-micron tolerance using impression-free techniques for a flawless fit in North York.',
+    keywords: '',
+    alternates: {
+      canonical: `https://www.denturesdirect.ca/${locale}/denture-services/full-complete-dentures`,
+      languages,
+    },
+    openGraph: {
+      title: 'Digital Full Dentures Toronto – Dentures Direct',
+      description: 'Precision digital full dentures milled to 3-micron tolerance. 100% impression-free at our North York clinic.',
+      url: `https://www.denturesdirect.ca/${locale}/denture-services/full-complete-dentures`,
+      siteName: 'Dentures Direct',
+      type: 'website',
+      images: [{
       url: '/precision_digital_full_dentures.png',
       width: 1200,
       height: 630,
       alt: 'Digital Full Dentures – Dentures Direct Toronto',
     }],
-  },
-};
+    },
+  };
+}
 
 export default function FullDenturesPage() {
   return (

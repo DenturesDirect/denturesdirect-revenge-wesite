@@ -1,23 +1,34 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Your First Visit to Dentures Direct Toronto | What to Expect | Free Consultation',
-  description: 'First time at Dentures Direct? Here\'s exactly what happens: an honest conversation with Damien (25+ years), a 3D scan (no goop), and a written quote before you leave. No pressure, no commitment. North York Toronto.',
-  keywords: 'first denture consultation Toronto, what to expect denture appointment, first time denture patient North York, denture consultation free Toronto, implant denture consultation, denturist first visit GTA',
-  openGraph: {
-    title: 'Your First Visit to Dentures Direct | What to Expect',
-    description: 'No goop. No hard sell. Just Damien, 25+ years of experience, and a written quote before you leave. Free consultation in North York Toronto.',
-    url: 'https://www.denturesdirect.ca/en/first-time-patients',
-    siteName: 'Dentures Direct',
-    type: 'website',
-    images: [{
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
+    acc[lang] = `https://www.denturesdirect.ca/${lang}/first-time-patients`;
+    return acc;
+  }, {} as Record<string, string>);
+
+  return {
+    title: 'Your First Visit to Dentures Direct Toronto | What to Expect | Free Consultation',
+    description: 'First time at Dentures Direct? Here\'s exactly what happens: an honest conversation with Damien (25+ years), a 3D scan (no goop), and a written quote before you leave. No pressure, no commitment. North York Toronto.',
+    keywords: 'first denture consultation Toronto, what to expect denture appointment, first time denture patient North York, denture consultation free Toronto, implant denture consultation, denturist first visit GTA',
+    alternates: {
+      canonical: `https://www.denturesdirect.ca/${locale}/first-time-patients`,
+      languages,
+    },
+    openGraph: {
+      title: 'Your First Visit to Dentures Direct | What to Expect',
+      description: 'No goop. No hard sell. Just Damien, 25+ years of experience, and a written quote before you leave. Free consultation in North York Toronto.',
+      url: `https://www.denturesdirect.ca/${locale}/first-time-patients`,
+      siteName: 'Dentures Direct',
+      type: 'website',
+      images: [{
       url: '/senior_couple_smiling.png',
       width: 1200,
       height: 630,
       alt: 'First Visit to Dentures Direct – Free Consultation Toronto',
     }],
-  },
-};
+    },
+  };
+}
 
 const faqSchema = {
   "@context": "https://schema.org",

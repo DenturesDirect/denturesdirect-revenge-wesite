@@ -15,14 +15,17 @@ export async function generateMetadata({params: {locale}}: Omit<Props, 'children
   const t = await getTranslations({locale, namespace: 'Index'});
  
   const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `/${lang}`;
+    acc[lang] = `https://www.denturesdirect.ca/${lang}`;
     return acc;
   }, {} as Record<string, string>);
 
   return {
     title: t('title'),
     description: t('description'),
-    alternates: { languages },
+    alternates: {
+      canonical: `https://www.denturesdirect.ca/${locale}`,
+      languages,
+    },
     keywords: 'digital dentures, intraoral scanning, CNC milled dentures, CDCP denturist Toronto, CDCP denturist North York, denturist North York, denture clinic North York, dentures Toronto, Digital Partial Dentures Toronto, Digital Full Dentures Toronto, implant dentures Toronto, implant overdentures Toronto, emergency denture repair Toronto, same day denture repair, denture repairs North York, affordable dentures Toronto, senior dentures Toronto, in house lab, denturist near me, denture clinic near me, Weston Road denturist, Humber Summit denturist',
     openGraph: {
       title: t('title'),
@@ -44,10 +47,6 @@ export default async function LocaleLayout({children, params: {locale}}: Props) 
       <head>
         <AdvancedSchema locale={locale} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href={`https://www.denturesdirect.ca/${locale}`} />
-        {['en','fr','vi','es','it'].map((lang) => (
-          <link key={lang} rel="alternate" hrefLang={lang} href={`https://www.denturesdirect.ca/${lang}`} />
-        ))}
         {/* Google Tag Manager */}
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRL1J7ZN0T"></script>
         <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JRL1J7ZN0T');` }} />

@@ -1,19 +1,30 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 import React from 'react';
 
-export const metadata: Metadata = {
-  title: 'How Much Do Implant Dentures Cost in Toronto? $5,250 Per Arch | Dentures Direct',
-  description: 'Implant overdenture: $5,250 flat per arch, no tax. Implant surgery fee varies by bone density, grafting needs, and surgeon — last year\'s average was ~$2,370/implant. Use your own surgeon or we refer. Free consultation at Dentures Direct, North York Toronto.',
-  keywords: 'implant dentures cost Toronto, how much do implant dentures cost, snap on denture cost Toronto, implant overdenture price Ontario, cost of denture implants Toronto, implant retained denture cost GTA, overdenture cost North York, $5250 implant denture, flat rate implant dentures Toronto, affordable implant dentures GTA, implant overdenture North York',
-  openGraph: {
-    title: 'Implant Dentures $5,250 Flat Per Arch | Honest Cost Breakdown | Dentures Direct Toronto',
-    description: '$5,250 per arch — no tax, no variation. Implant surgery quoted separately by your oral surgeon. Last year\'s average: ~$2,370/implant. Free consultation in North York.',
-    url: 'https://www.denturesdirect.ca/en/implant-dentures-cost-toronto',
-    siteName: 'Dentures Direct',
-    type: 'article',
-    images: [{ url: '/implant-retained-overdentures-after-toronto.jpg', width: 1200, height: 630, alt: 'Implant dentures cost Toronto — $5,250 flat per arch — Dentures Direct' }],
-  },
-};
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
+    acc[lang] = `https://www.denturesdirect.ca/${lang}/implant-dentures-cost-toronto`;
+    return acc;
+  }, {} as Record<string, string>);
+
+  return {
+    title: 'How Much Do Implant Dentures Cost in Toronto? $5,250 Per Arch | Dentures Direct',
+    description: 'Implant overdenture: $5,250 flat per arch, no tax. Implant surgery fee varies by bone density, grafting needs, and surgeon — last year\'s average was ~$2,370/implant. Use your own surgeon or we refer. Free consultation at Dentures Direct, North York Toronto.',
+    keywords: 'implant dentures cost Toronto, how much do implant dentures cost, snap on denture cost Toronto, implant overdenture price Ontario, cost of denture implants Toronto, implant retained denture cost GTA, overdenture cost North York, $5250 implant denture, flat rate implant dentures Toronto, affordable implant dentures GTA, implant overdenture North York',
+    alternates: {
+      canonical: `https://www.denturesdirect.ca/${locale}/implant-dentures-cost-toronto`,
+      languages,
+    },
+    openGraph: {
+      title: 'Implant Dentures $5,250 Flat Per Arch | Honest Cost Breakdown | Dentures Direct Toronto',
+      description: '$5,250 per arch — no tax, no variation. Implant surgery quoted separately by your oral surgeon. Last year\'s average: ~$2,370/implant. Free consultation in North York.',
+      url: `https://www.denturesdirect.ca/${locale}/implant-dentures-cost-toronto`,
+      siteName: 'Dentures Direct',
+      type: 'website',
+      images: [{ url: '/implant-retained-overdentures-after-toronto.jpg', width: 1200, height: 630, alt: 'Implant dentures cost Toronto — $5,250 flat per arch — Dentures Direct' }],
+    },
+  };
+}
 
 const faqSchema = {
   "@context": "https://schema.org",
