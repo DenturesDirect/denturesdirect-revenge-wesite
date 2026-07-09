@@ -1,14 +1,45 @@
 {
   "Index": {
-    "title": "Dentures Direct - Prothèses dentaires numériques à Toronto",
-    "description": "Prothèses numériques haut de gamme 100 % sans empreinte. Usinage CNC en interne."
+    "title": "Dentures Direct — Spécialiste des prothèses sur implants à Toronto | North York",
+    "description": "Spécialiste des prothèses dentaires sur implants à Toronto. Prothèses à encliquetage sur implants, prothèses numériques 100 % sans empreinte, usinées CNC sur place. 25 ans d'expérience. North York, Etobicoke et le Grand Toronto. Consultation gratuite."
   },
   "Navigation": {
     "home": "Accueil",
+    "implant_dentures": "Prothèses sur implants",
     "technology": "Technologie",
     "services": "Services",
-    "cdcp": "Guide RCSD",
+    "team": "Équipe",
+    "reviews": "Avis",
+    "new_patients": "Patients",
+    "cdcp": "RCSD",
     "locations": "Emplacements",
-    "emergency": "Urgence? Appelez le {phone}"
+    "location": "Emplacement",
+    "book_online": "Prendre rendez-vous",
+    "call_now": "Appelez : {phone}"
+  },
+  "Footer": {
+    "blurb": "La première clinique de prothèses dentaires numériques à Toronto. Fabrication de précision, usinage sur place, couverte par le RCSD.",
+    "follow_us": "Suivez-nous",
+    "popular_services": "Services populaires",
+    "link_implant": "Prothèses sur implants à Toronto",
+    "link_implant_cost": "Coût des prothèses sur implants",
+    "link_digital": "Prothèses numériques",
+    "link_full": "Prothèses complètes numériques",
+    "link_repair": "Réparation d'urgence de prothèses",
+    "link_cdcp": "Couverture RCSD des prothèses",
+    "link_gallery": "Galerie de sourires",
+    "hours": "Heures d'ouverture",
+    "mon_fri": "Lundi – vendredi",
+    "saturday": "Samedi",
+    "sunday": "Dimanche",
+    "by_appointment": "Sur rendez-vous",
+    "closed": "Fermé",
+    "same_day": "Réparations d'urgence le jour même",
+    "find_us": "Nous trouver",
+    "serving": "Au service de North York, Etobicoke, Weston, Humber Summit et du Grand Toronto",
+    "directions": "Itinéraire",
+    "rights": "Tous droits réservés.",
+    "privacy": "Politique de confidentialité",
+    "regulated": "Réglementée par l'Ordre des denturologistes de l'Ontario"
   }
 }

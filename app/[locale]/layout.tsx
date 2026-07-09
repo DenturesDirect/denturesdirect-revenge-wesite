@@ -42,6 +42,7 @@ export async function generateMetadata({params: {locale}}: Omit<Props, 'children
 
 export default async function LocaleLayout({children, params: {locale}}: Props) {
   const messages = await getMessages();
+  const tf = await getTranslations({locale, namespace: 'Footer'});
  
   return (
     <html lang={locale} className="scroll-smooth">
@@ -82,7 +83,7 @@ export default async function LocaleLayout({children, params: {locale}}: Props) 
                     className="h-10 w-auto brightness-0 invert opacity-90"
                   />
                   <p className="text-white/50 text-sm leading-relaxed max-w-xs">
-                    Toronto&apos;s premier digital denture clinic. Precision-crafted, on-site milled, and CDCP-covered.
+                    {tf('blurb')}
                   </p>
                   <a
                     href="tel:416-245-7474"
@@ -92,7 +93,7 @@ export default async function LocaleLayout({children, params: {locale}}: Props) 
                     (416) 245-7474
                   </a>
                   <div className="pt-2">
-                    <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-2">Follow Us</p>
+                    <p className="text-white/40 text-xs font-semibold uppercase tracking-widest mb-2">{tf('follow_us')}</p>
                     <div className="flex items-center gap-3">
                       <a
                         href="https://www.facebook.com/profile.php?id=61582079577837"
@@ -130,49 +131,49 @@ export default async function LocaleLayout({children, params: {locale}}: Props) 
 
                 {/* Col 2: Popular Services */}
                 <div>
-                  <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-widest">Popular Services</h4>
+                  <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-widest">{tf('popular_services')}</h4>
                   <ul className="space-y-2.5 text-sm text-white/60">
-                    <li><a href={`/${locale}/denture-services/implant-retained-overdentures-toronto`} className="hover:text-white transition-colors">Implant-Retained Dentures Toronto</a></li>
-                    <li><a href={`/${locale}/implant-dentures-cost-toronto`} className="hover:text-white transition-colors">Implant Denture Cost</a></li>
-                    <li><a href={`/${locale}/digital-dentures`} className="hover:text-white transition-colors">Digital Dentures</a></li>
-                    <li><a href={`/${locale}/denture-services/digital-full-dentures-toronto`} className="hover:text-white transition-colors">Digital Full Dentures</a></li>
-                    <li><a href={`/${locale}/denture-services/emergency-denture-repair-toronto`} className="hover:text-white transition-colors">Emergency Denture Repair</a></li>
-                    <li><a href={`/${locale}/cdcp-toronto-denturist`} className="hover:text-white transition-colors">CDCP Denture Coverage</a></li>
-                    <li><a href={`/${locale}/gallery`} className="hover:text-white transition-colors">Smile Gallery</a></li>
+                    <li><a href={`/${locale}/denture-services/implant-retained-overdentures-toronto`} className="hover:text-white transition-colors">{tf('link_implant')}</a></li>
+                    <li><a href={`/${locale}/implant-dentures-cost-toronto`} className="hover:text-white transition-colors">{tf('link_implant_cost')}</a></li>
+                    <li><a href={`/${locale}/digital-dentures`} className="hover:text-white transition-colors">{tf('link_digital')}</a></li>
+                    <li><a href={`/${locale}/denture-services/digital-full-dentures-toronto`} className="hover:text-white transition-colors">{tf('link_full')}</a></li>
+                    <li><a href={`/${locale}/denture-services/emergency-denture-repair-toronto`} className="hover:text-white transition-colors">{tf('link_repair')}</a></li>
+                    <li><a href={`/${locale}/cdcp-toronto-denturist`} className="hover:text-white transition-colors">{tf('link_cdcp')}</a></li>
+                    <li><a href={`/${locale}/gallery`} className="hover:text-white transition-colors">{tf('link_gallery')}</a></li>
                   </ul>
                 </div>
 
                 {/* Col 3: Hours */}
                 <div>
-                  <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-widest">Hours of Operation</h4>
+                  <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-widest">{tf('hours')}</h4>
                   <ul className="space-y-2 text-sm text-white/60">
-                    <li className="flex justify-between"><span>Monday – Friday</span><span className="text-white/80 font-medium">9:00 AM – 5:00 PM</span></li>
-                    <li className="flex justify-between"><span>Saturday</span><span className="text-white/80 font-medium">By Appointment</span></li>
-                    <li className="flex justify-between"><span>Sunday</span><span className="text-white/40">Closed</span></li>
+                    <li className="flex justify-between"><span>{tf('mon_fri')}</span><span className="text-white/80 font-medium">9:00 AM – 5:00 PM</span></li>
+                    <li className="flex justify-between"><span>{tf('saturday')}</span><span className="text-white/80 font-medium">{tf('by_appointment')}</span></li>
+                    <li className="flex justify-between"><span>{tf('sunday')}</span><span className="text-white/40">{tf('closed')}</span></li>
                   </ul>
                   <div className="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-green-400">
                     <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                    Same-day emergency repairs available
+                    {tf('same_day')}
                   </div>
                 </div>
 
                 {/* Col 3: Address */}
                 <div>
-                  <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-widest">Find Us</h4>
+                  <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-widest">{tf('find_us')}</h4>
                   <address
                     itemScope itemType="https://schema.org/PostalAddress"
                     className="not-italic text-sm text-white/60 leading-relaxed space-y-1"
                   >
                     <p itemProp="streetAddress" className="text-white/80 font-medium">2833 Weston Road</p>
                     <p><span itemProp="addressLocality">Toronto</span>, <span itemProp="addressRegion">ON</span> <span itemProp="postalCode">M9M 2S1</span></p>
-                    <p className="text-white/40 text-xs mt-2">Serving North York, Etobicoke,<br />Weston, Humber Summit & the GTA</p>
+                    <p className="text-white/40 text-xs mt-2">{tf('serving')}</p>
                   </address>
                   <a
                     href="https://maps.google.com/?q=2833+Weston+Rd,+Toronto+ON"
                     target="_blank" rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 mt-3 text-xs text-brand-blue hover:text-brand-blueLight transition-colors font-medium"
                   >
-                    Get Directions
+                    {tf('directions')}
                     <svg className="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
                   </a>
                 </div>
@@ -181,11 +182,11 @@ export default async function LocaleLayout({children, params: {locale}}: Props) 
 
               {/* Bottom bar */}
               <div className="pt-6 flex flex-col sm:flex-row justify-between items-center gap-2 text-xs text-white/30">
-                <p>&copy; {new Date().getFullYear()} Dentures Direct. All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} Dentures Direct. {tf('rights')}</p>
                 <div className="flex items-center gap-4">
-                  <a href="/en/privacy-policy" className="hover:text-white/60 transition-colors">Privacy Policy</a>
+                  <a href={`/${locale}/privacy-policy`} className="hover:text-white/60 transition-colors">{tf('privacy')}</a>
                   <span className="text-white/10">|</span>
-                  <p>Regulated by the College of Denturists of Ontario</p>
+                  <p>{tf('regulated')}</p>
                 </div>
               </div>
             </div>

@@ -1,14 +1,45 @@
 {
   "Index": {
-    "title": "Dentures Direct - Dentiere Digitali a Toronto",
-    "description": "Dentiere digitali premium 100% senza impronte."
+    "title": "Dentures Direct — Specialisti in protesi su impianti a Toronto | North York",
+    "description": "Specialisti in overdenture su impianti a Toronto. Protesi ad aggancio su impianti e protesi digitali 100 % senza impronte, fresate CNC nel nostro laboratorio interno. 25 anni di esperienza. North York, Etobicoke e l'area di Toronto. Consulenza gratuita."
   },
   "Navigation": {
     "home": "Home",
+    "implant_dentures": "Protesi su impianti",
     "technology": "Tecnologia",
     "services": "Servizi",
-    "cdcp": "Guida CDCP",
+    "team": "Il team",
+    "reviews": "Recensioni",
+    "new_patients": "Pazienti",
+    "cdcp": "CDCP",
     "locations": "Sedi",
-    "emergency": "Emergenza? Chiama {phone}"
+    "location": "Sede",
+    "book_online": "Prenota online",
+    "call_now": "Chiama: {phone}"
+  },
+  "Footer": {
+    "blurb": "La principale clinica di protesi dentarie digitali di Toronto. Fabbricazione di precisione, fresatura in sede, coperta dal CDCP.",
+    "follow_us": "Seguici",
+    "popular_services": "Servizi più richiesti",
+    "link_implant": "Protesi su impianti a Toronto",
+    "link_implant_cost": "Costo delle protesi su impianti",
+    "link_digital": "Protesi digitali",
+    "link_full": "Protesi totali digitali",
+    "link_repair": "Riparazione urgente di protesi",
+    "link_cdcp": "Copertura CDCP per protesi",
+    "link_gallery": "Galleria dei sorrisi",
+    "hours": "Orari di apertura",
+    "mon_fri": "Lunedì – venerdì",
+    "saturday": "Sabato",
+    "sunday": "Domenica",
+    "by_appointment": "Su appuntamento",
+    "closed": "Chiuso",
+    "same_day": "Riparazioni d'emergenza in giornata",
+    "find_us": "Dove siamo",
+    "serving": "Al servizio di North York, Etobicoke, Weston, Humber Summit e dell'area di Toronto",
+    "directions": "Indicazioni stradali",
+    "rights": "Tutti i diritti riservati.",
+    "privacy": "Informativa sulla privacy",
+    "regulated": "Regolamentata dal College of Denturists of Ontario"
   }
 }

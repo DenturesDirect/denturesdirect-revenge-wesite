@@ -1,14 +1,45 @@
 {
   "Index": {
-    "title": "Dentures Direct - Răng giả kỹ thuật số tại Toronto",
-    "description": "Răng giả kỹ thuật số cao cấp 100% không cần lấy dấu."
+    "title": "Dentures Direct — Chuyên gia hàm giả trên implant tại Toronto | North York",
+    "description": "Chuyên gia hàm giả tháo lắp trên implant tại Toronto. Hàm giả bấm khớp trên implant, hàm giả kỹ thuật số 100 % không cần lấy dấu, phay CNC tại phòng lab riêng. 25 năm kinh nghiệm. Phục vụ North York, Etobicoke và vùng Đại Toronto. Tư vấn miễn phí."
   },
   "Navigation": {
     "home": "Trang chủ",
+    "implant_dentures": "Hàm giả trên implant",
     "technology": "Công nghệ",
     "services": "Dịch vụ",
-    "cdcp": "Hướng dẫn CDCP",
+    "team": "Đội ngũ",
+    "reviews": "Đánh giá",
+    "new_patients": "Bệnh nhân",
+    "cdcp": "CDCP",
     "locations": "Địa điểm",
-    "emergency": "Khẩn cấp? Gọi {phone}"
+    "location": "Địa điểm",
+    "book_online": "Đặt lịch hẹn",
+    "call_now": "Gọi: {phone}"
+  },
+  "Footer": {
+    "blurb": "Phòng khám hàm giả kỹ thuật số hàng đầu Toronto. Chế tác chính xác, phay tại chỗ, được CDCP chi trả.",
+    "follow_us": "Theo dõi chúng tôi",
+    "popular_services": "Dịch vụ phổ biến",
+    "link_implant": "Hàm giả trên implant tại Toronto",
+    "link_implant_cost": "Chi phí hàm giả trên implant",
+    "link_digital": "Hàm giả kỹ thuật số",
+    "link_full": "Hàm giả toàn phần kỹ thuật số",
+    "link_repair": "Sửa hàm giả khẩn cấp",
+    "link_cdcp": "Bảo hiểm CDCP cho hàm giả",
+    "link_gallery": "Bộ sưu tập nụ cười",
+    "hours": "Giờ làm việc",
+    "mon_fri": "Thứ Hai – Thứ Sáu",
+    "saturday": "Thứ Bảy",
+    "sunday": "Chủ Nhật",
+    "by_appointment": "Theo lịch hẹn",
+    "closed": "Đóng cửa",
+    "same_day": "Sửa chữa khẩn cấp trong ngày",
+    "find_us": "Tìm chúng tôi",
+    "serving": "Phục vụ North York, Etobicoke, Weston, Humber Summit và vùng Đại Toronto",
+    "directions": "Chỉ đường",
+    "rights": "Bảo lưu mọi quyền.",
+    "privacy": "Chính sách bảo mật",
+    "regulated": "Được quản lý bởi College of Denturists of Ontario"
   }
 }

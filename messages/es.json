@@ -1,14 +1,45 @@
 {
   "Index": {
-    "title": "Dentures Direct - Dentaduras Digitales en Toronto",
-    "description": "Dentaduras digitales premium 100% sin impresiones."
+    "title": "Dentures Direct — Especialistas en dentaduras sobre implantes en Toronto | North York",
+    "description": "Especialistas en sobredentaduras retenidas por implantes en Toronto. Dentaduras a presión sobre implantes y dentaduras digitales 100 % sin impresiones, fresadas CNC en nuestro propio laboratorio. 25 años de experiencia. North York, Etobicoke y el área metropolitana de Toronto. Consulta gratuita."
   },
   "Navigation": {
     "home": "Inicio",
+    "implant_dentures": "Dentaduras sobre implantes",
     "technology": "Tecnología",
     "services": "Servicios",
-    "cdcp": "Guía CDCP",
+    "team": "Equipo",
+    "reviews": "Opiniones",
+    "new_patients": "Pacientes",
+    "cdcp": "CDCP",
     "locations": "Ubicaciones",
-    "emergency": "¿Emergencia? Llame al {phone}"
+    "location": "Ubicación",
+    "book_online": "Reservar cita",
+    "call_now": "Llame: {phone}"
+  },
+  "Footer": {
+    "blurb": "La clínica líder en dentaduras digitales de Toronto. Fabricación de precisión, fresado en el propio laboratorio y cobertura CDCP.",
+    "follow_us": "Síganos",
+    "popular_services": "Servicios populares",
+    "link_implant": "Dentaduras sobre implantes en Toronto",
+    "link_implant_cost": "Costo de dentaduras sobre implantes",
+    "link_digital": "Dentaduras digitales",
+    "link_full": "Dentaduras completas digitales",
+    "link_repair": "Reparación urgente de dentaduras",
+    "link_cdcp": "Cobertura CDCP para dentaduras",
+    "link_gallery": "Galería de sonrisas",
+    "hours": "Horario de atención",
+    "mon_fri": "Lunes – viernes",
+    "saturday": "Sábado",
+    "sunday": "Domingo",
+    "by_appointment": "Con cita previa",
+    "closed": "Cerrado",
+    "same_day": "Reparaciones de emergencia el mismo día",
+    "find_us": "Encuéntrenos",
+    "serving": "Atendemos North York, Etobicoke, Weston, Humber Summit y el área metropolitana de Toronto",
+    "directions": "Cómo llegar",
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Política de privacidad",
+    "regulated": "Regulada por el Colegio de Denturistas de Ontario"
   }
 }

@@ -19,13 +19,13 @@ export default function Header() {
 
   const navLinks = [
     { href: `/${locale}`,                              label: t('home') },
-    { href: `/${locale}/denture-services/implant-retained-overdentures-toronto`, label: 'Implant Dentures' },
+    { href: `/${locale}/denture-services/implant-retained-overdentures-toronto`, label: t('implant_dentures') },
     { href: `/${locale}/denture-services`,             label: t('services') },
-    { href: `/${locale}/about-us`,                     label: 'Team' },
-    { href: `/${locale}/happy-patients`,               label: 'Reviews' },
+    { href: `/${locale}/about-us`,                     label: t('team') },
+    { href: `/${locale}/happy-patients`,               label: t('reviews') },
     { href: `/${locale}/first-time-patients`,          label: t('new_patients') },
     { href: `/${locale}/cdcp-toronto-denturist`,       label: t('cdcp') },
-    { href: `/${locale}/locations`,                    label: 'Location' },
+    { href: `/${locale}/locations`,                    label: t('location') },
   ];
 
   return (
@@ -67,7 +67,7 @@ export default function Header() {
                 href={`/${locale}/contact`}
                 className="ml-1 px-4 py-1.5 rounded-full text-sm font-semibold text-white border border-brand-blue/50 hover:border-brand-blue hover:bg-brand-blue/15 transition-all duration-200"
               >
-                Book Online
+                {t('book_online')}
               </Link>
             </nav>
 
@@ -129,7 +129,7 @@ export default function Header() {
               onClick={() => setMobileOpen(false)}
               className="mt-4 text-center px-4 py-3 rounded-full text-sm font-semibold text-white bg-brand-blue hover:bg-brand-blueDark transition-colors"
             >
-              Book Online
+              {t('book_online')}
             </Link>
           </div>
         </div>
