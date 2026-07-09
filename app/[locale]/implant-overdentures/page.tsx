@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import ImplantLeadForm from '@/components/ImplantLeadForm';
+import ImplantCandidacyQuiz from '@/components/ImplantCandidacyQuiz';
 
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } } };
 const stagger = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } } };
@@ -284,6 +285,13 @@ export default function ImplantOverdenturesLandingPage() {
               <p className="text-center text-xs text-gray-400 mt-3">3 implants lower · 4 implants upper — Damien&apos;s standard configuration</p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Candidacy Quiz ── */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ImplantCandidacyQuiz />
         </div>
       </section>
 
