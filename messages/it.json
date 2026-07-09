@@ -15,7 +15,8 @@
     "locations": "Sedi",
     "location": "Sede",
     "book_online": "Prenota online",
-    "call_now": "Chiama: {phone}"
+    "call_now": "Chiama: {phone}",
+    "blog": "Blog"
   },
   "Footer": {
     "blurb": "La principale clinica di protesi dentarie digitali di Toronto. Fabbricazione di precisione, fresatura in sede, coperta dal CDCP.",

@@ -15,7 +15,8 @@
     "locations": "Ubicaciones",
     "location": "Ubicación",
     "book_online": "Reservar cita",
-    "call_now": "Llame: {phone}"
+    "call_now": "Llame: {phone}",
+    "blog": "Blog"
   },
   "Footer": {
     "blurb": "La clínica líder en dentaduras digitales de Toronto. Fabricación de precisión, fresado en el propio laboratorio y cobertura CDCP.",

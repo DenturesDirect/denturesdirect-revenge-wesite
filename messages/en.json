@@ -15,7 +15,8 @@
     "locations": "Locations",
     "location": "Location",
     "book_online": "Book Online",
-    "call_now": "Call: {phone}"
+    "call_now": "Call: {phone}",
+    "blog": "Blog"
   },
   "Footer": {
     "blurb": "Toronto's premier digital denture clinic. Precision-crafted, on-site milled, and CDCP-covered.",

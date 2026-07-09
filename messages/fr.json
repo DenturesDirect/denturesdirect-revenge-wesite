@@ -15,7 +15,8 @@
     "locations": "Emplacements",
     "location": "Emplacement",
     "book_online": "Prendre rendez-vous",
-    "call_now": "Appelez : {phone}"
+    "call_now": "Appelez : {phone}",
+    "blog": "Blogue"
   },
   "Footer": {
     "blurb": "La première clinique de prothèses dentaires numériques à Toronto. Fabrication de précision, usinage sur place, couverte par le RCSD.",
