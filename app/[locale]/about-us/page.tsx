@@ -32,7 +32,7 @@ export default function AboutUsPage() {
       {/* ════════════════════════════════════════════════════
           HERO — dark gradient with team photo
       ════════════════════════════════════════════════════ */}
-      <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-gradient-hero pt-8 pb-24">
+      <section className="relative min-h-[55vh] flex items-center overflow-hidden bg-gradient-hero pt-20 pb-24">
         {/* Ambient orbs */}
         <div className="orb w-[600px] h-[600px] bg-brand-blue/20 -top-32 -right-48 animate-orb" />
         <div className="orb orb-slow w-[400px] h-[400px] bg-brand-blue/10 bottom-0 left-0 animate-orb-slow" />
@@ -42,10 +42,10 @@ export default function AboutUsPage() {
             initial="hidden"
             animate="visible"
             variants={stagger}
-            className="grid lg:grid-cols-2 gap-16 items-center"
+            className="max-w-3xl mx-auto"
           >
-            {/* ── Left: Text ── */}
-            <div className="text-left space-y-8">
+            {/* ── Text ── */}
+            <div className="text-center space-y-8 flex flex-col items-center">
               <motion.div variants={fadeUp}>
                 <span className="pill-badge border-white/20 bg-white/10 text-white inline-flex">
                   <svg className="w-3 h-3 mr-1.5 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
@@ -69,7 +69,7 @@ export default function AboutUsPage() {
                 25+ years of clinical expertise. An in-house lab. A credentialled team that obsesses over fit, function, and finish. This is Dentures Direct.
               </motion.p>
 
-              <motion.div variants={fadeUp} className="flex flex-col sm:flex-row flex-wrap gap-4 pt-2">
+              <motion.div variants={fadeUp} className="flex flex-col sm:flex-row flex-wrap gap-4 pt-2 justify-center">
                 <Link
                   href={`/${locale}/contact`}
                   className="btn-shimmer inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-blue hover:bg-brand-blueDark text-white font-semibold rounded-full transition-all duration-300 shadow-cta hover:shadow-cta-hover hover:-translate-y-0.5"
@@ -86,54 +86,6 @@ export default function AboutUsPage() {
                 </a>
               </motion.div>
             </div>
-
-            {/* ── Right: Team photo in framed panel ── */}
-            <motion.div variants={fadeUp} className="relative h-full min-h-[560px] hidden lg:block">
-              {/* Tilted frame with photo */}
-              <div className="absolute inset-0 bg-white/6 backdrop-blur-sm border border-white/15 rounded-3xl rotate-1 shadow-2xl overflow-hidden">
-                <div className="relative w-full h-full">
-                  <Image
-                    src="/team-hero.jpg"
-                    alt="Dentures Direct team — Damien Hiorth DD, Luisa Gomez RDT Candidate, Caroline Brunelle — North York Toronto denture clinic"
-                    fill
-                    className="object-cover object-top"
-                    priority
-                  />
-                  <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-brand-dark/40 to-transparent" />
-                </div>
-              </div>
-
-              {/* Floating stat card — top left */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-                className="absolute -left-10 top-24 glass rounded-2xl p-5 z-20 min-w-[160px]"
-              >
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl bg-brand-blue/15 flex items-center justify-center">
-                    <span className="text-xl">🏆</span>
-                  </div>
-                  <div>
-                    <div className="text-2xl font-bold text-brand-dark leading-none">25+</div>
-                    <div className="text-xs font-medium text-brand-gray mt-0.5">Years in Practice</div>
-                  </div>
-                </div>
-              </motion.div>
-
-              {/* Floating RDT card — bottom right */}
-              <motion.div
-                animate={{ y: [0, 10, 0] }}
-                transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
-                className="absolute -right-8 bottom-12 glass rounded-2xl p-5 z-20 min-w-[190px]"
-              >
-                <div className="flex items-center gap-2 mb-2">
-                  <div className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
-                  <span className="text-xs font-semibold text-brand-gray uppercase tracking-wider">On Staff</span>
-                </div>
-                <div className="text-xl font-bold text-brand-blue">RDT Candidate</div>
-                <div className="text-xs text-brand-gray mt-1">Top 5% of Canadian Clinics</div>
-              </motion.div>
-            </motion.div>
 
           </motion.div>
         </div>
@@ -289,20 +241,9 @@ export default function AboutUsPage() {
                 </span>
               </h2>
               <p className="text-gray-400 text-lg mt-4 max-w-2xl mx-auto">
-                Damien tells the story of the Christmas Eve call he almost didn&apos;t take — and why it made him rebuild this clinic from the ground up.
+                Damien tells the story of the Christmas Eve call he almost didn&apos;t take — and why it made him rebuild this clinic from the ground up.{' '}
+                <Link href={`/${locale}`} className="text-brand-blueLight font-semibold hover:text-white transition-colors">Read the full story →</Link>
               </p>
-            </motion.div>
-
-            <motion.div variants={fadeUp} className="relative w-full rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10 mb-12">
-              <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
-                <iframe
-                  src="https://www.youtube.com/embed/m4M7rpwrFrg?rel=0&modestbranding=1&color=white"
-                  title="Damien Hiorth DD — The Call That Changed Everything | Dentures Direct Toronto"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  className="absolute inset-0 w-full h-full"
-                />
-              </div>
             </motion.div>
 
             <motion.div variants={fadeUp} className="flex justify-center">

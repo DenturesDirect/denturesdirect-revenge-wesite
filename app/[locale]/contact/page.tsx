@@ -100,9 +100,8 @@ export default function ContactPage() {
                     label: 'Hours of Operation',
                     content: (
                       <ul className="space-y-1.5 text-sm text-brand-gray">
-                        <li className="flex justify-between max-w-xs"><span>Monday – Friday</span><span className="font-semibold text-brand-dark">9:00 AM – 5:00 PM</span></li>
-                        <li className="flex justify-between max-w-xs"><span>Saturday</span><span className="font-semibold text-brand-dark">By Appointment</span></li>
-                        <li className="flex justify-between max-w-xs"><span>Sunday</span><span className="text-brand-gray/50">Closed</span></li>
+                        <li className="flex justify-between max-w-xs"><span>Monday – Thursday</span><span className="font-semibold text-brand-dark">8:00 AM – 6:00 PM</span></li>
+                        <li className="flex justify-between max-w-xs"><span>Friday – Sunday</span><span className="text-brand-gray/50">Closed</span></li>
                       </ul>
                     ),
                   },

@@ -64,7 +64,7 @@ export default function NeighbourhoodPage({ neighbourhood, distance, cdcpNote, d
                 {[
                   { icon: '📍', text: '2833 Weston Road, North York, ON M9M 2S1' },
                   { icon: '📞', text: '(416) 245-7474' },
-                  { icon: '🕐', text: 'Mon–Fri: 9am–5pm · Sat: By appointment' },
+                  { icon: '🕐', text: 'Mon–Thu: 8am–6pm' },
                   { icon: '🅿️', text: 'Free parking · Wheelchair accessible' },
                   { icon: '💳', text: 'CDCP accepted · Direct billing available' },
                 ].map(item => (

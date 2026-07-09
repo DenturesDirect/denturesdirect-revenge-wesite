@@ -160,7 +160,7 @@ const en: HomeContent = {
     h2b: 'your own denture?',
     p: "Free consultation. Honest assessment. Clear pricing. No hard sell — if you're not a candidate, we'll tell you that too.",
     book: 'Book Free Consultation',
-    address: '2833 Weston Road, North York · Mon–Fri 9am–5pm · Sat by appointment',
+    address: '2833 Weston Road, North York · Mon–Thu 8am–6pm',
   },
 };
 
@@ -256,7 +256,7 @@ const fr: HomeContent = {
     h2b: 'contre votre prothèse?',
     p: "Consultation gratuite. Évaluation honnête. Prix clairs. Aucune pression — si vous n'êtes pas candidat, nous vous le dirons aussi.",
     book: 'Réserver une consultation gratuite',
-    address: '2833 Weston Road, North York · Lun–ven 9 h à 17 h · Sam sur rendez-vous',
+    address: '2833 Weston Road, North York · Lun–jeu 8 h à 18 h',
   },
 };
 
@@ -352,7 +352,7 @@ const es: HomeContent = {
     h2b: 'con su propia dentadura?',
     p: 'Consulta gratuita. Evaluación honesta. Precios claros. Sin presión — si no es candidato, también se lo diremos.',
     book: 'Reservar consulta gratuita',
-    address: '2833 Weston Road, North York · Lun–vie 9am–5pm · Sáb con cita',
+    address: '2833 Weston Road, North York · Lun–jue 8am–6pm',
   },
 };
 
@@ -448,7 +448,7 @@ const it: HomeContent = {
     h2b: 'con la sua dentiera?',
     p: 'Consulenza gratuita. Valutazione onesta. Prezzi chiari. Nessuna pressione — se non è un candidato, glielo diremo.',
     book: 'Prenota una consulenza gratuita',
-    address: '2833 Weston Road, North York · Lun–ven 9–17 · Sab su appuntamento',
+    address: '2833 Weston Road, North York · Lun–gio 8–18',
   },
 };
 
@@ -544,7 +544,7 @@ const vi: HomeContent = {
     h2b: 'với chính hàm giả của mình?',
     p: 'Tư vấn miễn phí. Đánh giá trung thực. Giá cả rõ ràng. Không ép buộc — nếu bạn không phù hợp, chúng tôi cũng sẽ nói thẳng.',
     book: 'Đặt lịch tư vấn miễn phí',
-    address: '2833 Weston Road, North York · T2–T6 9:00–17:00 · T7 theo hẹn',
+    address: '2833 Weston Road, North York · T2–T5 8:00–18:00',
   },
 };
 

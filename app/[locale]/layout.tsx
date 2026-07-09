@@ -147,9 +147,8 @@ export default async function LocaleLayout({children, params: {locale}}: Props) 
                 <div>
                   <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-widest">{tf('hours')}</h4>
                   <ul className="space-y-2 text-sm text-white/60">
-                    <li className="flex justify-between"><span>{tf('mon_fri')}</span><span className="text-white/80 font-medium">9:00 AM – 5:00 PM</span></li>
-                    <li className="flex justify-between"><span>{tf('saturday')}</span><span className="text-white/80 font-medium">{tf('by_appointment')}</span></li>
-                    <li className="flex justify-between"><span>{tf('sunday')}</span><span className="text-white/40">{tf('closed')}</span></li>
+                    <li className="flex justify-between"><span>{tf('mon_thu')}</span><span className="text-white/80 font-medium">8:00 AM – 6:00 PM</span></li>
+                    <li className="flex justify-between"><span>{tf('fri_sun')}</span><span className="text-white/40">{tf('closed')}</span></li>
                   </ul>
                   <div className="mt-4 inline-flex items-center gap-2 text-xs font-semibold text-green-400">
                     <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />

@@ -291,7 +291,7 @@ export default function LooseDentureGuidePage() {
                 >
                   Call Dentures Direct — (416) 245-7474
                 </a>
-                <p className="text-xs text-gray-500 mt-4">2833 Weston Road, North York, Toronto · Mon–Fri 9am–5pm</p>
+                <p className="text-xs text-gray-500 mt-4">2833 Weston Road, North York, Toronto · Mon–Thu 8am–6pm</p>
               </div>
 
             </div>

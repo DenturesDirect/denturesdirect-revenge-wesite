@@ -40,6 +40,8 @@
     "directions": "Itinéraire",
     "rights": "Tous droits réservés.",
     "privacy": "Politique de confidentialité",
-    "regulated": "Réglementée par l'Ordre des denturologistes de l'Ontario"
+    "regulated": "Réglementée par l'Ordre des denturologistes de l'Ontario",
+    "mon_thu": "Lundi – jeudi",
+    "fri_sun": "Vendredi – dimanche"
   }
 }

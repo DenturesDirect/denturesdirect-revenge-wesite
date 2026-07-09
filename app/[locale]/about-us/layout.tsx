@@ -24,10 +24,10 @@ export async function generateMetadata({ params: { locale } }: Props) {
       siteName: 'Dentures Direct',
       type: 'website',
       images: [{
-        url: '/team-hero.jpg',
+        url: '/damien-new.jpg',
         width: 1200,
         height: 630,
-        alt: 'Dentures Direct Team — Damien Hiorth DD, Luisa Gomez, Caroline Brunelle — North York Toronto',
+        alt: 'Damien Hiorth DD — Founder & Lead Denturist, Dentures Direct, North York Toronto',
       }],
     },
   };
