@@ -1,31 +1,29 @@
-﻿import { Metadata } from 'next';
+import { Metadata } from 'next';
+import { getCdcpContent } from '@/content/cdcp';
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+const PATH = '/cdcp-toronto-denturist';
+const BASE = 'https://www.denturesdirect.ca';
+
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  const c = getCdcpContent(locale).meta;
   const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `https://www.denturesdirect.ca/${lang}/cdcp-toronto-denturist`;
+    acc[lang] = `${BASE}/${lang}${PATH}`;
     return acc;
-  }, {} as Record<string, string>);
+  }, { 'x-default': `${BASE}/en${PATH}` } as Record<string, string>);
 
   return {
-    title: 'CDCP Denturist Toronto | Canadian Dental Care Plan Dentures | Dentures Direct',
-    description: 'Dentures Direct is an official CDCP provider in Toronto and North York. Get your digital dentures covered under the Canadian Dental Care Plan. Serving eligible Canadian seniors in the GTA.',
+    title: c.title,
+    description: c.description,
     keywords: 'CDCP denturist Toronto, Canadian Dental Care Plan dentures, CDCP dentures North York, CDCP covered dentures GTA, CDCP provider Toronto, government dental plan dentures Toronto',
-    alternates: {
-      canonical: `https://www.denturesdirect.ca/${locale}/cdcp-toronto-denturist`,
-      languages,
-    },
+    alternates: { canonical: `${BASE}/${locale}${PATH}`, languages },
     openGraph: {
-      title: 'CDCP Denturist Toronto | Canadian Dental Care Plan Dentures',
-      description: 'Official CDCP provider in Toronto. Get premium digital dentures fully covered under the Canadian Dental Care Plan for eligible Canadian seniors.',
-      url: `https://www.denturesdirect.ca/${locale}/cdcp-toronto-denturist`,
+      title: c.ogTitle,
+      description: c.ogDescription,
+      url: `${BASE}/${locale}${PATH}`,
       siteName: 'Dentures Direct',
+      locale,
       type: 'website',
-      images: [{
-      url: '/og-en.png',
-      width: 1200,
-      height: 630,
-      alt: 'CDCP Covered Dentures – Dentures Direct Toronto',
-    }],
+      images: [{ url: '/og-en.png', width: 1200, height: 630, alt: 'CDCP Covered Dentures – Dentures Direct Toronto' }],
     },
   };
 }

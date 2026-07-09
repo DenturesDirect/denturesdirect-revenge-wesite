@@ -10,7 +10,8 @@ _Living checklist. Last updated: 2026-07-09._
 
 ## 🔧 Claude to do next
 - [x] **Rebuild the blog** — done (8 posts, blog index + post pages, BlogPosting/Breadcrumb schema, internal links, added to nav & sitemap). Content is freshly written; original wording can be layered in later if you want it.
-- [ ] Extend translations (fr/es/it/vi) to the deeper service + CDCP pages (currently English under non-English locales). Priority: CDCP pages in Italian & Vietnamese.
+- [x] CDCP pages (pillar + covered-services + how-to-apply) translated into fr/es/it/vi (also fixed the sub-pages' canonicals).
+- [ ] Extend translations (fr/es/it/vi) to the remaining deeper pages: partial/full/immediate/emergency service pages, neighbourhood/location pages, about, contact, and the blog.
 
 ## 🧹 Cleanup (later, with care)
 - [ ] Delete the duplicate/abandoned repos once we confirm nothing depends on them: `denturesdirect-revenge-website.`, `DENTURESSDIRECT-REVENGE-WEBSITE`, and any other stale site repos. **Audit before deleting** — don't cut a wire that's still connected.
