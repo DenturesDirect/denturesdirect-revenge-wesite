@@ -9,7 +9,7 @@ _Living checklist. Last updated: 2026-07-09._
 - [ ] **Google Search Console:** resubmit `sitemap.xml` and request re-indexing of the implant pillar page. This is what starts the SEO clock.
 
 ## 🔧 Claude to do next
-- [ ] **Rebuild the blog** (8 posts, from the screenshots): All-on-4 vs Snap-On; Denture Relines (hard vs soft); Implant-Retained Dentures Ultimate Guide; Acrylic vs Cast vs Flexible Partials; What to Do If Your Denture Breaks; Goodbye Goop / Digital Dentures; Implant vs Traditional Dentures; Are You a Candidate for Implant Dentures. Build as its own PR with schema + internal links to the money pages.
+- [x] **Rebuild the blog** — done (8 posts, blog index + post pages, BlogPosting/Breadcrumb schema, internal links, added to nav & sitemap). Content is freshly written; original wording can be layered in later if you want it.
 - [ ] Extend translations (fr/es/it/vi) to the deeper service + CDCP pages (currently English under non-English locales). Priority: CDCP pages in Italian & Vietnamese.
 
 ## 🧹 Cleanup (later, with care)

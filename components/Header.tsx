@@ -25,6 +25,7 @@ export default function Header() {
     { href: `/${locale}/happy-patients`,               label: t('reviews') },
     { href: `/${locale}/first-time-patients`,          label: t('new_patients') },
     { href: `/${locale}/cdcp-toronto-denturist`,       label: t('cdcp') },
+    { href: `/${locale}/blog`,                          label: t('blog') },
     { href: `/${locale}/locations`,                    label: t('location') },
   ];
 

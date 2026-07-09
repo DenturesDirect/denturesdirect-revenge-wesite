@@ -15,7 +15,8 @@
     "locations": "Địa điểm",
     "location": "Địa điểm",
     "book_online": "Đặt lịch hẹn",
-    "call_now": "Gọi: {phone}"
+    "call_now": "Gọi: {phone}",
+    "blog": "Blog"
   },
   "Footer": {
     "blurb": "Phòng khám hàm giả kỹ thuật số hàng đầu Toronto. Chế tác chính xác, phay tại chỗ, được CDCP chi trả.",

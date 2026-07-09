@@ -193,6 +193,18 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.denturesdirect.ca/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.denturesdirect.ca/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.denturesdirect.ca/fr/blog"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.denturesdirect.ca/vi/blog"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.denturesdirect.ca/es/blog"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.denturesdirect.ca/it/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.denturesdirect.ca/en/blog"/>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.denturesdirect.ca/en/about-us</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.denturesdirect.ca/en/about-us"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.denturesdirect.ca/fr/about-us"/>
@@ -275,6 +287,18 @@
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.denturesdirect.ca/en/implant-dentures-woodbridge-vaughan</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.denturesdirect.ca/en/implant-dentures-woodbridge-vaughan"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.denturesdirect.ca/fr/implant-dentures-woodbridge-vaughan"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.denturesdirect.ca/vi/implant-dentures-woodbridge-vaughan"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.denturesdirect.ca/es/implant-dentures-woodbridge-vaughan"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.denturesdirect.ca/it/implant-dentures-woodbridge-vaughan"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.denturesdirect.ca/en/implant-dentures-woodbridge-vaughan"/>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.denturesdirect.ca/en/locations</loc>
@@ -397,18 +421,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.denturesdirect.ca/en/implant-dentures-woodbridge-vaughan</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.denturesdirect.ca/en/implant-dentures-woodbridge-vaughan"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.denturesdirect.ca/fr/implant-dentures-woodbridge-vaughan"/>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://www.denturesdirect.ca/vi/implant-dentures-woodbridge-vaughan"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.denturesdirect.ca/es/implant-dentures-woodbridge-vaughan"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.denturesdirect.ca/it/implant-dentures-woodbridge-vaughan"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.denturesdirect.ca/en/implant-dentures-woodbridge-vaughan"/>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://www.denturesdirect.ca/en/privacy-policy</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.denturesdirect.ca/en/privacy-policy"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.denturesdirect.ca/fr/privacy-policy"/>
@@ -419,5 +431,101 @@
     <lastmod>2026-07-09</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://www.denturesdirect.ca/en/blog/are-you-a-candidate-for-implant-dentures</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.denturesdirect.ca/en/blog/are-you-a-candidate-for-implant-dentures"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.denturesdirect.ca/fr/blog/are-you-a-candidate-for-implant-dentures"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.denturesdirect.ca/vi/blog/are-you-a-candidate-for-implant-dentures"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.denturesdirect.ca/es/blog/are-you-a-candidate-for-implant-dentures"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.denturesdirect.ca/it/blog/are-you-a-candidate-for-implant-dentures"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.denturesdirect.ca/en/blog/are-you-a-candidate-for-implant-dentures"/>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.denturesdirect.ca/en/blog/implant-dentures-vs-traditional-dentures</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.denturesdirect.ca/en/blog/implant-dentures-vs-traditional-dentures"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.denturesdirect.ca/fr/blog/implant-dentures-vs-traditional-dentures"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.denturesdirect.ca/vi/blog/implant-dentures-vs-traditional-dentures"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.denturesdirect.ca/es/blog/implant-dentures-vs-traditional-dentures"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.denturesdirect.ca/it/blog/implant-dentures-vs-traditional-dentures"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.denturesdirect.ca/en/blog/implant-dentures-vs-traditional-dentures"/>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.denturesdirect.ca/en/blog/impression-free-digital-dentures</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.denturesdirect.ca/en/blog/impression-free-digital-dentures"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.denturesdirect.ca/fr/blog/impression-free-digital-dentures"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.denturesdirect.ca/vi/blog/impression-free-digital-dentures"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.denturesdirect.ca/es/blog/impression-free-digital-dentures"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.denturesdirect.ca/it/blog/impression-free-digital-dentures"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.denturesdirect.ca/en/blog/impression-free-digital-dentures"/>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.denturesdirect.ca/en/blog/all-on-4-vs-snap-on-dentures</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.denturesdirect.ca/en/blog/all-on-4-vs-snap-on-dentures"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.denturesdirect.ca/fr/blog/all-on-4-vs-snap-on-dentures"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.denturesdirect.ca/vi/blog/all-on-4-vs-snap-on-dentures"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.denturesdirect.ca/es/blog/all-on-4-vs-snap-on-dentures"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.denturesdirect.ca/it/blog/all-on-4-vs-snap-on-dentures"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.denturesdirect.ca/en/blog/all-on-4-vs-snap-on-dentures"/>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.denturesdirect.ca/en/blog/implant-retained-dentures-toronto-guide</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.denturesdirect.ca/en/blog/implant-retained-dentures-toronto-guide"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.denturesdirect.ca/fr/blog/implant-retained-dentures-toronto-guide"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.denturesdirect.ca/vi/blog/implant-retained-dentures-toronto-guide"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.denturesdirect.ca/es/blog/implant-retained-dentures-toronto-guide"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.denturesdirect.ca/it/blog/implant-retained-dentures-toronto-guide"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.denturesdirect.ca/en/blog/implant-retained-dentures-toronto-guide"/>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.denturesdirect.ca/en/blog/acrylic-vs-cast-vs-flexible-partial-dentures</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.denturesdirect.ca/en/blog/acrylic-vs-cast-vs-flexible-partial-dentures"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.denturesdirect.ca/fr/blog/acrylic-vs-cast-vs-flexible-partial-dentures"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.denturesdirect.ca/vi/blog/acrylic-vs-cast-vs-flexible-partial-dentures"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.denturesdirect.ca/es/blog/acrylic-vs-cast-vs-flexible-partial-dentures"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.denturesdirect.ca/it/blog/acrylic-vs-cast-vs-flexible-partial-dentures"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.denturesdirect.ca/en/blog/acrylic-vs-cast-vs-flexible-partial-dentures"/>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.denturesdirect.ca/en/blog/denture-relines-hard-vs-soft</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.denturesdirect.ca/en/blog/denture-relines-hard-vs-soft"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.denturesdirect.ca/fr/blog/denture-relines-hard-vs-soft"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.denturesdirect.ca/vi/blog/denture-relines-hard-vs-soft"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.denturesdirect.ca/es/blog/denture-relines-hard-vs-soft"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.denturesdirect.ca/it/blog/denture-relines-hard-vs-soft"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.denturesdirect.ca/en/blog/denture-relines-hard-vs-soft"/>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.denturesdirect.ca/en/blog/what-to-do-if-your-denture-breaks</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.denturesdirect.ca/en/blog/what-to-do-if-your-denture-breaks"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.denturesdirect.ca/fr/blog/what-to-do-if-your-denture-breaks"/>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://www.denturesdirect.ca/vi/blog/what-to-do-if-your-denture-breaks"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.denturesdirect.ca/es/blog/what-to-do-if-your-denture-breaks"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://www.denturesdirect.ca/it/blog/what-to-do-if-your-denture-breaks"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.denturesdirect.ca/en/blog/what-to-do-if-your-denture-breaks"/>
+    <lastmod>2026-07-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
