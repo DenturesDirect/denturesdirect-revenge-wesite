@@ -13,6 +13,10 @@ export default function AdvancedSchema({ locale }: SchemaProps) {
     "Implant Retained Dentures",
     "Implant Overdentures",
     "Snap-On Dentures",
+    "Snap-In Dentures",
+    "All-on-4 Fixed Dentures",
+    "Locator Attachment Overdentures",
+    "Implant Denture Conversions",
     "Full Digital Complete Dentures",
     "Digital Partial Dentures",
     "Acrylic Digital Partial Dentures",
@@ -66,6 +70,8 @@ export default function AdvancedSchema({ locale }: SchemaProps) {
         "https://www.linkedin.com/company/Dentures-Direct"
       ],
     "image": "https://www.denturesdirect.ca/dentures-direct-toronto-logo.png",
+    "hasMap": "https://maps.google.com/?cid=9263902258767914897",
+    "priceRange": "$$",
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -166,9 +172,14 @@ export default function AdvancedSchema({ locale }: SchemaProps) {
       "Rexdale",
       "Downsview",
       "York",
+      "East York",
+      "Scarborough",
       "Woodbridge",
       "Vaughan",
       "Brampton",
+      "Mississauga",
+      "Markham",
+      "Richmond Hill",
       "Greater Toronto Area"
     ],
     "medicalSpecialty": "Prosthodontics",

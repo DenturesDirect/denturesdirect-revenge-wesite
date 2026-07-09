@@ -51,7 +51,7 @@ const steps = [
 const faqs: { q: string; a: React.ReactNode }[] = [
   {
     q: 'How many implants do I need?',
-    a: 'For a lower overdenture, typically 2. Upper overdentures usually require 4. We\'ll assess your bone density and jaw during your free consultation to confirm.',
+    a: 'For a lower overdenture, typically 3. Upper overdentures usually require 4. We\'ll assess your bone density and jaw during your free consultation to confirm.',
   },
   {
     q: 'What does it cost?',
@@ -432,8 +432,15 @@ export default function ImplantOverdenturesLandingPage() {
       </section>
 
       {/* ── Minimal Footer ── */}
-      <footer className="bg-brand-darker py-6 text-center text-xs text-white/30 border-t border-white/10">
+      <footer className="bg-brand-darker py-6 text-center text-xs text-white/30 border-t border-white/10 space-y-2">
         <p>© {new Date().getFullYear()} Dentures Direct. 2833 Weston Road, North York, Toronto, ON M9M 2S1. Regulated by the College of Denturists of Ontario.</p>
+        <p className="space-x-3">
+          <Link href={`/${locale}/denture-services/implant-retained-overdentures-toronto`} className="hover:text-white/60 transition-colors underline underline-offset-2">Learn more about implant-retained dentures</Link>
+          <span className="text-white/10">|</span>
+          <Link href={`/${locale}/implant-dentures-cost-toronto`} className="hover:text-white/60 transition-colors underline underline-offset-2">Full cost breakdown</Link>
+          <span className="text-white/10">|</span>
+          <Link href={`/${locale}`} className="hover:text-white/60 transition-colors underline underline-offset-2">Main website</Link>
+        </p>
       </footer>
 
       {/* Google Fonts */}

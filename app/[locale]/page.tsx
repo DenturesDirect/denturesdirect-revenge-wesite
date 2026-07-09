@@ -95,7 +95,7 @@ export default function HomePage() {
 
               <motion.div variants={fadeUp} className="flex flex-col sm:flex-row flex-wrap gap-4 pt-2">
                 <Link
-                  href={`/${locale}/implant-overdentures`}
+                  href={`/${locale}/denture-services/implant-retained-overdentures-toronto`}
                   className="btn-shimmer inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-blue hover:bg-brand-blueDark text-white font-semibold rounded-full transition-all duration-300 shadow-cta hover:shadow-cta-hover hover:-translate-y-0.5"
                 >
                   See Implant Options
@@ -262,7 +262,7 @@ export default function HomePage() {
                   If you&apos;re using adhesive every day, avoiding certain foods, or just quietly dreading every meal — that&apos;s not life with dentures, that&apos;s life <em>despite</em> them.
                 </p>
                 <p>
-                  Implant-retained overdentures snap securely onto 2–4 implants. They don&apos;t shift. They don&apos;t float. They don&apos;t click. Patients tell us the same thing within a week: <strong className="text-brand-dark">&ldquo;I forget I&apos;m wearing them.&rdquo;</strong>
+                  Implant-retained overdentures snap securely onto 3–4 implants. They don&apos;t shift. They don&apos;t float. They don&apos;t click. Patients tell us the same thing within a week: <strong className="text-brand-dark">&ldquo;I forget I&apos;m wearing them.&rdquo;</strong>
                 </p>
               </div>
 
@@ -281,15 +281,21 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <div className="reveal reveal-delay-3">
+              <div className="reveal reveal-delay-3 flex flex-wrap items-center gap-x-8 gap-y-3">
                 <Link
-                  href={`/${locale}/implant-overdentures`}
+                  href={`/${locale}/denture-services/implant-retained-overdentures-toronto`}
                   className="inline-flex items-center gap-2 text-brand-blue font-bold hover:gap-4 transition-all duration-300 group"
                 >
-                  See how implant overdentures work
+                  See how implant-retained dentures work
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
+                </Link>
+                <Link
+                  href={`/${locale}/implant-dentures-cost-toronto`}
+                  className="inline-flex items-center gap-2 text-brand-gray font-semibold hover:text-brand-blue transition-colors duration-300 underline underline-offset-4 decoration-brand-border"
+                >
+                  See exact pricing
                 </Link>
               </div>
             </div>
@@ -405,9 +411,9 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                   </svg>
                 ),
-                title: 'Implant Overdentures',
-                body: 'Snap-in upper and lower overdentures anchored to 2–4 implants. The permanent solution to a denture that won\'t stay put.',
-                href: `/${locale}/implant-overdentures`,
+                title: 'Implant-Retained Dentures',
+                body: 'Snap-in upper and lower overdentures anchored to 3–4 implants. The permanent solution to a denture that won\'t stay put.',
+                href: `/${locale}/denture-services/implant-retained-overdentures-toronto`,
                 badge: 'Most Popular',
                 badgeColor: 'bg-brand-blue text-white',
               },
@@ -431,7 +437,7 @@ export default function HomePage() {
                 ),
                 title: 'Emergency Repairs',
                 body: 'Broken clasp, cracked plate, or a relining that\'s long overdue — same-day repairs done in our on-site lab.',
-                href: `/${locale}/denture-services/emergency-denture-repairs`,
+                href: `/${locale}/denture-services/emergency-denture-repair-toronto`,
                 badge: 'Same Day',
                 badgeColor: 'bg-amber-500 text-white',
               },

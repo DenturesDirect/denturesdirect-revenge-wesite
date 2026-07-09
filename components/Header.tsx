@@ -19,10 +19,10 @@ export default function Header() {
 
   const navLinks = [
     { href: `/${locale}`,                              label: t('home') },
-    { href: `/${locale}/about-us`,                     label: 'Team' },
-    { href: `/${locale}/gallery`,                      label: 'Gallery' },
-    { href: `/${locale}/happy-patients`,               label: 'Reviews' },
+    { href: `/${locale}/denture-services/implant-retained-overdentures-toronto`, label: 'Implant Dentures' },
     { href: `/${locale}/denture-services`,             label: t('services') },
+    { href: `/${locale}/about-us`,                     label: 'Team' },
+    { href: `/${locale}/happy-patients`,               label: 'Reviews' },
     { href: `/${locale}/first-time-patients`,          label: t('new_patients') },
     { href: `/${locale}/cdcp-toronto-denturist`,       label: t('cdcp') },
     { href: `/${locale}/locations`,                    label: 'Location' },

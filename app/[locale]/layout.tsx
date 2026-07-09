@@ -20,11 +20,12 @@ export async function generateMetadata({params: {locale}}: Omit<Props, 'children
   }, {} as Record<string, string>);
 
   return {
+    metadataBase: new URL('https://www.denturesdirect.ca'),
     title: t('title'),
     description: t('description'),
     alternates: {
       canonical: `https://www.denturesdirect.ca/${locale}`,
-      languages,
+      languages: { ...languages, 'x-default': 'https://www.denturesdirect.ca/en' },
     },
     keywords: 'digital dentures, intraoral scanning, CNC milled dentures, CDCP denturist Toronto, CDCP denturist North York, denturist North York, denture clinic North York, dentures Toronto, Digital Partial Dentures Toronto, Digital Full Dentures Toronto, implant dentures Toronto, implant overdentures Toronto, emergency denture repair Toronto, same day denture repair, denture repairs North York, affordable dentures Toronto, senior dentures Toronto, in house lab, denturist near me, denture clinic near me, Weston Road denturist, Humber Summit denturist',
     openGraph: {
@@ -71,7 +72,7 @@ export default async function LocaleLayout({children, params: {locale}}: Props) 
             <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-brand-blue/5 blur-3xl pointer-events-none" />
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pb-12 border-b border-white/10">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-12 border-b border-white/10">
 
                 {/* Col 1: Brand */}
                 <div className="space-y-4">
@@ -127,7 +128,21 @@ export default async function LocaleLayout({children, params: {locale}}: Props) 
                   </div>
                 </div>
 
-                {/* Col 2: Hours */}
+                {/* Col 2: Popular Services */}
+                <div>
+                  <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-widest">Popular Services</h4>
+                  <ul className="space-y-2.5 text-sm text-white/60">
+                    <li><a href={`/${locale}/denture-services/implant-retained-overdentures-toronto`} className="hover:text-white transition-colors">Implant-Retained Dentures Toronto</a></li>
+                    <li><a href={`/${locale}/implant-dentures-cost-toronto`} className="hover:text-white transition-colors">Implant Denture Cost</a></li>
+                    <li><a href={`/${locale}/digital-dentures`} className="hover:text-white transition-colors">Digital Dentures</a></li>
+                    <li><a href={`/${locale}/denture-services/digital-full-dentures-toronto`} className="hover:text-white transition-colors">Digital Full Dentures</a></li>
+                    <li><a href={`/${locale}/denture-services/emergency-denture-repair-toronto`} className="hover:text-white transition-colors">Emergency Denture Repair</a></li>
+                    <li><a href={`/${locale}/cdcp-toronto-denturist`} className="hover:text-white transition-colors">CDCP Denture Coverage</a></li>
+                    <li><a href={`/${locale}/gallery`} className="hover:text-white transition-colors">Smile Gallery</a></li>
+                  </ul>
+                </div>
+
+                {/* Col 3: Hours */}
                 <div>
                   <h4 className="text-white font-semibold mb-4 text-sm uppercase tracking-widest">Hours of Operation</h4>
                   <ul className="space-y-2 text-sm text-white/60">
