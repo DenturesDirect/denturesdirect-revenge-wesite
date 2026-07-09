@@ -9,9 +9,9 @@ import Image from 'next/image';
 const services = [
   {
     slug: 'implant-overdentures',
-    route: 'implant-overdentures',
-    title: 'Digital Implant Overdentures',
-    desc: 'Snaps onto 2–4 implants. Doesn\'t move. No adhesive, no slipping, no anxiety. If you\'ve been fighting a loose lower denture for years — this is the answer.',
+    route: 'denture-services/implant-retained-overdentures-toronto',
+    title: 'Implant-Retained Dentures',
+    desc: 'Snaps onto 3–4 implants. Doesn\'t move. No adhesive, no slipping, no anxiety. If you\'ve been fighting a loose lower denture for years — this is the answer.',
     image: '/implant-before-after.png',
     imageAlt: 'Digital implant retained overdenture snap-in system — Dentures Direct North York Toronto',
     tag: 'Our Specialty',

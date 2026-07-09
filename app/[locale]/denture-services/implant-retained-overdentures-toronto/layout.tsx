@@ -1,35 +1,115 @@
-﻿import { Metadata } from 'next';
+import React from 'react';
+import { getImplantPillarContent } from '@/content/implant-pillar';
+
+const PATH = '/denture-services/implant-retained-overdentures-toronto';
+const BASE = 'https://www.denturesdirect.ca';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const c = getImplantPillarContent(locale);
   const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `https://www.denturesdirect.ca/${lang}/denture-services/implant-retained-overdentures`;
+    acc[lang] = `${BASE}/${lang}${PATH}`;
     return acc;
-  }, {} as Record<string, string>);
+  }, { 'x-default': `${BASE}/en${PATH}` } as Record<string, string>);
 
   return {
-    title: 'Implant Retained Dentures Toronto | Snap-On & Fixed Overdentures | Dentures Direct',
-    description: 'Stop struggling with loose dentures. Implant-retained overdentures in Toronto from Dentures Direct. Snap-on and fixed All-on-4 solutions, CNC-milled on-site. Serving North York and the GTA.',
-    keywords: 'implant retained dentures Toronto, snap-on dentures North York, implant overdentures Toronto, All-on-4 Toronto, implant dentures GTA, overdentures North York, implant supported dentures Toronto',
+    title: c.meta.title,
+    description: c.meta.description,
+    keywords:
+      'implant retained dentures Toronto, implant dentures Toronto, snap on dentures Toronto, snap in dentures Toronto, implant overdentures Toronto, implant supported dentures Toronto, All-on-4 Toronto, overdentures North York, implant dentures GTA, denture implants Toronto cost, locator attachment dentures Toronto',
     alternates: {
-      canonical: `https://www.denturesdirect.ca/${locale}/denture-services/implant-retained-overdentures`,
+      canonical: `${BASE}/${locale}${PATH}`,
       languages,
     },
     openGraph: {
-      title: 'Implant Retained Dentures Toronto | Snap-On & Fixed Overdentures',
-      description: 'Implant-retained overdentures in Toronto. Snap-on and fixed All-on-4 solutions, CNC-milled in our North York lab. Stop struggling with loose dentures.',
-      url: `https://www.denturesdirect.ca/${locale}/denture-services/implant-retained-overdentures`,
+      title: c.meta.ogTitle,
+      description: c.meta.ogDescription,
+      url: `${BASE}/${locale}${PATH}`,
       siteName: 'Dentures Direct',
+      locale,
       type: 'website',
       images: [{
-      url: '/dancing-senior-couple.png',
-      width: 1200,
-      height: 630,
-      alt: 'Implant Retained Dentures – Dentures Direct Toronto',
-    }],
+        url: '/implant-retained-overdentures-after-toronto.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Implant-retained dentures result — Dentures Direct Toronto',
+      }],
     },
   };
 }
 
-export default function ImplantOverdenturesLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+// Strip **bold** markers for plain-text JSON-LD output
+const plain = (s: string) => s.replace(/\*\*/g, '');
+
+function faqSchema(locale: string) {
+  const c = getImplantPillarContent(locale);
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "inLanguage": locale,
+    "mainEntity": c.faq.items.map((item) => ({
+      "@type": "Question",
+      "name": plain(item.q),
+      "acceptedAnswer": { "@type": "Answer", "text": plain(item.a) },
+    })),
+  };
+}
+
+const procedureSchema = {
+  "@context": "https://schema.org",
+  "@type": "MedicalProcedure",
+  "name": "Implant-Retained Overdentures",
+  "alternateName": ["Snap-On Dentures", "Implant Overdentures", "Implant-Supported Dentures"],
+  "procedureType": "https://schema.org/NoninvasiveProcedure",
+  "howPerformed": "Digital intraoral scanning of the jaw and implant positions, CAD design by a licensed denturist, and on-site CNC milling of the overdenture, which attaches to dental implants placed by an oral surgeon.",
+  "body": "Implant-retained dentures snap onto 3–4 dental implants per arch, eliminating movement, clicking, and the need for adhesive.",
+  "provider": {
+    "@type": "MedicalClinic",
+    "name": "Dentures Direct",
+    "telephone": "+1-416-245-7474",
+    "url": "https://www.denturesdirect.ca",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "2833 Weston Rd",
+      "addressLocality": "Toronto",
+      "addressRegion": "ON",
+      "postalCode": "M9M 2S1",
+      "addressCountry": "CA"
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "5250",
+    "priceCurrency": "CAD",
+    "description": "Implant overdenture — $5,250 flat per arch, no tax. Implant surgery quoted separately by the oral surgeon."
+  }
+};
+
+function breadcrumbSchema(locale: string) {
+  const c = getImplantPillarContent(locale);
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": c.crumbs.home, "item": `${BASE}/${locale}` },
+      { "@type": "ListItem", "position": 2, "name": c.crumbs.services, "item": `${BASE}/${locale}/denture-services` },
+      { "@type": "ListItem", "position": 3, "name": c.crumbs.current, "item": `${BASE}/${locale}${PATH}` }
+    ]
+  };
+}
+
+export default function ImplantOverdenturesLayout({
+  children,
+  params: { locale },
+}: {
+  children: React.ReactNode;
+  params: { locale: string };
+}) {
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(locale)) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(procedureSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema(locale)) }} />
+      {children}
+    </>
+  );
 }

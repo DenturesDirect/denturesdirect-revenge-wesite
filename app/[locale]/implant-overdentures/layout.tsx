@@ -8,9 +8,9 @@ export async function generateMetadata({ params: { locale } }: { params: { local
   }, {} as Record<string, string>);
 
   return {
-    title: 'Implant Overdentures Toronto — Stop Loose Dentures for Good | Dentures Direct',
-    description: 'Lower implant-retained overdentures in Toronto. Stop your denture from moving, clicking, and embarrassing you. In-house lab, RDT Candidate on staff. Free consultation — call (416) 245-7474.',
-    keywords: 'implant overdentures Toronto, implant retained dentures North York, snap on dentures Toronto, loose lower denture fix Toronto, implant supported dentures GTA, overdenture Toronto cost',
+    title: 'Stop Loose Dentures for Good — Snap-In Implant Overdentures | Dentures Direct Toronto',
+    description: 'Denture moving, clicking, or embarrassing you? Snap-in implant overdentures hold it in place for good. In-house North York lab, $5,250 flat per arch. Free consultation — call (416) 245-7474.',
+    keywords: 'loose denture fix Toronto, denture won\'t stay in, snap in dentures Toronto, denture adhesive alternative, loose lower denture solution Toronto, secure dentures North York',
     alternates: {
       canonical: `https://www.denturesdirect.ca/${locale}/implant-overdentures`,
       languages,

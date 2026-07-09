@@ -5,32 +5,18 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import ImplantLeadForm from '@/components/ImplantLeadForm';
+import { getImplantCostContent } from '@/content/implant-cost';
 
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.65, ease: [0.22, 1, 0.36, 1] } } };
 const stagger = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } } };
 
-const faqs = [
-  {
-    q: 'Is there a cheaper option than implants?',
-    a: 'Yes — a well-made digital overdenture without implants will fit significantly better than a poorly made denture with implants. If your jaw is stable and budget is a priority, a new CNC-milled digital denture is worth considering first. We\'ll tell you honestly which option makes more sense for your specific situation.',
-  },
-  {
-    q: 'Does OHIP or insurance cover implant overdentures?',
-    a: 'OHIP does not cover dental implants or overdentures. Most private insurance plans cover a portion of the overdenture (the denture portion), but not the implant surgery itself. We recommend calling your insurer before your appointment. We can provide a pre-determination letter if needed.',
-  },
-  {
-    q: 'Does CDCP cover implant dentures?',
-    a: 'The Canadian Dental Care Plan (CDCP) does not currently cover implant surgery. It may cover a portion of the denture component depending on the plan tier. This is evolving — call us and we\'ll tell you what\'s currently covered.',
-  },
-  {
-    q: 'Can I finance implant dentures?',
-    a: 'We don\'t offer in-house financing, but many of our patients use third-party medical financing (e.g. Medicard, Dentalcard). The oral surgeon who places your implants may also offer payment plans.',
-  },
-  {
-    q: 'My implants were placed elsewhere — what does the overdenture cost?',
-    a: 'This is one of our most common cases. If your implants are well-positioned and in good condition, we can build a new overdenture or convert your existing denture to clip onto them. Come in — we\'ll assess the situation and give you a written quote.',
-  },
-];
+// Renders **bold** segments as <strong>
+function renderBold(text: string, strongClass?: string) {
+  const parts = text.split(/\*\*(.+?)\*\*/g);
+  return parts.map((part, i) =>
+    i % 2 === 1 ? <strong key={i} className={strongClass}>{part}</strong> : <React.Fragment key={i}>{part}</React.Fragment>
+  );
+}
 
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
@@ -47,7 +33,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
           </svg>
         </span>
       </button>
-      <div className={`overflow-hidden transition-all duration-300 ${open ? 'max-h-72 pb-5' : 'max-h-0'}`}>
+      <div className={`overflow-hidden transition-all duration-300 ${open ? 'max-h-96 pb-5' : 'max-h-0'}`}>
         <p className="text-gray-600 leading-relaxed">{a}</p>
       </div>
     </div>
@@ -56,6 +42,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function ImplantDenturesCostPage() {
   const locale = useLocale();
+  const c = getImplantCostContent(locale);
 
   return (
     <div className="w-full font-sans bg-white">
@@ -69,48 +56,40 @@ export default function ImplantDenturesCostPage() {
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div initial="hidden" animate="visible" variants={stagger}>
             <motion.span variants={fadeUp} className="inline-flex items-center gap-2 bg-brand-blue/20 border border-brand-blue/40 rounded-full px-4 py-1.5 text-brand-blue text-sm font-semibold mb-6">
-              North York · Toronto · GTA
+              {c.hero.badge}
             </motion.span>
             <motion.h1 variants={fadeUp} className="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-              How Much Do Implant Dentures Cost in Toronto?
+              {c.hero.h1}
             </motion.h1>
             <motion.p variants={fadeUp} className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
-              An honest answer from Damien Hiorth DD — 25 years in practice. Two costs. One you can control, one you can&apos;t. Here&apos;s how it works.
+              {c.hero.sub}
             </motion.p>
             <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:416-245-7474"
-                className="inline-flex items-center gap-2 bg-brand-blue hover:bg-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all shadow-2xl shadow-brand-blue/30"
-              >
-                Get a Free Quote — (416) 245-7474
+              <a href="tel:416-245-7474" className="inline-flex items-center gap-2 bg-brand-blue hover:bg-blue-500 text-white font-bold py-4 px-8 rounded-full text-lg transition-all shadow-2xl shadow-brand-blue/30">
+                {c.hero.ctaCall}
               </a>
-              <a
-                href="#our-fee"
-                className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white font-semibold py-4 px-8 rounded-full text-lg transition-all"
-              >
-                See the Breakdown ↓
+              <a href="#our-fee" className="inline-flex items-center gap-2 border border-white/30 hover:border-white text-white font-semibold py-4 px-8 rounded-full text-lg transition-all">
+                {c.hero.ctaBreakdown}
               </a>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
-          SECTION 1: OUR FEE — The Part You Can Pin Down
-      ═══════════════════════════════════════════════════ */}
+      {/* SECTION 1: OUR FEE */}
       <section id="our-fee" className="py-20 bg-[#f8fafc] border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="text-center mb-12">
               <span className="inline-flex items-center gap-2 text-brand-blue font-bold uppercase tracking-widest text-sm mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-blue" />
-                Our Fee — Flat, Transparent, Final
+                {c.fee.badge}
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-brand-dark leading-tight">
-                The digital implant overdenture.
+                {c.fee.h2}
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto mt-4 leading-relaxed">
-                This is the part we control. It&apos;s the same fee for every patient, every arch, every time.
+                {c.fee.sub}
               </p>
             </motion.div>
 
@@ -118,18 +97,12 @@ export default function ImplantDenturesCostPage() {
               <div className="grid md:grid-cols-2 gap-10 items-center">
                 <div className="space-y-6">
                   <div>
-                    <p className="text-sm text-brand-blue font-bold uppercase tracking-widest mb-2">Per Arch — Upper or Lower</p>
-                    <p className="text-6xl font-black text-brand-dark">$5,250</p>
-                    <p className="text-gray-500 mt-2 text-lg">Flat. No tax. No variation. No &ldquo;and up.&rdquo;</p>
+                    <p className="text-sm text-brand-blue font-bold uppercase tracking-widest mb-2">{c.fee.perArch}</p>
+                    <p className="text-6xl font-black text-brand-dark">{c.fee.price}</p>
+                    <p className="text-gray-500 mt-2 text-lg">{c.fee.priceNote}</p>
                   </div>
                   <div className="space-y-3">
-                    {[
-                      'Digitally designed, CNC milled in our lab — not outsourced',
-                      'Works with 2, 3, or 4 implants — same fee',
-                      'LOCATOR R-TX attachment system included',
-                      '5-year breakage warranty',
-                      'Written quote before you commit to anything',
-                    ].map(item => (
+                    {c.fee.bullets.map(item => (
                       <div key={item} className="flex items-start gap-3">
                         <svg className="w-5 h-5 text-brand-blue shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
                         <span className="text-gray-700">{item}</span>
@@ -139,17 +112,13 @@ export default function ImplantDenturesCostPage() {
                 </div>
                 <div className="bg-brand-blue/5 border border-brand-blue/15 rounded-3xl p-8 text-center space-y-6">
                   <div>
-                    <p className="text-xs text-brand-blue font-bold uppercase tracking-widest mb-1">Already have implants?</p>
-                    <p className="text-gray-700 leading-relaxed">
-                      If your implants are placed and you just need the overdenture — this is your only cost. Come in. We&apos;ll assess your implants and tell you exactly what&apos;s possible.
-                    </p>
+                    <p className="text-xs text-brand-blue font-bold uppercase tracking-widest mb-1">{c.fee.haveImplantsTitle}</p>
+                    <p className="text-gray-700 leading-relaxed">{c.fee.haveImplantsBody}</p>
                   </div>
                   <div className="w-full h-px bg-brand-blue/15" />
                   <div>
-                    <p className="text-xs text-brand-blue font-bold uppercase tracking-widest mb-1">Both arches?</p>
-                    <p className="text-gray-700 leading-relaxed">
-                      Book upper and lower together for <strong>$10,000</strong> — save $500. No tax, no surprises.
-                    </p>
+                    <p className="text-xs text-brand-blue font-bold uppercase tracking-widest mb-1">{c.fee.bothArchesTitle}</p>
+                    <p className="text-gray-700 leading-relaxed">{renderBold(c.fee.bothArchesBody, 'text-brand-dark')}</p>
                   </div>
                 </div>
               </div>
@@ -158,59 +127,25 @@ export default function ImplantDenturesCostPage() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
-          SECTION 2: THE SURGICAL FEE — The Variable Part
-      ═══════════════════════════════════════════════════ */}
+      {/* SECTION 2: SURGICAL FEE */}
       <section className="py-20 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="text-center mb-12">
               <span className="inline-flex items-center gap-2 text-gray-500 font-bold uppercase tracking-widest text-sm mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-gray-400" />
-                Not Our Fee — The Oral Surgeon&apos;s Fee
+                {c.surgery.badge}
               </span>
               <h2 className="text-4xl md:text-5xl font-bold text-brand-dark leading-tight">
-                The implant surgery.
+                {c.surgery.h2}
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4 leading-relaxed">
-                This is the variable part — and it&apos;s set by the oral surgeon, not us. Here&apos;s why it varies and what you should know.
+                {c.surgery.sub}
               </p>
             </motion.div>
 
-            {/* Why it varies */}
             <motion.div variants={fadeUp} className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
-              {[
-                {
-                  icon: '🦴',
-                  title: 'Bone density & quality',
-                  desc: 'Strong bone = straightforward placement. Years of tooth loss or a poorly fitting denture can cause bone resorption — which may mean grafting before implants.',
-                },
-                {
-                  title: 'Number of implants',
-                  icon: '📍',
-                  desc: 'Lower jaw typically needs 2. Upper jaw usually needs 4 (the bone is softer, forces are different). Each implant is a separate surgical fee.',
-                },
-                {
-                  title: 'Bone grafting',
-                  icon: '🩺',
-                  desc: 'If your bone isn\'t thick enough, the surgeon may need to add grafting material. This adds cost and healing time — but it\'s the only way to ensure the implants hold long-term.',
-                },
-                {
-                  title: 'Surgeon\'s experience & clinic',
-                  icon: '🎓',
-                  desc: 'An experienced oral surgeon at a full surgical suite will charge differently than a general dentist doing chair-side implants. You want the surgeon, not the shortcut.',
-                },
-                {
-                  title: 'Implant brand & system',
-                  icon: '⚙️',
-                  desc: 'Premium systems like Straumann or Nobel Biocare cost more than budget brands. We work with all major systems — but we\'ll tell you honestly which ones we trust.',
-                },
-                {
-                  title: 'CBCT scan',
-                  icon: '📷',
-                  desc: 'Every surgeon requires a 3D cone-beam CT scan before pricing or placing implants. It\'s how they see your bone, nerves, and sinus position. Non-negotiable.',
-                },
-              ].map(item => (
+              {c.surgery.factors.map(item => (
                 <div key={item.title} className="bg-[#f8fafc] rounded-2xl border border-gray-100 p-6">
                   <span className="text-2xl mb-3 block">{item.icon}</span>
                   <h3 className="font-bold text-brand-dark mb-2">{item.title}</h3>
@@ -219,29 +154,18 @@ export default function ImplantDenturesCostPage() {
               ))}
             </motion.div>
 
-            {/* Your surgeon or ours */}
             <motion.div variants={fadeUp} className="bg-brand-dark rounded-[2rem] p-8 md:p-12 text-white">
               <div className="grid md:grid-cols-2 gap-10 items-center">
                 <div className="space-y-5">
                   <h3 className="text-3xl font-bold leading-tight">
-                    Use your own surgeon. Or we&apos;ll refer you.
+                    {c.surgery.surgeonTitle}
                   </h3>
-                  <p className="text-gray-300 text-lg leading-relaxed">
-                    We don&apos;t place implants — we build the overdenture that clips onto them. That means you&apos;re free to use <strong className="text-white">any oral surgeon you trust.</strong>
-                  </p>
-                  <p className="text-gray-300 text-lg leading-relaxed">
-                    If you don&apos;t have one, we refer to a small network of oral surgeons we&apos;ve worked with for years. They do the CBCT, assess your bone, give you a surgical quote, and coordinate directly with us on implant placement.
-                  </p>
-                  <p className="text-gray-400 text-sm italic">
-                    The only thing we insist on: your surgeon does a CBCT scan before any surgery. If they skip that step, find a different surgeon.
-                  </p>
+                  <p className="text-gray-300 text-lg leading-relaxed">{renderBold(c.surgery.surgeonBody1, 'text-white')}</p>
+                  <p className="text-gray-300 text-lg leading-relaxed">{c.surgery.surgeonBody2}</p>
+                  <p className="text-gray-400 text-sm italic">{c.surgery.surgeonNote}</p>
                 </div>
                 <div className="space-y-4">
-                  {[
-                    { label: 'Already have a surgeon?', value: 'We\'ll coordinate with them — send records, align timelines, no friction.' },
-                    { label: 'Need a referral?', value: 'We\'ll connect you with oral surgeons we trust. They\'ll handle everything surgical.' },
-                    { label: 'Already have implants?', value: 'Skip the surgery entirely. Just come in for the overdenture.' },
-                  ].map(item => (
+                  {c.surgery.cards.map(item => (
                     <div key={item.label} className="bg-white/5 border border-white/10 rounded-2xl p-5">
                       <p className="text-brand-blue font-bold text-sm mb-1">{item.label}</p>
                       <p className="text-gray-300 text-sm leading-relaxed">{item.value}</p>
@@ -254,49 +178,39 @@ export default function ImplantDenturesCostPage() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
-          SECTION 3: LAST YEAR'S AVERAGE
-      ═══════════════════════════════════════════════════ */}
+      {/* SECTION 3: LAST YEAR'S AVERAGE */}
       <section className="py-20 bg-[#f8fafc] border-y border-gray-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={stagger}>
             <motion.div variants={fadeUp} className="text-center mb-10">
               <span className="inline-flex items-center gap-2 text-brand-blue font-bold uppercase tracking-widest text-sm mb-4">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-blue" />
-                Real Data — Not Marketing Ranges
+                {c.average.badge}
               </span>
               <h2 className="text-4xl font-bold text-brand-dark">
-                What our patients actually paid last year.
+                {c.average.h2}
               </h2>
             </motion.div>
 
             <motion.div variants={fadeUp} className="bg-white rounded-[2rem] border border-gray-200 shadow-sm overflow-hidden">
               <div className="p-8 md:p-10 space-y-8">
                 <div className="text-center">
-                  <p className="text-gray-500 text-sm font-semibold uppercase tracking-wider mb-2">Average surgical cost per implant (from our referral network)</p>
-                  <p className="text-5xl font-black text-brand-dark">~$2,370</p>
-                  <p className="text-gray-500 mt-1">per implant · across all cases · 2025</p>
+                  <p className="text-gray-500 text-sm font-semibold uppercase tracking-wider mb-2">{c.average.avgLabel}</p>
+                  <p className="text-5xl font-black text-brand-dark">{c.average.avgValue}</p>
+                  <p className="text-gray-500 mt-1">{c.average.avgUnit}</p>
                 </div>
                 <div className="w-full h-px bg-gray-100" />
                 <div className="grid md:grid-cols-3 gap-6 text-center">
-                  <div className="bg-[#f8fafc] rounded-2xl p-6">
-                    <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-2">Simple case (good bone)</p>
-                    <p className="text-2xl font-black text-gray-500">Lower end</p>
-                    <p className="text-sm text-gray-500 mt-1">3 implants · no grafting</p>
-                  </div>
-                  <div className="bg-[#f8fafc] rounded-2xl p-6">
-                    <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-2">Average case</p>
-                    <p className="text-2xl font-black text-brand-dark">Mid-range</p>
-                    <p className="text-sm text-gray-500 mt-1">3–4 implants · minor grafting</p>
-                  </div>
-                  <div className="bg-[#f8fafc] rounded-2xl p-6">
-                    <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-2">Complex case (bone loss)</p>
-                    <p className="text-2xl font-black text-gray-700">Higher end</p>
-                    <p className="text-sm text-gray-500 mt-1">4 implants · grafting · sinus lift</p>
-                  </div>
+                  {c.average.cases.map((cs, i) => (
+                    <div key={i} className="bg-[#f8fafc] rounded-2xl p-6">
+                      <p className="text-xs text-gray-400 font-bold uppercase tracking-widest mb-2">{cs.label}</p>
+                      <p className={`text-2xl font-black ${i === 0 ? 'text-gray-500' : i === 1 ? 'text-brand-dark' : 'text-gray-700'}`}>{cs.value}</p>
+                      <p className="text-sm text-gray-500 mt-1">{cs.detail}</p>
+                    </div>
+                  ))}
                 </div>
                 <p className="text-gray-500 text-sm text-center leading-relaxed max-w-2xl mx-auto">
-                  These are averages from our referred patients — your surgeon will give you an exact number after your CBCT scan. The only way to know what <em>your</em> case costs is to come in.
+                  {c.average.disclaimer}
                 </p>
               </div>
             </motion.div>
@@ -304,14 +218,10 @@ export default function ImplantDenturesCostPage() {
         </div>
       </section>
 
-      {/* ═══════════════════════════════════════════════════
-          SECTION 4: YOU DESERVE THIS — Emotional Close
-      ═══════════════════════════════════════════════════ */}
+      {/* SECTION 4: EMOTIONAL CLOSE */}
       <section className="py-28 bg-brand-dark overflow-hidden">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
-
-            {/* Left — emotional copy */}
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -319,56 +229,34 @@ export default function ImplantDenturesCostPage() {
               variants={{ hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.12 } } }}
               className="text-white"
             >
-              <motion.span
-                variants={fadeUp}
-                className="text-brand-blue font-bold uppercase tracking-widest text-sm mb-6 block"
-              >
-                Free Consultation · Written Quote
+              <motion.span variants={fadeUp} className="text-brand-blue font-bold uppercase tracking-widest text-sm mb-6 block">
+                {c.close.badge}
               </motion.span>
               <motion.h2 variants={fadeUp} className="text-4xl md:text-5xl font-extrabold leading-tight mb-8">
-                Have you finally realized
+                {c.close.h2a}
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-brand-blue to-blue-300 mt-2">
-                  you deserve better?
+                  {c.close.h2b}
                 </span>
               </motion.h2>
               <motion.div variants={fadeUp} className="space-y-5 text-gray-300 text-lg leading-relaxed">
-                <p>
-                  You&apos;ve spent years dealing with it. The adhesive. The slipping. The quiet panic at every meal, every conversation, every family dinner.
-                </p>
-                <p>
-                  You&apos;ve tried to make it work. You&apos;ve told yourself it&apos;s fine. You&apos;ve avoided the foods you love, covered your mouth when you laugh, skipped events because you didn&apos;t trust your teeth to stay put.
-                </p>
-                <p>
-                  <strong className="text-white">It doesn&apos;t have to be this way.</strong>
-                </p>
-                <p>
-                  Digital implant overdentures give you back what a loose denture took away: <strong className="text-white">fit, function, confidence, and dignity.</strong> They snap in, they don&apos;t move, and they let you eat, speak, and live without thinking about your teeth.
-                </p>
-                <p>
-                  Come in. Sit down with Damien. Tell him what&apos;s been going on. He&apos;ll give you an honest assessment, a written quote, and the truth about what&apos;s possible for <em>your</em> situation.
-                </p>
+                {c.close.paras.map((para, i) => (
+                  <p key={i}>{renderBold(para, 'text-white')}</p>
+                ))}
                 <p className="text-white font-semibold text-xl mt-4">
-                  No pressure. No commitment. Just an answer you&apos;ve been waiting too long to hear.
+                  {c.close.kicker}
                 </p>
               </motion.div>
               <motion.div variants={fadeUp} className="mt-10 flex flex-col sm:flex-row gap-4">
-                <Link
-                  href={`/${locale}/contact`}
-                  className="btn-shimmer inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-blue hover:bg-brand-blueDark text-white font-semibold rounded-full transition-all duration-300 shadow-cta hover:shadow-cta-hover hover:-translate-y-0.5 text-lg"
-                >
-                  Book Your Free Consultation
+                <Link href={`/${locale}/contact`} className="btn-shimmer inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-blue hover:bg-brand-blueDark text-white font-semibold rounded-full transition-all duration-300 shadow-cta hover:shadow-cta-hover hover:-translate-y-0.5 text-lg">
+                  {c.close.book}
                 </Link>
-                <a
-                  href="tel:416-245-7474"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/8 border border-white/25 text-white font-semibold rounded-full hover:bg-white/15 transition-all duration-300 hover:-translate-y-0.5 backdrop-blur-sm"
-                >
+                <a href="tel:416-245-7474" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/8 border border-white/25 text-white font-semibold rounded-full hover:bg-white/15 transition-all duration-300 hover:-translate-y-0.5 backdrop-blur-sm">
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                   (416) 245-7474
                 </a>
               </motion.div>
             </motion.div>
 
-            {/* Right — form */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -378,7 +266,6 @@ export default function ImplantDenturesCostPage() {
             >
               <ImplantLeadForm />
             </motion.div>
-
           </div>
         </div>
       </section>
@@ -387,10 +274,10 @@ export default function ImplantDenturesCostPage() {
       <section className="py-20 bg-[#f8fafc]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeUp} className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-brand-dark mb-4">Common Cost Questions</h2>
+            <h2 className="text-4xl font-bold text-brand-dark mb-4">{c.faq.h2}</h2>
           </motion.div>
           <div className="bg-white rounded-[2rem] border border-gray-100 shadow-sm p-8">
-            {faqs.map(f => <FAQItem key={f.q} q={f.q} a={f.a} />)}
+            {c.faq.items.map(f => <FAQItem key={f.q} q={f.q} a={f.a} />)}
           </div>
         </div>
       </section>

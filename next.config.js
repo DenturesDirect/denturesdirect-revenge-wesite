@@ -6,6 +6,16 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false, // Security: hide next.js in headers
+  async redirects() {
+    return [
+      { source: '/en/denturist-woodbridge-vaughan', destination: '/en/implant-dentures-woodbridge-vaughan', permanent: true },
+      { source: '/fr/denturist-woodbridge-vaughan', destination: '/fr/implant-dentures-woodbridge-vaughan', permanent: true },
+      { source: '/vi/denturist-woodbridge-vaughan', destination: '/vi/implant-dentures-woodbridge-vaughan', permanent: true },
+      { source: '/es/denturist-woodbridge-vaughan', destination: '/es/implant-dentures-woodbridge-vaughan', permanent: true },
+      { source: '/it/denturist-woodbridge-vaughan', destination: '/it/implant-dentures-woodbridge-vaughan', permanent: true },
+      { source: '/denturist-woodbridge-vaughan', destination: '/implant-dentures-woodbridge-vaughan', permanent: true },
+    ];
+  },
   async headers() {
     return [
       {

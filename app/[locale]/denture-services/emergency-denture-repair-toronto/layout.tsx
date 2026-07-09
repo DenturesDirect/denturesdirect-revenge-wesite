@@ -2,7 +2,7 @@
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `https://www.denturesdirect.ca/${lang}/denture-services/emergency-denture-repairs`;
+    acc[lang] = `https://www.denturesdirect.ca/${lang}/denture-services/emergency-denture-repair-toronto`;
     return acc;
   }, {} as Record<string, string>);
 
@@ -11,13 +11,13 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     description: 'Broken denture? Dentures Direct offers same-day emergency denture repairs in Toronto, usually within one hour. Cracked bases, broken teeth, relining — all done in our on-site North York lab. Call (416) 245-7474.',
     keywords: 'emergency denture repair Toronto, same day denture repair Toronto, broken denture Toronto, denture repair North York, cracked denture repair, denture reline Toronto, urgent denture repair GTA',
     alternates: {
-      canonical: `https://www.denturesdirect.ca/${locale}/denture-services/emergency-denture-repairs`,
+      canonical: `https://www.denturesdirect.ca/${locale}/denture-services/emergency-denture-repair-toronto`,
       languages,
     },
     openGraph: {
       title: 'Emergency Denture Repair Toronto | Same-Day | Dentures Direct',
       description: 'Same-day emergency denture repairs in Toronto, usually within one hour. Cracked bases, broken teeth, relining — all in our on-site North York lab.',
-      url: `https://www.denturesdirect.ca/${locale}/denture-services/emergency-denture-repairs`,
+      url: `https://www.denturesdirect.ca/${locale}/denture-services/emergency-denture-repair-toronto`,
       siteName: 'Dentures Direct',
       type: 'website',
       images: [{

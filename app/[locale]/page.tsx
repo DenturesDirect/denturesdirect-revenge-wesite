@@ -1,10 +1,11 @@
 "use client";
 
 import React from 'react';
-import { useTranslations, useLocale } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getHomeContent } from '@/content/home';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -14,6 +15,14 @@ const stagger = {
   hidden: { opacity: 0 },
   visible: { opacity: 1, transition: { staggerChildren: 0.13 } }
 };
+
+// Renders **bold** segments as <strong>
+function renderBold(text: string, strongClass = 'text-brand-dark') {
+  const parts = text.split(/\*\*(.+?)\*\*/g);
+  return parts.map((part, i) =>
+    i % 2 === 1 ? <strong key={i} className={strongClass}>{part}</strong> : <React.Fragment key={i}>{part}</React.Fragment>
+  );
+}
 
 function StarIcon() {
   return (
@@ -33,6 +42,37 @@ function CheckIcon() {
 
 export default function HomePage() {
   const locale = useLocale();
+  const c = getHomeContent(locale);
+
+  const tileMeta = [
+    {
+      icon: (
+        <svg className="w-7 h-7 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+      ),
+      href: `/${locale}/denture-services/implant-retained-overdentures-toronto`,
+      badgeColor: 'bg-brand-blue text-white',
+    },
+    {
+      icon: (
+        <svg className="w-7 h-7 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+      href: `/${locale}/digital-dentures`,
+      badgeColor: 'bg-emerald-500 text-white',
+    },
+    {
+      icon: (
+        <svg className="w-7 h-7 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M13 10V3L4 14h7v7l9-11h-7z" />
+        </svg>
+      ),
+      href: `/${locale}/denture-services/emergency-denture-repair-toronto`,
+      badgeColor: 'bg-amber-500 text-white',
+    },
+  ];
 
   return (
     <div className="w-full overflow-hidden font-sans">
@@ -57,7 +97,7 @@ export default function HomePage() {
               <motion.div variants={fadeUp}>
                 <span className="inline-flex items-center gap-2 pill-badge border-brand-blue/30 bg-brand-blue/12 text-brand-blue">
                   <span className="w-2 h-2 rounded-full bg-brand-blue animate-pulse" />
-                  Toronto&apos;s Implant Denture Specialist · 25 Years
+                  {c.hero.badge}
                 </span>
               </motion.div>
 
@@ -65,9 +105,9 @@ export default function HomePage() {
                 variants={fadeUp}
                 className="text-5xl md:text-[3.6rem] xl:text-[4.25rem] font-bold leading-[1.06] tracking-tight text-white"
               >
-                Your Denture Should
+                {c.hero.h1a}
                 <span className="block font-display italic gradient-text-light mt-1">
-                  Stay Where It Belongs.
+                  {c.hero.h1b}
                 </span>
               </motion.h1>
 
@@ -75,17 +115,12 @@ export default function HomePage() {
                 variants={fadeUp}
                 className="text-lg md:text-xl text-white/65 max-w-xl leading-relaxed font-light"
               >
-                Snap-in implant overdentures that never move — and precision digital dentures, full or partial, milled in our own North York lab. Designed by Damien DD. No outsourcing. No referrals out. No compromises.
+                {c.hero.sub}
               </motion.p>
 
               {/* Benefit bullets */}
               <motion.ul variants={fadeUp} className="space-y-2.5 text-white/80 text-base">
-                {[
-                  'Implant overdentures — $5,250 flat per arch, no adhesive',
-                  'Digital full & partial dentures — precision-milled in-house',
-                  'Impression-free 3D intraoral scanning',
-                  'CNC milled in our own on-site lab — zero outsourcing',
-                ].map((item) => (
+                {c.hero.bullets.map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckIcon />
                     <span>{item}</span>
@@ -95,10 +130,10 @@ export default function HomePage() {
 
               <motion.div variants={fadeUp} className="flex flex-col sm:flex-row flex-wrap gap-4 pt-2">
                 <Link
-                  href={`/${locale}/implant-overdentures`}
+                  href={`/${locale}/denture-services/implant-retained-overdentures-toronto`}
                   className="btn-shimmer inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-blue hover:bg-brand-blueDark text-white font-semibold rounded-full transition-all duration-300 shadow-cta hover:shadow-cta-hover hover:-translate-y-0.5"
                 >
-                  See Implant Options
+                  {c.hero.ctaImplant}
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                 </Link>
 
@@ -106,7 +141,7 @@ export default function HomePage() {
                   href={`/${locale}/digital-dentures`}
                   className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/8 border border-white/25 text-white font-semibold rounded-full hover:bg-white/15 hover:border-white/40 transition-all duration-300 hover:-translate-y-0.5 backdrop-blur-sm"
                 >
-                  Digital Dentures
+                  {c.hero.ctaDigital}
                 </Link>
 
                 <a
@@ -129,7 +164,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <div className="flex gap-0.5 mb-0.5">{[...Array(5)].map((_, i) => <StarIcon key={i} />)}</div>
-                  <p className="text-white/50 text-xs font-medium">Trusted by 5,000+ Toronto patients</p>
+                  <p className="text-white/50 text-xs font-medium">{c.hero.trust}</p>
                 </div>
               </motion.div>
             </div>
@@ -160,8 +195,8 @@ export default function HomePage() {
                     <svg className="w-5 h-5 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                   </div>
                   <div>
-                    <div className="text-2xl font-bold text-brand-dark leading-none">100%</div>
-                    <div className="text-xs font-medium text-brand-gray mt-0.5">In-House Lab</div>
+                    <div className="text-2xl font-bold text-brand-dark leading-none">{c.hero.cardLab}</div>
+                    <div className="text-xs font-medium text-brand-gray mt-0.5">{c.hero.cardLabLabel}</div>
                   </div>
                 </div>
               </motion.div>
@@ -174,10 +209,10 @@ export default function HomePage() {
               >
                 <div className="flex items-center gap-2 mb-2">
                   <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  <span className="text-xs font-semibold text-brand-gray uppercase tracking-wider">Snap-In Secure</span>
+                  <span className="text-xs font-semibold text-brand-gray uppercase tracking-wider">{c.hero.cardSnapTag}</span>
                 </div>
-                <div className="text-xl font-bold text-brand-blue">Zero Adhesive</div>
-                <div className="text-xs text-brand-gray mt-1">Implant-retained · Upper & Lower</div>
+                <div className="text-xl font-bold text-brand-blue">{c.hero.cardSnapTitle}</div>
+                <div className="text-xs text-brand-gray mt-1">{c.hero.cardSnapSub}</div>
               </motion.div>
 
               {/* Price flag — mid right */}
@@ -186,8 +221,8 @@ export default function HomePage() {
                 transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
                 className="absolute -right-6 top-40 glass rounded-2xl px-4 py-3 z-20"
               >
-                <div className="text-xs text-brand-gray font-medium mb-0.5">Implant Overdenture</div>
-                <div className="text-xl font-bold text-brand-dark">$5,250 <span className="text-sm font-normal text-brand-gray">flat / arch</span></div>
+                <div className="text-xs text-brand-gray font-medium mb-0.5">{c.hero.cardPriceLabel}</div>
+                <div className="text-xl font-bold text-brand-dark">$5,250 <span className="text-sm font-normal text-brand-gray">{c.hero.cardPriceSuffix}</span></div>
               </motion.div>
             </motion.div>
           </motion.div>
@@ -200,12 +235,7 @@ export default function HomePage() {
       <section className="bg-white border-y border-brand-border py-0">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4">
-            {[
-              { stat: '$5,250', label: 'Implant Overdenture — Flat / Arch' },
-              { stat: '25+', label: 'Years of Implant Denture Experience' },
-              { stat: '100%', label: 'Impression-Free — No Goop Ever' },
-              { stat: 'In-House', label: 'CNC Milling — Never Outsourced' },
-            ].map((item, i) => (
+            {c.stats.map((item, i) => (
               <div
                 key={i}
                 className={`reveal reveal-delay-${i + 1} flex flex-col items-center justify-center py-10 px-6 text-center ${i < 3 ? 'md:border-r border-brand-border' : ''} ${i >= 2 ? 'border-t md:border-t-0 border-brand-border' : ''} group hover:bg-brand-light/50 transition-colors duration-200`}
@@ -240,39 +270,30 @@ export default function HomePage() {
               {/* Floating badge */}
               <div className="absolute bottom-6 left-6 glass rounded-2xl px-5 py-4">
                 <div className="flex gap-0.5 mb-1">{[...Array(5)].map((_, i) => <StarIcon key={i} />)}</div>
-                <p className="text-sm font-bold text-brand-dark">&ldquo;I forgot I was wearing dentures.&rdquo;</p>
-                <p className="text-xs text-brand-gray mt-0.5">— Dentures Direct patient</p>
+                <p className="text-sm font-bold text-brand-dark">{c.problem.quote}</p>
+                <p className="text-xs text-brand-gray mt-0.5">{c.problem.quoteAttr}</p>
               </div>
             </div>
 
             {/* Right: Content */}
             <div className="space-y-8">
               <div className="reveal">
-                <span className="pill-badge mb-4 inline-flex">Implant-Retained Overdentures</span>
+                <span className="pill-badge mb-4 inline-flex">{c.problem.badge}</span>
                 <h2 className="text-4xl md:text-5xl font-bold text-brand-dark leading-tight mt-3">
-                  Done fighting
+                  {c.problem.h2a}
                   <span className="block font-display italic text-brand-blue mt-1">
-                    your own denture?
+                    {c.problem.h2b}
                   </span>
                 </h2>
               </div>
 
               <div className="reveal reveal-delay-1 space-y-4 text-brand-gray leading-relaxed">
-                <p>
-                  If you&apos;re using adhesive every day, avoiding certain foods, or just quietly dreading every meal — that&apos;s not life with dentures, that&apos;s life <em>despite</em> them.
-                </p>
-                <p>
-                  Implant-retained overdentures snap securely onto 2–4 implants. They don&apos;t shift. They don&apos;t float. They don&apos;t click. Patients tell us the same thing within a week: <strong className="text-brand-dark">&ldquo;I forget I&apos;m wearing them.&rdquo;</strong>
-                </p>
+                <p>{c.problem.p1}</p>
+                <p>{renderBold(c.problem.p2)}</p>
               </div>
 
               <div className="reveal reveal-delay-2 grid grid-cols-2 gap-4">
-                {[
-                  { title: 'No Adhesive. Ever.', body: 'Snaps directly onto your implants. The attachment holds — not glue, not hope.' },
-                  { title: 'Eat Without Limits', body: 'Steak, corn, crusty bread — the foods you stopped ordering are back on the menu.' },
-                  { title: 'In-House Lab', body: 'Designed by Damien DD. Milled by Luisa, RDT Candidate. No outsourcing. No delays. Direct quality control.' },
-                  { title: '$5,250 Flat Per Arch', body: 'No taxes. No surprises. No "and up." Both arches together: $10,000 — save $500.' },
-                ].map((card) => (
+                {c.problem.cards.map((card) => (
                   <div key={card.title} className="card-gradient-border p-5">
                     <div className="w-8 h-0.5 bg-brand-blue rounded mb-3" />
                     <h4 className="font-bold text-brand-dark mb-2 text-base">{card.title}</h4>
@@ -281,15 +302,21 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <div className="reveal reveal-delay-3">
+              <div className="reveal reveal-delay-3 flex flex-wrap items-center gap-x-8 gap-y-3">
                 <Link
-                  href={`/${locale}/implant-overdentures`}
+                  href={`/${locale}/denture-services/implant-retained-overdentures-toronto`}
                   className="inline-flex items-center gap-2 text-brand-blue font-bold hover:gap-4 transition-all duration-300 group"
                 >
-                  See how implant overdentures work
+                  {c.problem.link}
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
+                </Link>
+                <Link
+                  href={`/${locale}/implant-dentures-cost-toronto`}
+                  className="inline-flex items-center gap-2 text-brand-gray font-semibold hover:text-brand-blue transition-colors duration-300 underline underline-offset-4 decoration-brand-border"
+                >
+                  {c.problem.pricingLink}
                 </Link>
               </div>
             </div>
@@ -321,7 +348,7 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-brand-dark/10 to-transparent" />
                 <div className="absolute bottom-8 left-8 right-8">
                   <p className="font-bold text-2xl text-white">Damien John Hiorth DD</p>
-                  <p className="text-brand-blue font-medium mt-1">Founder &amp; Lead Denturist · 25 Years</p>
+                  <p className="text-brand-blue font-medium mt-1">{c.story.photoTitle}</p>
                 </div>
               </div>
 
@@ -331,38 +358,26 @@ export default function HomePage() {
                 transition={{ duration: 9, repeat: Infinity, ease: 'easeInOut' }}
                 className="absolute -right-4 top-12 glass-dark rounded-2xl p-5 max-w-[210px] z-20"
               >
-                <div className="text-3xl font-black text-brand-blue mb-1">Flat Rate</div>
-                <div className="text-sm text-white/70 leading-snug">per arch — Christmas morning.</div>
-                <div className="text-xs text-white/40 mt-2 italic">The moment everything changed.</div>
+                <div className="text-3xl font-black text-brand-blue mb-1">{c.story.flagTitle}</div>
+                <div className="text-sm text-white/70 leading-snug">{c.story.flagSub}</div>
+                <div className="text-xs text-white/40 mt-2 italic">{c.story.flagNote}</div>
               </motion.div>
             </div>
 
             {/* Right: Story */}
             <div className="space-y-6">
               <div className="reveal">
-                <span className="pill-badge border-white/20 bg-white/10 text-white mb-4 inline-flex">Why I Changed Everything</span>
+                <span className="pill-badge border-white/20 bg-white/10 text-white mb-4 inline-flex">{c.story.badge}</span>
                 <h2 className="text-4xl md:text-5xl font-bold leading-tight mt-3">
-                  The call I almost
-                  <span className="block font-display italic text-brand-blue mt-1">didn&apos;t take.</span>
+                  {c.story.h2a}
+                  <span className="block font-display italic text-brand-blue mt-1">{c.story.h2b}</span>
                 </h2>
               </div>
 
               <div className="reveal reveal-delay-1 space-y-5 text-white/70 text-lg leading-relaxed font-light">
-                <p>
-                  It was December 23rd. I had told my receptionist: <strong className="text-white">no calls, no new patients until the New Year.</strong> I was burnt out. Seven-day work weeks. A practice that had nearly quadrupled in revenue — and somehow I&apos;d never made less.
-                </p>
-                <p>
-                  Then the phone rang. A woman in a panic. Her 96-year-old mother had lost what she believed was an implant denture. She was terrified her mother would starve.
-                </p>
-                <p>
-                  I took the case. Christmas Eve: scans, bite registration. Christmas Day: the mill running in my lab. Boxing Day: delivery. <strong className="text-white">Flat rate per arch. Nine hours. Three days.</strong>
-                </p>
-                <p>
-                  Standing there, I realized something uncomfortable: this was exactly what I&apos;d always wanted to do — and I&apos;d spent years not doing it. High volume. Endless conventional cases. Never the implant work I&apos;d trained for.
-                </p>
-                <p>
-                  That morning I made a promise to myself. <strong className="text-white">This clinic would become what it was always supposed to be:</strong> a specialist implant denture practice. Fewer patients. Higher standards. Work that actually matters.
-                </p>
+                {c.story.paras.map((para, i) => (
+                  <p key={i}>{renderBold(para, 'text-white')}</p>
+                ))}
               </div>
 
               <div className="reveal reveal-delay-2 pt-2">
@@ -370,7 +385,7 @@ export default function HomePage() {
                   href={`/${locale}/about-us`}
                   className="inline-flex items-center gap-2 text-white font-bold hover:text-brand-blue transition-colors duration-300 group"
                 >
-                  Read Damien&apos;s full story
+                  {c.story.link}
                   <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
@@ -387,55 +402,18 @@ export default function HomePage() {
       <section className="py-28 bg-brand-ice">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 reveal">
-            <span className="pill-badge mb-4 inline-flex">Our Specialties</span>
+            <span className="pill-badge mb-4 inline-flex">{c.services.badge}</span>
             <h2 className="text-4xl md:text-5xl font-bold text-brand-dark leading-tight mt-3">
-              Precision work.
-              <span className="block font-display italic text-brand-blue mt-1">Built to last.</span>
+              {c.services.h2a}
+              <span className="block font-display italic text-brand-blue mt-1">{c.services.h2b}</span>
             </h2>
             <p className="text-brand-gray text-lg leading-relaxed mt-5">
-              Every overdenture I build — I design it personally. Luisa, our RDT Candidate, fabricates it in our lab down the hall. Nobody ships anything out. Nobody waits weeks for a third party.
+              {c.services.intro}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                icon: (
-                  <svg className="w-7 h-7 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                ),
-                title: 'Implant Overdentures',
-                body: 'Snap-in upper and lower overdentures anchored to 2–4 implants. The permanent solution to a denture that won\'t stay put.',
-                href: `/${locale}/implant-overdentures`,
-                badge: 'Most Popular',
-                badgeColor: 'bg-brand-blue text-white',
-              },
-              {
-                icon: (
-                  <svg className="w-7 h-7 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                ),
-                title: 'Digital Dentures',
-                body: 'No messy impressions. 3D intraoral scan, CAD design, CNC milled on-site. Mathematically precise every time.',
-                href: `/${locale}/digital-dentures`,
-                badge: 'Impression-Free',
-                badgeColor: 'bg-emerald-500 text-white',
-              },
-              {
-                icon: (
-                  <svg className="w-7 h-7 text-brand-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                ),
-                title: 'Emergency Repairs',
-                body: 'Broken clasp, cracked plate, or a relining that\'s long overdue — same-day repairs done in our on-site lab.',
-                href: `/${locale}/denture-services/emergency-denture-repairs`,
-                badge: 'Same Day',
-                badgeColor: 'bg-amber-500 text-white',
-              },
-            ].map((service, i) => (
+            {c.services.tiles.map((service, i) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 30 }}
@@ -443,13 +421,13 @@ export default function HomePage() {
                 viewport={{ once: true, margin: '-60px' }}
                 transition={{ duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
               >
-                <Link href={service.href} className="group block h-full">
+                <Link href={tileMeta[i].href} className="group block h-full">
                   <div className="card-premium h-full p-8 flex flex-col gap-5">
                     <div className="flex items-start justify-between">
                       <div className="w-14 h-14 rounded-2xl bg-brand-blue/10 flex items-center justify-center group-hover:bg-brand-blue/20 transition-colors duration-300">
-                        {service.icon}
+                        {tileMeta[i].icon}
                       </div>
-                      <span className={`text-xs font-bold px-3 py-1 rounded-full ${service.badgeColor}`}>
+                      <span className={`text-xs font-bold px-3 py-1 rounded-full ${tileMeta[i].badgeColor}`}>
                         {service.badge}
                       </span>
                     </div>
@@ -460,7 +438,7 @@ export default function HomePage() {
                       <p className="text-brand-gray leading-relaxed text-base">{service.body}</p>
                     </div>
                     <div className="mt-auto flex items-center gap-1 text-brand-blue font-semibold text-sm">
-                      Learn more
+                      {c.services.learnMore}
                       <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                       </svg>
@@ -476,7 +454,7 @@ export default function HomePage() {
               href={`/${locale}/denture-services`}
               className="inline-flex items-center gap-2 text-brand-blue font-bold hover:gap-4 transition-all duration-300 group"
             >
-              View all services
+              {c.services.viewAll}
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
               </svg>
@@ -491,31 +469,15 @@ export default function HomePage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-14 reveal">
-            <span className="pill-badge mb-4 inline-flex">Patient Stories</span>
+            <span className="pill-badge mb-4 inline-flex">{c.reviews.badge}</span>
             <h2 className="text-4xl font-bold text-brand-dark mt-3">
-              Real patients.
-              <span className="font-display italic text-brand-blue"> Real results.</span>
+              {c.reviews.h2a}
+              <span className="font-display italic text-brand-blue">{c.reviews.h2b}</span>
             </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                quote: "I had been struggling with my lower denture for 15 years. Within a week of getting my implant overdenture at Dentures Direct, I forgot I was wearing it. I cried at my first meal.",
-                name: "Margaret T.",
-                detail: "Lower implant overdenture, North York",
-              },
-              {
-                quote: "Damien was completely upfront about pricing and process from day one. No surprises, no upselling. Just honest work. The digital fit is better than anything I've had in 20 years of dentures.",
-                name: "Robert K.",
-                detail: "Digital full dentures, Etobicoke",
-              },
-              {
-                quote: "I already had implants from another clinic and was told it would be complicated to get overdentures made elsewhere. Damien assessed me in one appointment and had them done in 3 weeks. Phenomenal.",
-                name: "Sandra M.",
-                detail: "Implant overdenture conversion, GTA",
-              },
-            ].map((review, i) => (
+            {c.reviews.items.map((review, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 24 }}
@@ -547,20 +509,20 @@ export default function HomePage() {
         <div className="orb w-96 h-96 bg-brand-blue/25 -top-20 left-1/2 -translate-x-1/2 animate-orb" />
         <div className="max-w-3xl mx-auto px-4 text-center relative z-10">
           <div className="reveal">
-            <span className="pill-badge border-white/20 bg-white/10 text-white mb-6 inline-flex">Accepting New Patients</span>
+            <span className="pill-badge border-white/20 bg-white/10 text-white mb-6 inline-flex">{c.cta.badge}</span>
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-              Ready to stop fighting
-              <span className="block font-display italic gradient-text-light mt-1">your own denture?</span>
+              {c.cta.h2a}
+              <span className="block font-display italic gradient-text-light mt-1">{c.cta.h2b}</span>
             </h2>
             <p className="text-white/60 mb-8 text-lg leading-relaxed">
-              Free consultation. Honest assessment. Clear pricing. No hard sell — if you&apos;re not a candidate, we&apos;ll tell you that too.
+              {c.cta.p}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href={`/${locale}/contact`}
                 className="btn-shimmer inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-blue hover:bg-brand-blueDark text-white font-semibold rounded-full transition-all duration-300 shadow-cta hover:shadow-cta-hover hover:-translate-y-0.5"
               >
-                Book Free Consultation
+                {c.cta.book}
               </Link>
               <a
                 href="tel:416-245-7474"
@@ -571,7 +533,7 @@ export default function HomePage() {
               </a>
             </div>
             <p className="text-white/35 text-sm mt-6">
-              2833 Weston Road, North York · Mon–Fri 9am–5pm · Sat by appointment
+              {c.cta.address}
             </p>
           </div>
         </div>

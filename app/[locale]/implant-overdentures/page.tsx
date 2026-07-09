@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { useLocale } from 'next-intl';
 import ImplantLeadForm from '@/components/ImplantLeadForm';
+import ImplantCandidacyQuiz from '@/components/ImplantCandidacyQuiz';
 
 const fadeUp = { hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } } };
 const stagger = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } } };
@@ -51,7 +52,7 @@ const steps = [
 const faqs: { q: string; a: React.ReactNode }[] = [
   {
     q: 'How many implants do I need?',
-    a: 'For a lower overdenture, typically 2. Upper overdentures usually require 4. We\'ll assess your bone density and jaw during your free consultation to confirm.',
+    a: 'For a lower overdenture, typically 3. Upper overdentures usually require 4. We\'ll assess your bone density and jaw during your free consultation to confirm.',
   },
   {
     q: 'What does it cost?',
@@ -287,6 +288,13 @@ export default function ImplantOverdenturesLandingPage() {
         </div>
       </section>
 
+      {/* ── Candidacy Quiz ── */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ImplantCandidacyQuiz />
+        </div>
+      </section>
+
       {/* ── Meet Damien ── */}
       <section className="py-20 bg-brand-dark text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -432,8 +440,15 @@ export default function ImplantOverdenturesLandingPage() {
       </section>
 
       {/* ── Minimal Footer ── */}
-      <footer className="bg-brand-darker py-6 text-center text-xs text-white/30 border-t border-white/10">
+      <footer className="bg-brand-darker py-6 text-center text-xs text-white/30 border-t border-white/10 space-y-2">
         <p>© {new Date().getFullYear()} Dentures Direct. 2833 Weston Road, North York, Toronto, ON M9M 2S1. Regulated by the College of Denturists of Ontario.</p>
+        <p className="space-x-3">
+          <Link href={`/${locale}/denture-services/implant-retained-overdentures-toronto`} className="hover:text-white/60 transition-colors underline underline-offset-2">Learn more about implant-retained dentures</Link>
+          <span className="text-white/10">|</span>
+          <Link href={`/${locale}/implant-dentures-cost-toronto`} className="hover:text-white/60 transition-colors underline underline-offset-2">Full cost breakdown</Link>
+          <span className="text-white/10">|</span>
+          <Link href={`/${locale}`} className="hover:text-white/60 transition-colors underline underline-offset-2">Main website</Link>
+        </p>
       </footer>
 
       {/* Google Fonts */}

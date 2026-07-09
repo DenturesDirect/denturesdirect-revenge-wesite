@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `https://www.denturesdirect.ca/${lang}/denture-services/full-complete-dentures`;
+    acc[lang] = `https://www.denturesdirect.ca/${lang}/denture-services/digital-full-dentures-toronto`;
     return acc;
   }, {} as Record<string, string>);
 
@@ -13,13 +13,13 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     description: 'Dentures Direct specializes in precision digital full dentures in Toronto. Milled to 3-micron tolerance using impression-free techniques for a flawless fit in North York.',
     keywords: '',
     alternates: {
-      canonical: `https://www.denturesdirect.ca/${locale}/denture-services/full-complete-dentures`,
+      canonical: `https://www.denturesdirect.ca/${locale}/denture-services/digital-full-dentures-toronto`,
       languages,
     },
     openGraph: {
       title: 'Digital Full Dentures Toronto – Dentures Direct',
       description: 'Precision digital full dentures milled to 3-micron tolerance. 100% impression-free at our North York clinic.',
-      url: `https://www.denturesdirect.ca/${locale}/denture-services/full-complete-dentures`,
+      url: `https://www.denturesdirect.ca/${locale}/denture-services/digital-full-dentures-toronto`,
       siteName: 'Dentures Direct',
       type: 'website',
       images: [{

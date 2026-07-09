@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `https://www.denturesdirect.ca/${lang}/denture-services/acrylic-partial-dentures`;
+    acc[lang] = `https://www.denturesdirect.ca/${lang}/denture-services/digital-acrylic-partial-dentures-toronto`;
     return acc;
   }, {} as Record<string, string>);
 
@@ -13,13 +13,13 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     description: 'Affordable Digital acrylic partial dentures in Toronto. Fast, custom fabrication at Dentures Direct in North York. Perfect for transitional or budget-friendly care.',
     keywords: '',
     alternates: {
-      canonical: `https://www.denturesdirect.ca/${locale}/denture-services/acrylic-partial-dentures`,
+      canonical: `https://www.denturesdirect.ca/${locale}/denture-services/digital-acrylic-partial-dentures-toronto`,
       languages,
     },
     openGraph: {
       title: 'Digital acrylic partial dentures Toronto – Dentures Direct',
       description: 'Affordable Digital acrylic partial dentures, custom-made in our North York on-site lab. Budget-friendly denture care in Toronto.',
-      url: `https://www.denturesdirect.ca/${locale}/denture-services/acrylic-partial-dentures`,
+      url: `https://www.denturesdirect.ca/${locale}/denture-services/digital-acrylic-partial-dentures-toronto`,
       siteName: 'Dentures Direct',
       type: 'website',
       images: [{
