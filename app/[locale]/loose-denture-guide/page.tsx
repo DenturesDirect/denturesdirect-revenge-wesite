@@ -299,12 +299,6 @@ export default function LooseDentureGuidePage() {
       </div>
 
 
-      {/* Footer */}
-      <footer className="bg-brand-darker py-5 text-center text-xs text-white/30 border-t border-white/10">
-        <p>© {new Date().getFullYear()} Dentures Direct. 2833 Weston Road, North York, Toronto, ON M9M 2S1. Regulated by the College of Denturists of Ontario.</p>
-      </footer>
-
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&display=swap');`}</style>
     </div>
   );
 }

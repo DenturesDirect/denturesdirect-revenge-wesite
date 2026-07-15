@@ -102,25 +102,8 @@ export default function ImplantOverdenturesLandingPage() {
   const locale = useLocale();
   return (
     <div className="w-full font-sans bg-white" style={{ fontFamily: "'Outfit', sans-serif" }}>
-      {/* ── Sticky Phone Bar ── */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-brand-dark/95 backdrop-blur-sm border-b border-white/10 py-3 px-4 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <img src="/dentures-direct-toronto-logo.png" alt="Dentures Direct" className="h-7 w-auto brightness-0 invert opacity-90" />
-          <span className="text-white/50 text-sm hidden sm:block">North York, Toronto</span>
-        </div>
-        <a
-          href="tel:416-245-7474"
-          className="inline-flex items-center gap-2 bg-brand-blue hover:bg-blue-600 text-white font-bold px-5 py-2 rounded-full text-sm transition-all duration-200 shadow-lg"
-        >
-          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-          </svg>
-          (416) 245-7474
-        </a>
-      </div>
-
       {/* ── Hero ── */}
-      <section className="relative pt-24 pb-0 min-h-[92vh] flex items-center bg-brand-dark overflow-hidden">
+      <section className="relative pt-16 pb-0 min-h-[85vh] flex items-center bg-brand-dark overflow-hidden">
         {/* Background image */}
         <div className="absolute inset-0">
           <Image
@@ -439,20 +422,6 @@ export default function ImplantOverdenturesLandingPage() {
         </div>
       </section>
 
-      {/* ── Minimal Footer ── */}
-      <footer className="bg-brand-darker py-6 text-center text-xs text-white/30 border-t border-white/10 space-y-2">
-        <p>© {new Date().getFullYear()} Dentures Direct. 2833 Weston Road, North York, Toronto, ON M9M 2S1. Regulated by the College of Denturists of Ontario.</p>
-        <p className="space-x-3">
-          <Link href={`/${locale}/denture-services/implant-retained-overdentures-toronto`} className="hover:text-white/60 transition-colors underline underline-offset-2">Learn more about implant-retained dentures</Link>
-          <span className="text-white/10">|</span>
-          <Link href={`/${locale}/implant-dentures-cost-toronto`} className="hover:text-white/60 transition-colors underline underline-offset-2">Full cost breakdown</Link>
-          <span className="text-white/10">|</span>
-          <Link href={`/${locale}`} className="hover:text-white/60 transition-colors underline underline-offset-2">Main website</Link>
-        </p>
-      </footer>
-
-      {/* Google Fonts */}
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');`}</style>
     </div>
   );
 }

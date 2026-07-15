@@ -47,7 +47,7 @@ export default function AdvancedSchema({ locale }: SchemaProps) {
     "name": "Dentures Direct",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "2833 Weston Rd",
+      "streetAddress": "2833 Weston Road",
       "addressLocality": "Toronto",
       "addressRegion": "ON",
       "postalCode": "M9M 2S1",

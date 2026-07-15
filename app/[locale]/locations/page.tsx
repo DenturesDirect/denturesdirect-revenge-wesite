@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Denture Clinic Toronto | Dentures Direct North York & Etobicoke',
-  description: 'Visit Dentures Direct, the top-rated denture clinic in Toronto. Located at 2833 Weston Rd, we serve North York, Etobicoke, and the GTA with precision digital dentures.',
+  description: 'Visit Dentures Direct, the top-rated denture clinic in Toronto. Located at 2833 Weston Road, we serve North York, Etobicoke, and the GTA with precision digital dentures.',
 };
 
 export default function LocationsPage() {
@@ -13,7 +13,7 @@ export default function LocationsPage() {
         <div className="text-center mb-16">
           <h1 className="text-5xl font-extrabold text-brand-dark mb-4 tracking-tight">Top Rated Denture Clinic in Toronto</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            We operate out of <strong>one</strong> state-of-the-art clinic and CNC laboratory, conveniently located on the border of North York and Etobicoke at 2833 Weston Rd.
+            We operate out of <strong>one</strong> state-of-the-art clinic and CNC laboratory, conveniently located on the border of North York and Etobicoke at 2833 Weston Road.
           </p>
         </div>
 

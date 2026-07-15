@@ -3,7 +3,7 @@
 _Living checklist. Last updated: 2026-07-09._
 
 ## ⚠️ Needs Damien's input / action
-- [ ] **Confirm hours.** I set the site to **Mon–Thu 8:00 AM–6:00 PM, Fri–Sun closed** (per your note). If you're open Friday or Saturday, tell me and I'll fix it everywhere in one pass. Hours currently live in: footer, contact page, schema (Google), location pages, homepage.
+- [x] Hours confirmed: **Mon–Thu 8–6, Fri–Sun closed**, flagged as **Summer hours** in footer + contact. (When summer ends, tell me the new hours and I'll swap them.)
 - [ ] **Replace the founder video on the Team page.** Removed the old one (you didn't like it). When you have a new video, send me the YouTube link and I'll drop it back in the same spot.
 - [ ] **Turn off "antigravity" auto-deploys** for the Vercel project, or it will overwrite the live site. One repo (`denturesdirect-revenge-wesite`), one pipeline now.
 - [ ] **Google Search Console:** resubmit `sitemap.xml` and request re-indexing of the implant pillar page. This is what starts the SEO clock.
@@ -22,6 +22,7 @@ _Living checklist. Last updated: 2026-07-09._
 - [ ] Consistent name/address/phone citations: Yelp, 411.ca, YellowPages, RateMDs, College of Denturists directory.
 
 ## ✅ Done
+- Full site crawl (44 pages): no broken links, no 404s, no missing metadata; fixed doubled header/footer on /implant-overdentures & /loose-denture-guide (the "dead-end" pages), standardized address to "2833 Weston Road" sitewide, swapped implant-page photo to damien-new, added Summer-hours label.
 - Implant SEO overhaul: pillar page, cost page, canonicals, sitemap, internal linking, schema
 - Full site translated to French, Spanish, Italian, Vietnamese (chrome, homepage, implant pillar, cost page, lead form)
 - Candidacy quiz + `implant-dentures-woodbridge-vaughan` route salvaged into this repo

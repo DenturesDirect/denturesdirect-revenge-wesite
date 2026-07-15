@@ -99,10 +99,13 @@ export default function ContactPage() {
                     ),
                     label: 'Hours of Operation',
                     content: (
-                      <ul className="space-y-1.5 text-sm text-brand-gray">
-                        <li className="flex justify-between max-w-xs"><span>Monday – Thursday</span><span className="font-semibold text-brand-dark">8:00 AM – 6:00 PM</span></li>
-                        <li className="flex justify-between max-w-xs"><span>Friday – Sunday</span><span className="text-brand-gray/50">Closed</span></li>
-                      </ul>
+                      <>
+                        <span className="inline-block text-[10px] font-semibold uppercase tracking-wide text-amber-700 bg-amber-100 border border-amber-300 rounded-full px-2 py-0.5 mb-2">Summer hours in effect</span>
+                        <ul className="space-y-1.5 text-sm text-brand-gray">
+                          <li className="flex justify-between max-w-xs"><span>Monday – Thursday</span><span className="font-semibold text-brand-dark">8:00 AM – 6:00 PM</span></li>
+                          <li className="flex justify-between max-w-xs"><span>Friday – Sunday</span><span className="text-brand-gray/50">Closed</span></li>
+                        </ul>
+                      </>
                     ),
                   },
                 ].map((item, i) => (
