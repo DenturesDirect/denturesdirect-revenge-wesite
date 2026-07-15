@@ -421,18 +421,6 @@
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.denturesdirect.ca/en/privacy-policy</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.denturesdirect.ca/en/privacy-policy"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://www.denturesdirect.ca/fr/privacy-policy"/>
-    <xhtml:link rel="alternate" hreflang="vi" href="https://www.denturesdirect.ca/vi/privacy-policy"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://www.denturesdirect.ca/es/privacy-policy"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://www.denturesdirect.ca/it/privacy-policy"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.denturesdirect.ca/en/privacy-policy"/>
-    <lastmod>2026-07-09</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
     <loc>https://www.denturesdirect.ca/en/blog/are-you-a-candidate-for-implant-dentures</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.denturesdirect.ca/en/blog/are-you-a-candidate-for-implant-dentures"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.denturesdirect.ca/fr/blog/are-you-a-candidate-for-implant-dentures"/>

@@ -17,7 +17,7 @@ export default function RescueAndRebuildPage() {
       {/* ── Hero ── */}
       <section className="relative pt-28 pb-24 bg-brand-dark overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <Image src="/broken-denture-repair.png" alt="" fill className="object-cover" />
+          <Image src="/broken-denture-repair.png" alt="Broken denture repaired at Dentures Direct in Toronto" fill className="object-cover" />
           <div className="absolute inset-0 bg-brand-dark/90" />
         </div>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

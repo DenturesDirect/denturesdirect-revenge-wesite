@@ -50,7 +50,7 @@ export default function ImplantDenturesCostPage() {
       {/* ── Hero ── */}
       <section className="relative pt-28 pb-20 bg-brand-dark overflow-hidden">
         <div className="absolute inset-0 opacity-15">
-          <Image src="/implant-retained-overdentures-after-toronto.jpg" alt="" fill className="object-cover" />
+          <Image src="/implant-retained-overdentures-after-toronto.jpg" alt="Natural-looking smile after implant-retained overdentures in Toronto" fill className="object-cover" />
           <div className="absolute inset-0 bg-brand-dark/80" />
         </div>
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

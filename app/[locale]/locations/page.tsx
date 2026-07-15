@@ -50,7 +50,7 @@ export default function LocationsPage() {
             
             <div className="min-h-[450px] rounded-2xl overflow-hidden shadow-inner border border-gray-200 relative">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m1!1d2883.5071542360433!2d-79.5369888!3d43.7207903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b30f2a5d2dd17%3A0x803e88739aefa8cf!2s2833%20Weston%20Rd%2C%20North%20York%2C%20ON%20M9M%202S1!5e0!3m2!1sen!2sca!4v1778845191649!5m2!1sen!2sca"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.2619438073867!2d-79.53920962386981!3d43.74668744636952!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b3040332fb17b%3A0xe5a3c9e3e3b3a3d5!2s2833%20Weston%20Rd%2C%20North%20York%2C%20ON%20M9M%202S1!5e0!3m2!1sen!2sca!4v1700000000000!5m2!1sen!2sca"
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 

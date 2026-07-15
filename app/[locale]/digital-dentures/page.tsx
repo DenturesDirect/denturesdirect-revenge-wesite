@@ -270,7 +270,7 @@ export default function DigitalDenturesPage() {
               </Link>
             </motion.div>
             <motion.p variants={fadeUp} className="text-sm text-blue-200 mt-6">
-              2833 Weston Road, North York, Toronto · (416) 245-7474
+              2833 Weston Road, North York · (416) 245-7474
             </motion.p>
           </motion.div>
         </div>
