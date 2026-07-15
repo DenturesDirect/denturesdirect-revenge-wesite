@@ -5,8 +5,12 @@ _Living checklist. Last updated: 2026-07-09._
 ## ⚠️ Needs Damien's input / action
 - [x] Hours confirmed: **Mon–Thu 8–6, Fri–Sun closed**, flagged as **Summer hours** in footer + contact. (When summer ends, tell me the new hours and I'll swap them.)
 - [ ] **Replace the founder video on the Team page.** Removed the old one (you didn't like it). When you have a new video, send me the YouTube link and I'll drop it back in the same spot.
-- [ ] **Turn off "antigravity" auto-deploys** for the Vercel project, or it will overwrite the live site. One repo (`denturesdirect-revenge-wesite`), one pipeline now.
 - [ ] **Google Search Console:** resubmit `sitemap.xml` and request re-indexing of the implant pillar page. This is what starts the SEO clock.
+
+## 🔁 Recurring — your weekly rhythm
+- [ ] **Post to Google Business Profile 1–2×/week.** Ready-to-paste posts are in `content/gbp-posts.md` — rotate the angle each time. GBP → Promote → Add update → paste → set button (Call/Book).
+- [ ] **Generate HeyGen videos for the 8 existing blog posts.** Ask Claude to write the 8 scripts (one batch), then generate each in HeyGen, upload to YouTube, and paste the YouTube ID into that post's `youtubeId` field — video auto-appears at the top with schema.
+- [ ] Each new weekly blog draft (auto-PR, Mondays) also comes with its own HeyGen script in the PR — generate + add the YouTube ID when you review it.
 
 ## 🔧 Claude to do next
 - [x] **Rebuild the blog** — done (8 posts, blog index + post pages, BlogPosting/Breadcrumb schema, internal links, added to nav & sitemap). Content is freshly written; original wording can be layered in later if you want it.
