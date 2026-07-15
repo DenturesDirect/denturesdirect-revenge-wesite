@@ -68,12 +68,29 @@ export default function BlogPostPage({ params: { locale, slug } }: { params: { l
     ],
   };
 
+  const videoSchema = post.youtubeId ? {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: post.title,
+    description: post.metaDescription,
+    thumbnailUrl: [`https://i.ytimg.com/vi/${post.youtubeId}/maxresdefault.jpg`, `${BASE}${post.image}`],
+    uploadDate: post.date,
+    contentUrl: `https://www.youtube.com/watch?v=${post.youtubeId}`,
+    embedUrl: `https://www.youtube.com/embed/${post.youtubeId}`,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Dentures Direct',
+      logo: { '@type': 'ImageObject', url: `${BASE}/dentures-direct-toronto-logo.png` },
+    },
+  } : null;
+
   const related = getAllPosts().filter((p) => p.slug !== post.slug && p.category === post.category).slice(0, 2);
 
   return (
     <div className="w-full bg-white font-sans">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {videoSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />}
 
       {/* Hero */}
       <section className="relative pt-24 pb-14 bg-gradient-hero overflow-hidden">
@@ -93,11 +110,24 @@ export default function BlogPostPage({ params: { locale, slug } }: { params: { l
         </div>
       </section>
 
-      {/* Cover image */}
+      {/* Cover video (if set) or image */}
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-20">
-        <div className="relative aspect-[16/9] rounded-3xl overflow-hidden shadow-card-hover ring-1 ring-brand-border">
-          <Image src={post.image} alt={post.imageAlt} fill className="object-cover" priority />
-        </div>
+        {post.youtubeId ? (
+          <div className="relative aspect-video rounded-3xl overflow-hidden shadow-card-hover ring-1 ring-brand-border bg-black">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src={`https://www.youtube.com/embed/${post.youtubeId}?rel=0&modestbranding=1`}
+              title={post.title}
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        ) : (
+          <div className="relative aspect-[16/9] rounded-3xl overflow-hidden shadow-card-hover ring-1 ring-brand-border">
+            <Image src={post.image} alt={post.imageAlt} fill className="object-cover" priority />
+          </div>
+        )}
       </div>
 
       {/* Body */}

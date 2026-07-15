@@ -16,6 +16,7 @@ export type BlogPost = {
   imageAlt: string;
   keywords: string;
   body: string;        // HTML
+  youtubeId?: string;  // optional: YouTube video ID -> renders a video at the top + VideoObject schema
 };
 
 const CTA = `<div class="blog-cta"><p><strong>Thinking about your options?</strong> Book a free, no-pressure consultation with Damien Hiorth DD at Dentures Direct in North York. Honest assessment, clear pricing, and we'll tell you if you're <em>not</em> a candidate too.</p><p><a href="/en/contact">Book a free consultation →</a> &nbsp;or call <a href="tel:416-245-7474">(416)&nbsp;245-7474</a></p></div>`;
