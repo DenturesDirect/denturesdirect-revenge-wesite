@@ -16,6 +16,9 @@ _Living checklist. Last updated: 2026-07-09._
 ## 🧹 Cleanup (later, with care)
 - [ ] Delete the duplicate/abandoned repos once we confirm nothing depends on them: `denturesdirect-revenge-website.`, `DENTURESSDIRECT-REVENGE-WEBSITE`, and any other stale site repos. **Audit before deleting** — don't cut a wire that's still connected.
 
+## 🔮 When the 24/7 front-desk automation goes live
+- [ ] Update the emergency page + GBP to advertise round-the-clock call answering (right now it honestly says "call during clinic hours"). Big win for "emergency denture repair near me open now" once phones are answered 24/7.
+
 ## 📈 Off-site SEO (ongoing)
 - [ ] Google Business Profile: post weekly (before/afters convert), add "Implant-Retained Dentures" as a service with the $5,250 price, reply to every review.
 - [ ] Ask every implant patient for a Google review that mentions "implant dentures."
