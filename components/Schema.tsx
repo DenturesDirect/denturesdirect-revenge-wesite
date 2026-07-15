@@ -44,11 +44,12 @@ export default function AdvancedSchema({ locale }: SchemaProps) {
   const schemaData = {
     "@context": "https://schema.org",
     "@type": ["MedicalClinic", "Dentist"],
-    "name": "Dentures Direct",
+    "name": "Dentures Direct Implant Denture Clinic",
+    "alternateName": "Dentures Direct",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "2833 Weston Road",
-      "addressLocality": "Toronto",
+      "addressLocality": "North York",
       "addressRegion": "ON",
       "postalCode": "M9M 2S1",
       "addressCountry": "CA"
@@ -181,8 +182,8 @@ export default function AdvancedSchema({ locale }: SchemaProps) {
     "isAcceptingNewPatients": true,
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": "150",
+      "ratingValue": "4.8",
+      "reviewCount": "67",
       "bestRating": "5",
       "worstRating": "1"
     },

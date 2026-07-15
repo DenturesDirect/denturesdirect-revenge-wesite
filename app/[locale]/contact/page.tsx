@@ -73,7 +73,7 @@ export default function ContactPage() {
                     label: 'Address',
                     content: (
                       <p className="text-brand-gray leading-relaxed">
-                        2833 Weston Road<br />Toronto, ON M9M 2S1<br />
+                        2833 Weston Road<br />North York, ON M9M 2S1<br />
                         <span className="text-sm text-brand-gray/70">(Border of North York &amp; Etobicoke — free parking on-site)</span>
                       </p>
                     ),

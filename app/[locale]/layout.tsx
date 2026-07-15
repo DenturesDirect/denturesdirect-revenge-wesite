@@ -167,7 +167,7 @@ export default async function LocaleLayout({children, params: {locale}}: Props) 
                     className="not-italic text-sm text-white/60 leading-relaxed space-y-1"
                   >
                     <p itemProp="streetAddress" className="text-white/80 font-medium">2833 Weston Road</p>
-                    <p><span itemProp="addressLocality">Toronto</span>, <span itemProp="addressRegion">ON</span> <span itemProp="postalCode">M9M 2S1</span></p>
+                    <p><span itemProp="addressLocality">North York</span>, <span itemProp="addressRegion">ON</span> <span itemProp="postalCode">M9M 2S1</span></p>
                     <p className="text-white/40 text-xs mt-2">{tf('serving')}</p>
                   </address>
                   <a

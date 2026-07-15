@@ -87,7 +87,7 @@ export default function EmergencyRepairsPage() {
           </p>
           <div className="p-6 bg-white border-l-4 border-brand-accent rounded shadow-sm inline-block text-left">
             <p className="text-sm text-gray-500 font-bold uppercase tracking-wider mb-1">On-Site Lab Address</p>
-            <p className="text-lg text-brand-dark font-medium">2833 Weston Road, Toronto, ON M9M 2S1</p>
+            <p className="text-lg text-brand-dark font-medium">2833 Weston Road, North York, ON M9M 2S1</p>
           </div>
         </div>
       </section>
