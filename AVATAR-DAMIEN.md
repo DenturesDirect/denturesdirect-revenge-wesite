@@ -31,10 +31,14 @@
 
 These are standing rules from Damien — include them in every heygen-video prompt:
 
-1. **Never cover the presenter's face.** All on-screen text, motion graphics,
-   lower thirds, and overlays must be positioned in the lower third of the
-   frame or in the empty area beside the presenter — never over his face or
-   head. State this explicitly in the prompt.
+1. **Never cover the presenter's face — enforce structurally, not with
+   placement hints.** HeyGen's compositor does NOT reliably honor overlay
+   placement instructions (learned 2026-07-17: it rendered a text box across
+   Damien's face despite an explicit lower-third directive). The only
+   reliable pattern: the A-roll presenter footage must be completely clean —
+   zero text, zero graphics on any frame where the presenter is visible.
+   All on-screen text appears exclusively on separate full-screen
+   motion-graphics cutaway cards between presenter segments.
 2. **Every CTA includes address + website.** The closing call-to-action (and
    outro card) must always show: **2833 Weston Road, North York**,
    **denturesdirect.ca**, and the phone number **(416) 245-7474**.
