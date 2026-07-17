@@ -38,7 +38,14 @@ These are standing rules from Damien — include them in every heygen-video prom
    reliable pattern: the A-roll presenter footage must be completely clean —
    zero text, zero graphics on any frame where the presenter is visible.
    All on-screen text appears exclusively on separate full-screen
-   motion-graphics cutaway cards between presenter segments.
+   motion-graphics cutaway cards.
+   **Cards must ride over continuous narration** (learned 2026-07-17:
+   "cards between segments" produced awkward silent gaps). The voice track
+   is one unbroken take; cards appear for 2-3 s as visual cutaways WHILE
+   the voice-over continues. Never instruct the agent to "let lines
+   breathe" or give a duration target longer than the natural script
+   length — both cause dead-air padding. State: total duration = natural
+   narration length; zero silent gaps.
 2. **Every CTA includes address + website.** The closing call-to-action (and
    outro card) must always show: **2833 Weston Road, North York**,
    **denturesdirect.ca**, and the phone number **(416) 245-7474**.
