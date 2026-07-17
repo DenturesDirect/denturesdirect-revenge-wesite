@@ -48,12 +48,21 @@ These are standing rules from Damien — include them in every heygen-video prom
    narration length; zero silent gaps.
    **Cards sparingly** (learned 2026-07-18: listing 5-7 cards produced
    videos Damien found too card-heavy, ~1/3 of runtime off his face).
-   Max 3 cards per video: opening title, at most ONE mid-video concept
-   card, and the contact outro. State explicitly: "the presenter must be
-   on screen for at least 85% of the video's runtime."
+   Max 3 cards per video: a title card (shown a few seconds in, NOT at the
+   very start — see rule 5), at most ONE mid-video concept card, and the
+   contact outro. State explicitly: "the presenter must be on screen for at
+   least 85% of the video's runtime."
 2. **Every CTA includes address + website.** The closing call-to-action (and
    outro card) must always show: **2833 Weston Road, North York**,
    **denturesdirect.ca**, and the phone number **(416) 245-7474**.
 3. Keep claims honest — no "24/7", no "and up" pricing; 4.8 stars / 67
    reviews; implant overdenture is $5,250 flat per arch.
 4. Slow down slightly on the phone number.
+5. **Always open on Damien's face, never on a card** (rule from Damien,
+   2026-07-18). The very first scene must be the presenter on camera
+   delivering the hook — the first frame the viewer sees is his face, not a
+   title card or motion graphic. Any title card comes a few seconds in,
+   after the opening spoken line. State explicitly in the prompt: "The video
+   MUST open on the presenter speaking on camera. Do not begin with a title
+   card, logo, or any full-screen graphic — the first frames are the
+   presenter's face."
