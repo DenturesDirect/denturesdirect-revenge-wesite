@@ -7,7 +7,7 @@
 - Hair: As in reference photos
 - Build: As in reference photos
 - Features: Digital twin of Damien Hiorth, owner of DenturesDirect (Toronto)
-- Style: Realistic. Available wardrobe/settings across looks: white shirt (landscape), lab coat (portrait), casual (portrait), game-show set (landscape)
+- Style: Realistic. Default look: close-up, white lab coat over blue scrub top, dental operatory background (landscape). Other looks: white shirt (landscape), lab coat (portrait), casual (portrait), game-show set (landscape)
 - Reference: Managed in the HeyGen account (photo avatar group "Damien")
 
 ## Voice
@@ -22,7 +22,7 @@
 - Voice Name: Damien Hiorth (private voice clone)
 - Voice Designed: false
 - Voice Seed: n/a
-- Looks: landscape=6da7943185384c14a259dc58bbf42b66 (white shirt), portrait=e3b43ac5e4b9413ea41006537a7fdf10 (Damien), square=none
-- Last Synced: 2026-07-17T11:05:00Z
+- Looks: landscape=06957931d44143a1aa3eab1b6977c5ba (Lab Coat Operatory Close-Up, DEFAULT), portrait=e3b43ac5e4b9413ea41006537a7fdf10 (Damien), square=none
+- Last Synced: 2026-07-17T19:55:00Z
 
 ⚠️ look_ids are ephemeral — always resolve fresh from group_id at runtime via `heygen avatar looks list --group-id <id>` (or MCP `list_avatar_looks`). Never hardcode look_id as the primary avatar reference.
