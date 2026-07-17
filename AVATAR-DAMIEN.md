@@ -75,3 +75,11 @@ These are standing rules from Damien — include them in every heygen-video prom
    (that's where generative video goes uncanny, and it's a trust risk in a
    medical context). The only on-screen TEXT remains the final contact card
    (rule 2). Billed as normal HeyGen credits per render.
+7. **Do NOT add aggressive "no pauses / no silence" directives, and do NOT
+   re-render to chase a small gap** (learned 2026-07-18). A single ~1-1.3s
+   beat sometimes appears at a b-roll cut; that's acceptable and normal.
+   Attempting a "CRITICAL AUDIO — NO PAUSES" instruction made the agent chop
+   the audio at EVERY b-roll cut (one 1.3s gap → six gaps, ~7.5s silence).
+   Re-rendering is non-deterministic and often worse. If a single beat truly
+   must go, trim it out of the finished MP4 locally (free, no re-render) —
+   never re-generate for it.
