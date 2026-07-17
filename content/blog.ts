@@ -120,6 +120,7 @@ ${CTA}
   },
   {
     slug: 'all-on-4-vs-snap-on-dentures',
+    youtubeId: 'oMsDbse8ykw',
     category: 'Implant Dentures',
     title: 'All-on-4 vs. Snap-On Dentures: Cost, Pros & Cons',
     metaTitle: 'All-on-4 vs. Snap-On Dentures: Cost, Pros & Cons | Toronto',
