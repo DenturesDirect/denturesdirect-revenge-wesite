@@ -57,6 +57,7 @@ ${CTA}
   },
   {
     slug: 'implant-dentures-vs-traditional-dentures',
+    youtubeId: 'wOA5BzztvUc',
     category: 'Implant Dentures',
     title: 'Implant Dentures vs. Traditional Dentures: Comparison Guide',
     metaTitle: 'Implant Dentures vs. Traditional Dentures | Toronto Comparison',
