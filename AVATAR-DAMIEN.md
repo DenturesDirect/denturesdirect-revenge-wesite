@@ -26,3 +26,18 @@
 - Last Synced: 2026-07-17T19:55:00Z
 
 ⚠️ look_ids are ephemeral — always resolve fresh from group_id at runtime via `heygen avatar looks list --group-id <id>` (or MCP `list_avatar_looks`). Never hardcode look_id as the primary avatar reference.
+
+## Video Production Directives (apply to EVERY video)
+
+These are standing rules from Damien — include them in every heygen-video prompt:
+
+1. **Never cover the presenter's face.** All on-screen text, motion graphics,
+   lower thirds, and overlays must be positioned in the lower third of the
+   frame or in the empty area beside the presenter — never over his face or
+   head. State this explicitly in the prompt.
+2. **Every CTA includes address + website.** The closing call-to-action (and
+   outro card) must always show: **2833 Weston Road, North York**,
+   **denturesdirect.ca**, and the phone number **(416) 245-7474**.
+3. Keep claims honest — no "24/7", no "and up" pricing; 4.8 stars / 67
+   reviews; implant overdenture is $5,250 flat per arch.
+4. Slow down slightly on the phone number.
