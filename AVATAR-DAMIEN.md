@@ -46,6 +46,11 @@ These are standing rules from Damien — include them in every heygen-video prom
    breathe" or give a duration target longer than the natural script
    length — both cause dead-air padding. State: total duration = natural
    narration length; zero silent gaps.
+   **Cards sparingly** (learned 2026-07-18: listing 5-7 cards produced
+   videos Damien found too card-heavy, ~1/3 of runtime off his face).
+   Max 3 cards per video: opening title, at most ONE mid-video concept
+   card, and the contact outro. State explicitly: "the presenter must be
+   on screen for at least 85% of the video's runtime."
 2. **Every CTA includes address + website.** The closing call-to-action (and
    outro card) must always show: **2833 Weston Road, North York**,
    **denturesdirect.ca**, and the phone number **(416) 245-7474**.
