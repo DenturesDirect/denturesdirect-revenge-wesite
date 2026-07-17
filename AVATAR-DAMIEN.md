@@ -66,3 +66,12 @@ These are standing rules from Damien — include them in every heygen-video prom
    MUST open on the presenter speaking on camera. Do not begin with a title
    card, logo, or any full-screen graphic — the first frames are the
    presenter's face."
+6. **Default cutaways are AI-generated clinical b-roll, not flat text cards**
+   (adopted 2026-07-18 after a successful test — Seedance-backed footage
+   inside HeyGen). Instead of full-screen text cards, use AI-generated VIDEO
+   of dental equipment, appliances, models, and clean clinic/lab
+   environments as the cutaways. **Hard constraint: objects and environments
+   ONLY — never AI people, patients, dentists, hands, fingers, or mouths**
+   (that's where generative video goes uncanny, and it's a trust risk in a
+   medical context). The only on-screen TEXT remains the final contact card
+   (rule 2). Billed as normal HeyGen credits per render.
