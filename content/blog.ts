@@ -88,6 +88,7 @@ ${CTA}
   },
   {
     slug: 'impression-free-digital-dentures',
+    youtubeId: 'zVkvgjp-O9s',
     category: 'Digital Dentures',
     title: 'Goodbye Goop: What Are Impression-Free Digital Dentures?',
     metaTitle: 'What Are Digital Dentures? Impression-Free 3D Scanning | Toronto',
