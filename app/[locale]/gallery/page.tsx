@@ -43,8 +43,26 @@ export default function GalleryPage() {
     }
   ];
 
+  const videoSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: 'Real Denture Smile Transformation — Before & After | Dentures Direct Toronto',
+    description:
+      'A real Dentures Direct patient, before and after treatment — from uneven, worn teeth to a natural, confident smile. Filmed at our North York, Toronto denture clinic.',
+    thumbnailUrl: ['https://www.denturesdirect.ca/videos/smile-transformation-before-after-toronto.jpg'],
+    uploadDate: '2026-07-17',
+    duration: 'PT11S',
+    contentUrl: 'https://www.denturesdirect.ca/videos/smile-transformation-before-after-toronto.mp4',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Dentures Direct',
+      logo: { '@type': 'ImageObject', url: 'https://www.denturesdirect.ca/dentures-direct-toronto-logo.png' },
+    },
+  };
+
   return (
     <div className="w-full pt-20 pb-24 bg-[#f8fafc] font-sans min-h-screen">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial="hidden" animate="visible" variants={fadeUp} className="text-center mb-16">
           <span className="text-brand-accent font-bold uppercase tracking-widest text-sm mb-4 block">Our Work</span>
@@ -52,6 +70,31 @@ export default function GalleryPage() {
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Browse through real cases from our Toronto clinic. We take pride in restoring both the function and the aesthetics of every patient&apos;s smile.
           </p>
+        </motion.div>
+
+        {/* Featured before/after video — real patient smile transformation */}
+        <motion.div initial="hidden" animate="visible" variants={fadeUp} className="max-w-4xl mx-auto mb-20">
+          <div className="text-center mb-6">
+            <span className="text-brand-blue font-bold uppercase tracking-widest text-sm mb-3 block">Featured&nbsp;·&nbsp;Video</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-brand-dark">Watch a real smile transformation</h2>
+            <p className="text-gray-600 mt-3 max-w-2xl mx-auto">
+              One Dentures Direct patient, before and after — from uneven, worn teeth to a natural, confident smile.
+            </p>
+          </div>
+          <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white ring-1 ring-brand-border bg-brand-dark">
+            <video
+              controls
+              playsInline
+              loop
+              preload="none"
+              poster="/videos/smile-transformation-before-after-toronto.jpg"
+              className="w-full aspect-video"
+              aria-label="Before and after denture smile transformation at Dentures Direct Toronto"
+            >
+              <source src="/videos/smile-transformation-before-after-toronto.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </motion.div>
 
         <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="grid md:grid-cols-2 gap-8">
