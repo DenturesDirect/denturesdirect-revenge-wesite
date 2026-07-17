@@ -24,6 +24,7 @@ const CTA = `<div class="blog-cta"><p><strong>Thinking about your options?</stro
 export const blogPosts: BlogPost[] = [
   {
     slug: 'are-you-a-candidate-for-implant-dentures',
+    youtubeId: 'pWbsCvyIpEE',
     category: 'Implant Dentures',
     title: 'Are You a Candidate for Implant Dentures? GTA Eligibility Guide',
     metaTitle: 'Are You a Candidate for Implant Dentures? | Toronto Eligibility Guide',
@@ -56,6 +57,7 @@ ${CTA}
   },
   {
     slug: 'implant-dentures-vs-traditional-dentures',
+    youtubeId: 'wOA5BzztvUc',
     category: 'Implant Dentures',
     title: 'Implant Dentures vs. Traditional Dentures: Comparison Guide',
     metaTitle: 'Implant Dentures vs. Traditional Dentures | Toronto Comparison',
@@ -86,6 +88,7 @@ ${CTA}
   },
   {
     slug: 'impression-free-digital-dentures',
+    youtubeId: 'zVkvgjp-O9s',
     category: 'Digital Dentures',
     title: 'Goodbye Goop: What Are Impression-Free Digital Dentures?',
     metaTitle: 'What Are Digital Dentures? Impression-Free 3D Scanning | Toronto',
@@ -118,6 +121,7 @@ ${CTA}
   },
   {
     slug: 'all-on-4-vs-snap-on-dentures',
+    youtubeId: 'oMsDbse8ykw',
     category: 'Implant Dentures',
     title: 'All-on-4 vs. Snap-On Dentures: Cost, Pros & Cons',
     metaTitle: 'All-on-4 vs. Snap-On Dentures: Cost, Pros & Cons | Toronto',
@@ -155,6 +159,7 @@ ${CTA}
   },
   {
     slug: 'implant-retained-dentures-toronto-guide',
+    youtubeId: 'S1a906ztMpA',
     category: 'Implant Dentures',
     title: 'Implant-Retained Dentures in Toronto: The Ultimate Guide to Snap-On Teeth',
     metaTitle: 'Implant-Retained Dentures Toronto: The Ultimate Guide | Snap-On Teeth',
@@ -187,6 +192,7 @@ ${CTA}
   },
   {
     slug: 'acrylic-vs-cast-vs-flexible-partial-dentures',
+    youtubeId: '96o_cmvx3ho',
     category: 'Partial Dentures',
     title: 'Acrylic vs. Cast vs. Flexible Partial Dentures: A Complete Guide',
     metaTitle: 'Acrylic vs. Cast vs. Flexible Partial Dentures | Toronto Guide',
@@ -229,6 +235,7 @@ ${CTA}
   },
   {
     slug: 'denture-relines-hard-vs-soft',
+    youtubeId: 'x_j5se22vxY',
     category: 'Maintenance',
     title: 'Denture Relines: How to Fix Loose Dentures (Hard vs. Soft)',
     metaTitle: 'Denture Relines Explained: Hard vs. Soft | Fix Loose Dentures Toronto',
@@ -264,6 +271,7 @@ ${CTA}
   },
   {
     slug: 'what-to-do-if-your-denture-breaks',
+    youtubeId: 'xIP1UNhDbGM',
     category: 'Emergency Repairs',
     title: 'What to Do If Your Denture Breaks: Emergency Repair Guide',
     metaTitle: 'Denture Broke? Emergency Repair Guide | Same-Day Repairs Toronto',
