@@ -45,6 +45,12 @@ export default function GalleryPage() {
 
   const featuredVideos = [
     {
+      title: 'A complete turnaround',
+      caption: 'From heavy decay and staining to a bright, even smile.',
+      src: '/videos/smile-transformation-3-before-after-toronto.mp4',
+      poster: '/videos/smile-transformation-3-before-after-toronto.jpg',
+    },
+    {
       title: 'Complete digital denture',
       caption: 'Missing, worn upper teeth restored with a complete digital denture.',
       src: '/videos/smile-transformation-2-before-after-toronto.mp4',
@@ -59,6 +65,22 @@ export default function GalleryPage() {
   ];
 
   const videoSchemas = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'VideoObject',
+      name: 'Smile Turnaround: Decay to Bright Even Smile — Before & After | Dentures Direct Toronto',
+      description:
+        'A real Dentures Direct patient, before and after — heavy decay and staining transformed into a bright, even smile. Filmed at our North York, Toronto denture clinic.',
+      thumbnailUrl: ['https://www.denturesdirect.ca/videos/smile-transformation-3-before-after-toronto.jpg'],
+      uploadDate: '2026-07-18',
+      duration: 'PT11S',
+      contentUrl: 'https://www.denturesdirect.ca/videos/smile-transformation-3-before-after-toronto.mp4',
+      publisher: {
+        '@type': 'Organization',
+        name: 'Dentures Direct',
+        logo: { '@type': 'ImageObject', url: 'https://www.denturesdirect.ca/dentures-direct-toronto-logo.png' },
+      },
+    },
     {
       '@context': 'https://schema.org',
       '@type': 'VideoObject',
@@ -116,7 +138,7 @@ export default function GalleryPage() {
               Real Dentures Direct patients, before and after — filmed at our Toronto clinic.
             </p>
           </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredVideos.map((v) => (
               <div key={v.src}>
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white ring-1 ring-brand-border bg-brand-dark">
