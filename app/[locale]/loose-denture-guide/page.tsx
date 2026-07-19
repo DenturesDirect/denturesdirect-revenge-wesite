@@ -59,7 +59,7 @@ export default function LooseDentureGuidePage() {
               <span className="text-brand-blue"> — and What They Actually Cost.</span>
             </motion.h1>
             <motion.p variants={fadeUp} className="text-xl text-gray-600 mb-8 leading-relaxed">
-              Written by Damien Hiorth DD, 25-year denturist in North York Toronto. No fluff, no upsell — just an honest breakdown of what works, what doesn&apos;t, and what to expect.
+              Written by Damien John Hiorth DD, 25-year denturist in North York Toronto. No fluff, no upsell — just an honest breakdown of what works, what doesn&apos;t, and what to expect.
             </motion.p>
 
             {/* Bullets */}
@@ -75,7 +75,7 @@ export default function LooseDentureGuidePage() {
             {/* Social proof */}
             <motion.div variants={fadeUp} className="flex items-center gap-4 p-5 bg-white rounded-2xl border border-gray-100 shadow-sm">
               <div className="relative w-14 h-14 rounded-full overflow-hidden shrink-0">
-                <Image src="/damien-new.jpg" alt="Damien Hiorth DD" fill className="object-cover object-top" />
+                <Image src="/damien-new.jpg" alt="Damien John Hiorth DD" fill className="object-cover object-top" />
               </div>
               <div>
                 <p className="font-bold text-brand-dark text-sm">Damien John Hiorth DD</p>
@@ -187,7 +187,7 @@ export default function LooseDentureGuidePage() {
             <div className="border-b border-gray-200 pb-8 mb-10 text-center">
               <img src="/dentures-direct-toronto-logo.png" alt="Dentures Direct" className="h-8 w-auto mx-auto mb-6 opacity-70" />
               <h2 className="text-4xl font-extrabold text-brand-dark mb-3">Your 3 Real Options for a Loose Lower Denture</h2>
-              <p className="text-gray-500">By Damien Hiorth DD · Dentures Direct, North York Toronto · (416) 245-7474</p>
+              <p className="text-gray-500">By Damien John Hiorth DD · Dentures Direct, North York Toronto · (416) 245-7474</p>
             </div>
 
             <div className="prose prose-lg max-w-none text-gray-700 space-y-10">

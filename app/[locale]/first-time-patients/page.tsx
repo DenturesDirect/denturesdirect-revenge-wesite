@@ -41,7 +41,7 @@ export default function FirstTimePatientsPage() {
                 <p className="text-gray-700 italic">
                   &quot;The result is a fit that traditional methods simply can&apos;t match. Patients feel the difference from the very first moment.&quot;
                 </p>
-                <p className="text-sm text-brand-blue font-semibold mt-3">— Damien Hiorth DD, Founder</p>
+                <p className="text-sm text-brand-blue font-semibold mt-3">— Damien John Hiorth DD, Founder</p>
               </div>
             </motion.div>
 

@@ -9,7 +9,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 
   return {
     title: 'Free Guide: Your 3 Real Options for a Loose Lower Denture | Dentures Direct Toronto',
-    description: 'Written by Damien Hiorth DD, 25-year denturist in North York Toronto. Covers relining, premium digital dentures, and implant overdentures — what each costs, how long it lasts, and which is right for you.',
+    description: 'Written by Damien John Hiorth DD, 25-year denturist in North York Toronto. Covers relining, premium digital dentures, and implant overdentures — what each costs, how long it lasts, and which is right for you.',
     keywords: 'loose lower denture options, loose denture fix Toronto, reline vs new denture, implant overdenture vs reline, denture options Toronto, loose denture guide, best denture Toronto',
     alternates: {
       canonical: `https://www.denturesdirect.ca/${locale}/loose-denture-guide`,

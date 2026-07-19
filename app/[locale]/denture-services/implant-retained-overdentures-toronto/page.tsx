@@ -217,7 +217,7 @@ export default function ImplantRetainedPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/10 max-w-md mx-auto lg:mx-0">
-              <Image src="/damien-new.jpg" alt="Damien Hiorth DD — implant denture specialist, Dentures Direct Toronto" fill className="object-cover object-top" />
+              <Image src="/damien-new.jpg" alt="Damien John Hiorth DD — implant denture specialist, Dentures Direct Toronto" fill className="object-cover object-top" />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/85 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6 right-6">
                 <p className="font-bold text-xl">Damien John Hiorth DD</p>

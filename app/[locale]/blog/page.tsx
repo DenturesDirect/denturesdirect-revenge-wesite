@@ -15,7 +15,7 @@ export async function generateMetadata({ params: { locale } }: { params: { local
 
   return {
     title: 'Denture & Implant Blog | Expert Guides from Dentures Direct Toronto',
-    description: 'Expert guides on implant-retained dentures, digital dentures, partials, relines, and emergency repairs — written by Damien Hiorth DD, denturist in North York Toronto.',
+    description: 'Expert guides on implant-retained dentures, digital dentures, partials, relines, and emergency repairs — written by Damien John Hiorth DD, denturist in North York Toronto.',
     keywords: 'denture blog Toronto, implant denture guide, digital denture articles, denturist advice North York',
     alternates: { canonical: `${BASE}/${locale}${PATH}`, languages },
     openGraph: {
@@ -44,7 +44,7 @@ export default function BlogIndexPage({ params: { locale } }: { params: { locale
             <span className="block font-display italic text-brand-blueLight mt-1">Blog</span>
           </h1>
           <p className="text-xl max-w-2xl mx-auto text-white/70 leading-relaxed">
-            Honest, practical guides on implant dentures, digital dentures, partials, relines, and repairs — from Damien Hiorth DD and the team.
+            Honest, practical guides on implant dentures, digital dentures, partials, relines, and repairs — from Damien John Hiorth DD and the team.
           </p>
         </div>
       </section>
@@ -77,7 +77,7 @@ export default function BlogIndexPage({ params: { locale } }: { params: { locale
                   </h2>
                   <p className="text-brand-gray text-sm leading-relaxed flex-grow">{post.excerpt}</p>
                   <div className="mt-6 pt-5 border-t border-brand-border flex items-center justify-between">
-                    <span className="text-xs text-brand-gray">By Damien Hiorth DD</span>
+                    <span className="text-xs text-brand-gray">By Damien John Hiorth DD</span>
                     <span className="inline-flex items-center gap-1.5 text-brand-blue font-bold text-sm">
                       Read Article
                       <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>

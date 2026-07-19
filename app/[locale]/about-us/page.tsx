@@ -169,8 +169,7 @@ export default function AboutUsPage() {
               <div className="reveal">
                 <span className="pill-badge mb-4 inline-flex">Lead Denturist</span>
                 <h2 className="text-4xl md:text-5xl font-bold text-brand-dark leading-tight mt-3">
-                  Damien John{' '}
-                  <span className="block font-display italic text-brand-blue mt-1">Hiorth DD</span>
+                  Damien John <span className="font-display italic text-brand-blue">Hiorth DD</span>
                 </h2>
               </div>
 
@@ -179,7 +178,7 @@ export default function AboutUsPage() {
                   Damien is the founder and lead denturist at Dentures Direct. He has spent over two decades mastering his craft — but made a deliberate pivot to focus exclusively on <strong className="text-brand-dark">implant-retained overdentures and premium digital dentures</strong>. Because he believes that's where the real difference is made.
                 </p>
                 <p>
-                  He was a Clinical Professor at Oxford College and Georgian College, has served on committees at the College of Denturists of Ontario, and built his own AI-powered practice management software — <a href="https://www.dentureflowpro.com" target="_blank" rel="noopener noreferrer" className="text-brand-blue font-semibold hover:text-brand-blueDark transition-colors">DentureFlowPro.com</a> — from scratch.
+                  He was a Clinical Professor at Oxford College and Georgian College, has served on committees at the College of Denturists of Ontario, and built his own AI-powered practice management software — <a href="https://www.dentureflowpro.ai" target="_blank" rel="noopener noreferrer" className="text-brand-blue font-semibold hover:text-brand-blueDark transition-colors">DentureFlowPro.ai</a> — from scratch.
                 </p>
                 <p>
                   His philosophy is direct: <em className="text-brand-dark font-medium">"The lower denture problem is physics."</em> Implants solve the physics. Everything else is just compromise.

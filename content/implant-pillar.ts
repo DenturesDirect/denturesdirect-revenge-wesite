@@ -41,7 +41,7 @@ export type ImplantPillarContent = {
 const en: ImplantPillarContent = {
   meta: {
     title: 'Implant-Retained Dentures Toronto | Snap-On & Fixed Overdentures — $5,250 Flat Per Arch',
-    description: 'Implant-retained dentures in Toronto by Damien Hiorth DD — 25 years of implant denture experience. Snap-on overdentures $5,250 flat per arch, designed and CNC-milled in our own North York lab. Free consultation: (416) 245-7474.',
+    description: 'Implant-retained dentures in Toronto by Damien John Hiorth DD — 25 years of implant denture experience. Snap-on overdentures $5,250 flat per arch, designed and CNC-milled in our own North York lab. Free consultation: (416) 245-7474.',
     ogTitle: 'Implant-Retained Dentures Toronto | Snap-On & Fixed Overdentures',
     ogDescription: 'Stop struggling with loose dentures. Snap-on and fixed implant overdentures, $5,250 flat per arch, CNC-milled in our own North York lab. Free consultation.',
   },
@@ -50,7 +50,7 @@ const en: ImplantPillarContent = {
     badge: "Toronto's Implant Denture Specialists · 25 Years",
     h1a: 'Implant-Retained Dentures',
     h1b: 'in Toronto',
-    sub: 'Snap-on and fixed implant overdentures that never shift, float, or need adhesive — designed by Damien Hiorth DD and CNC-milled in our own North York lab.',
+    sub: 'Snap-on and fixed implant overdentures that never shift, float, or need adhesive — designed by Damien John Hiorth DD and CNC-milled in our own North York lab.',
     priceLine: '**$5,250 flat per arch.** No tax. No "and up." Free consultation.',
     ctaCall: 'Book Your Free Consultation — (416) 245-7474',
     ctaPricing: 'See Exact Pricing',
@@ -171,7 +171,7 @@ const en: ImplantPillarContent = {
 const fr: ImplantPillarContent = {
   meta: {
     title: 'Prothèses dentaires sur implants à Toronto | Overdentures à encliquetage et fixes — 5 250 $ fixe par arcade',
-    description: "Prothèses sur implants à Toronto par Damien Hiorth DD — 25 ans d'expérience. Prothèses à encliquetage 5 250 $ prix fixe par arcade, conçues et usinées CNC dans notre laboratoire de North York. Consultation gratuite : (416) 245-7474.",
+    description: "Prothèses sur implants à Toronto par Damien John Hiorth DD — 25 ans d'expérience. Prothèses à encliquetage 5 250 $ prix fixe par arcade, conçues et usinées CNC dans notre laboratoire de North York. Consultation gratuite : (416) 245-7474.",
     ogTitle: 'Prothèses sur implants à Toronto | À encliquetage et fixes',
     ogDescription: 'Cessez de lutter contre une prothèse qui bouge. Prothèses sur implants à encliquetage et fixes, 5 250 $ fixe par arcade, usinées CNC dans notre laboratoire de North York. Consultation gratuite.',
   },
@@ -180,7 +180,7 @@ const fr: ImplantPillarContent = {
     badge: 'Les spécialistes des prothèses sur implants à Toronto · 25 ans',
     h1a: 'Prothèses dentaires sur implants',
     h1b: 'à Toronto',
-    sub: "Des prothèses sur implants, à encliquetage ou fixes, qui ne bougent pas, ne flottent pas et n'exigent aucun adhésif — conçues par Damien Hiorth DD et usinées CNC dans notre propre laboratoire de North York.",
+    sub: "Des prothèses sur implants, à encliquetage ou fixes, qui ne bougent pas, ne flottent pas et n'exigent aucun adhésif — conçues par Damien John Hiorth DD et usinées CNC dans notre propre laboratoire de North York.",
     priceLine: '**5 250 $ prix fixe par arcade.** Pas de taxes. Pas de « et plus ». Consultation gratuite.',
     ctaCall: 'Réservez votre consultation gratuite — (416) 245-7474',
     ctaPricing: 'Voir les prix exacts',
@@ -301,7 +301,7 @@ const fr: ImplantPillarContent = {
 const es: ImplantPillarContent = {
   meta: {
     title: 'Dentaduras sobre implantes en Toronto | Sobredentaduras a presión y fijas — $5,250 fijo por arcada',
-    description: 'Dentaduras retenidas por implantes en Toronto por Damien Hiorth DD — 25 años de experiencia. Sobredentaduras a presión $5,250 precio fijo por arcada, diseñadas y fresadas CNC en nuestro laboratorio de North York. Consulta gratuita: (416) 245-7474.',
+    description: 'Dentaduras retenidas por implantes en Toronto por Damien John Hiorth DD — 25 años de experiencia. Sobredentaduras a presión $5,250 precio fijo por arcada, diseñadas y fresadas CNC en nuestro laboratorio de North York. Consulta gratuita: (416) 245-7474.',
     ogTitle: 'Dentaduras sobre implantes en Toronto | A presión y fijas',
     ogDescription: 'Deje de luchar con una dentadura floja. Sobredentaduras a presión y fijas, $5,250 fijo por arcada, fresadas CNC en nuestro laboratorio de North York. Consulta gratuita.',
   },
@@ -310,7 +310,7 @@ const es: ImplantPillarContent = {
     badge: 'Especialistas en dentaduras sobre implantes en Toronto · 25 años',
     h1a: 'Dentaduras sobre implantes',
     h1b: 'en Toronto',
-    sub: 'Sobredentaduras a presión y fijas que nunca se mueven, no flotan y no necesitan adhesivo — diseñadas por Damien Hiorth DD y fresadas CNC en nuestro propio laboratorio de North York.',
+    sub: 'Sobredentaduras a presión y fijas que nunca se mueven, no flotan y no necesitan adhesivo — diseñadas por Damien John Hiorth DD y fresadas CNC en nuestro propio laboratorio de North York.',
     priceLine: '**$5,250 precio fijo por arcada.** Sin impuestos. Sin «desde». Consulta gratuita.',
     ctaCall: 'Reserve su consulta gratuita — (416) 245-7474',
     ctaPricing: 'Ver precios exactos',
@@ -431,7 +431,7 @@ const es: ImplantPillarContent = {
 const it: ImplantPillarContent = {
   meta: {
     title: 'Protesi su impianti a Toronto | Overdenture ad aggancio e fisse — 5.250 $ fisso per arcata',
-    description: 'Protesi su impianti a Toronto di Damien Hiorth DD — 25 anni di esperienza. Overdenture ad aggancio 5.250 $ prezzo fisso per arcata, progettate e fresate CNC nel nostro laboratorio di North York. Consulenza gratuita: (416) 245-7474.',
+    description: 'Protesi su impianti a Toronto di Damien John Hiorth DD — 25 anni di esperienza. Overdenture ad aggancio 5.250 $ prezzo fisso per arcata, progettate e fresate CNC nel nostro laboratorio di North York. Consulenza gratuita: (416) 245-7474.',
     ogTitle: 'Protesi su impianti a Toronto | Ad aggancio e fisse',
     ogDescription: 'Basta lottare con una dentiera che balla. Overdenture ad aggancio e fisse, 5.250 $ fisso per arcata, fresate CNC nel nostro laboratorio di North York. Consulenza gratuita.',
   },
@@ -440,7 +440,7 @@ const it: ImplantPillarContent = {
     badge: 'Gli specialisti delle protesi su impianti a Toronto · 25 anni',
     h1a: 'Protesi dentarie su impianti',
     h1b: 'a Toronto',
-    sub: 'Overdenture ad aggancio e fisse che non si spostano, non ballano e non richiedono adesivo — progettate da Damien Hiorth DD e fresate CNC nel nostro laboratorio di North York.',
+    sub: 'Overdenture ad aggancio e fisse che non si spostano, non ballano e non richiedono adesivo — progettate da Damien John Hiorth DD e fresate CNC nel nostro laboratorio di North York.',
     priceLine: '**5.250 $ prezzo fisso per arcata.** Niente tasse. Niente «a partire da». Consulenza gratuita.',
     ctaCall: 'Prenoti la sua consulenza gratuita — (416) 245-7474',
     ctaPricing: 'Vedi i prezzi esatti',
@@ -561,7 +561,7 @@ const it: ImplantPillarContent = {
 const vi: ImplantPillarContent = {
   meta: {
     title: 'Hàm giả trên implant tại Toronto | Hàm bấm khớp & cố định — 5.250 $ giá cố định mỗi hàm',
-    description: 'Hàm giả trên implant tại Toronto bởi Damien Hiorth DD — 25 năm kinh nghiệm. Hàm bấm khớp 5.250 $ giá cố định mỗi hàm, thiết kế và phay CNC tại phòng lab riêng ở North York. Tư vấn miễn phí: (416) 245-7474.',
+    description: 'Hàm giả trên implant tại Toronto bởi Damien John Hiorth DD — 25 năm kinh nghiệm. Hàm bấm khớp 5.250 $ giá cố định mỗi hàm, thiết kế và phay CNC tại phòng lab riêng ở North York. Tư vấn miễn phí: (416) 245-7474.',
     ogTitle: 'Hàm giả trên implant tại Toronto | Bấm khớp & cố định',
     ogDescription: 'Chấm dứt hàm giả lỏng lẻo. Hàm giả bấm khớp và cố định trên implant, 5.250 $ giá cố định mỗi hàm, phay CNC tại phòng lab riêng ở North York. Tư vấn miễn phí.',
   },
@@ -570,7 +570,7 @@ const vi: ImplantPillarContent = {
     badge: 'Chuyên gia hàm giả trên implant tại Toronto · 25 năm',
     h1a: 'Hàm giả trên implant',
     h1b: 'tại Toronto',
-    sub: 'Hàm giả bấm khớp và cố định trên implant — không xê dịch, không bập bênh, không cần keo dán — do Damien Hiorth DD thiết kế và phay CNC tại phòng lab riêng ở North York.',
+    sub: 'Hàm giả bấm khớp và cố định trên implant — không xê dịch, không bập bênh, không cần keo dán — do Damien John Hiorth DD thiết kế và phay CNC tại phòng lab riêng ở North York.',
     priceLine: '**5.250 $ giá cố định mỗi hàm.** Không thuế. Không “từ … trở lên”. Tư vấn miễn phí.',
     ctaCall: 'Đặt lịch tư vấn miễn phí — (416) 245-7474',
     ctaPricing: 'Xem bảng giá chi tiết',

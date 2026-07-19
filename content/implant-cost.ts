@@ -42,7 +42,7 @@ const en: ImplantCostContent = {
   hero: {
     badge: 'North York · Toronto · GTA',
     h1: 'How Much Do Implant Dentures Cost in Toronto?',
-    sub: 'An honest answer from Damien Hiorth DD — 25 years in practice. Two costs. One you can control, one you can’t. Here’s how it works.',
+    sub: 'An honest answer from Damien John Hiorth DD — 25 years in practice. Two costs. One you can control, one you can’t. Here’s how it works.',
     ctaCall: 'Get a Free Quote — (416) 245-7474',
     ctaBreakdown: 'See the Breakdown ↓',
   },
@@ -136,7 +136,7 @@ const fr: ImplantCostContent = {
   hero: {
     badge: 'North York · Toronto · Grand Toronto',
     h1: 'Combien coûtent les prothèses sur implants à Toronto?',
-    sub: 'Une réponse honnête de Damien Hiorth DD — 25 ans de pratique. Deux coûts. Un que vous maîtrisez, un que vous ne maîtrisez pas. Voici comment ça fonctionne.',
+    sub: 'Une réponse honnête de Damien John Hiorth DD — 25 ans de pratique. Deux coûts. Un que vous maîtrisez, un que vous ne maîtrisez pas. Voici comment ça fonctionne.',
     ctaCall: 'Obtenez un devis gratuit — (416) 245-7474',
     ctaBreakdown: 'Voir le détail ↓',
   },
@@ -230,7 +230,7 @@ const es: ImplantCostContent = {
   hero: {
     badge: 'North York · Toronto · Área metropolitana',
     h1: '¿Cuánto cuestan las dentaduras sobre implantes en Toronto?',
-    sub: 'Una respuesta honesta de Damien Hiorth DD — 25 años de práctica. Dos costos. Uno que puede controlar, otro que no. Así funciona.',
+    sub: 'Una respuesta honesta de Damien John Hiorth DD — 25 años de práctica. Dos costos. Uno que puede controlar, otro que no. Así funciona.',
     ctaCall: 'Obtenga una cotización gratis — (416) 245-7474',
     ctaBreakdown: 'Ver el desglose ↓',
   },
@@ -324,7 +324,7 @@ const it: ImplantCostContent = {
   hero: {
     badge: 'North York · Toronto · Area metropolitana',
     h1: 'Quanto costano le protesi su impianti a Toronto?',
-    sub: 'Una risposta onesta da Damien Hiorth DD — 25 anni di attività. Due costi. Uno che può controllare, uno che non può. Ecco come funziona.',
+    sub: 'Una risposta onesta da Damien John Hiorth DD — 25 anni di attività. Due costi. Uno che può controllare, uno che non può. Ecco come funziona.',
     ctaCall: 'Richieda un preventivo gratuito — (416) 245-7474',
     ctaBreakdown: 'Vedi l’analisi ↓',
   },
@@ -418,7 +418,7 @@ const vi: ImplantCostContent = {
   hero: {
     badge: 'North York · Toronto · Vùng Đại Toronto',
     h1: 'Hàm giả trên implant ở Toronto giá bao nhiêu?',
-    sub: 'Câu trả lời thẳng thắn từ Damien Hiorth DD — 25 năm hành nghề. Hai khoản chi phí. Một khoản bạn kiểm soát được, một khoản thì không. Đây là cách nó vận hành.',
+    sub: 'Câu trả lời thẳng thắn từ Damien John Hiorth DD — 25 năm hành nghề. Hai khoản chi phí. Một khoản bạn kiểm soát được, một khoản thì không. Đây là cách nó vận hành.',
     ctaCall: 'Nhận báo giá miễn phí — (416) 245-7474',
     ctaBreakdown: 'Xem chi tiết ↓',
   },

@@ -30,7 +30,7 @@ export async function generateMetadata({ params: { locale, slug } }: { params: {
       locale,
       type: 'article',
       publishedTime: post.date,
-      authors: ['Damien Hiorth DD'],
+      authors: ['Damien John Hiorth DD'],
       images: [{ url: post.image, width: 1200, height: 630, alt: post.imageAlt }],
     },
   };
@@ -106,7 +106,7 @@ export default function BlogPostPage({ params: { locale, slug } }: { params: { l
           </nav>
           <span className="pill-badge border-brand-blue/30 bg-brand-blue/12 text-brand-blue mb-4 inline-flex">{post.category}</span>
           <h1 className="text-4xl md:text-5xl font-bold leading-[1.1] mb-5">{post.title}</h1>
-          <p className="text-white/60 text-sm">By Damien Hiorth DD · {post.dateLabel} · {post.readTime}</p>
+          <p className="text-white/60 text-sm">By Damien John Hiorth DD · {post.dateLabel} · {post.readTime}</p>
         </div>
       </section>
 
