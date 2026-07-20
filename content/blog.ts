@@ -330,6 +330,41 @@ ${CTA}
 ${CTA}
 `,
   },
+  {
+    slug: 'how-much-do-implant-dentures-cost-toronto-2026',
+    category: 'Implant Dentures',
+    title: 'How Much Do Implant Dentures Really Cost in Toronto? (2026 Breakdown)',
+    metaTitle: 'Implant Dentures Cost Toronto 2026: The Real Breakdown | Dentures Direct',
+    excerpt: "Trying to figure out what implant dentures actually cost before you book a consult? Here's the honest 2026 breakdown — what's flat, what varies, and real example math.",
+    metaDescription: "What do implant-retained (snap-on) dentures cost in Toronto in 2026? A straight breakdown of the overdenture fee, implant surgery cost, and what CDCP covers. Dentures Direct, North York.",
+    date: '2026-07-20',
+    dateLabel: 'July 20, 2026',
+    readTime: '5 min read',
+    image: '/implant-before-after.png',
+    imageAlt: 'Implant-retained denture before and after result — real cost breakdown from Dentures Direct Toronto',
+    keywords: 'implant dentures cost Toronto, snap on denture cost, how much do implant dentures cost, implant overdenture price Toronto 2026, denture implant cost breakdown',
+    body: `
+<p>Every consultation starts with the same question, and it's the right one to ask before anything else: <em>what is this actually going to cost?</em> The honest answer has two parts — one is a flat, predictable number, and one genuinely varies. Here's the real breakdown for 2026.</p>
+<h2>Part 1: The overdenture itself — flat and predictable</h2>
+<p>The denture that clips onto your implants is a fixed price at Dentures Direct: <strong>$5,250 per arch</strong>. No tax, no "starting at," no surprise add-ons once you're in the chair. This is the part we control entirely — it's designed and milled in our own North York lab, so we can quote it with certainty.</p>
+<h2>Part 2: The implant surgery — the part that varies</h2>
+<p>The implants themselves are placed by an oral surgeon and billed separately from the denture. This is the number that shifts case to case, because it depends on your bone density, whether you need a graft, and which surgeon does the work. Last year, the average across our referred patients was <strong>about $2,370 per implant</strong> — but your CBCT scan (a 3D X-ray your surgeon takes) is the only way to get an exact figure for your jaw.</p>
+<h2>Putting it together: example math</h2>
+<p>Here's roughly what a full case can look like, using last year's average surgical cost:</p>
+<ul>
+<li><strong>Lower arch</strong> (typically 3 implants): ~$2,370 × 3 ≈ $7,110 in surgery + $5,250 overdenture ≈ <strong>$12,360 total</strong></li>
+<li><strong>Upper arch</strong> (typically 4 implants, since upper bone is softer): ~$2,370 × 4 ≈ $9,480 in surgery + $5,250 overdenture ≈ <strong>$14,730 total</strong></li>
+</ul>
+<p>These are averages, not quotes — grafting, sedation, and surgeon fees can move the surgical number up or down. But it gives you a realistic ballpark to walk into a consultation with, instead of guessing.</p>
+<h2>What if you already have implants?</h2>
+<p>If implants were placed elsewhere and they're healthy and well-positioned, your only cost is often the <strong>$5,250 overdenture</strong> — the most expensive part is already done. This is one of our most common cases.</p>
+<h2>Does CDCP cover any of this?</h2>
+<p>The Canadian Dental Care Plan does not currently cover implant surgery. It may cover a portion of the denture component depending on your plan tier — coverage details are evolving, so it's worth a call before you assume either way. See our full <a href="/en/cdcp-toronto-denturist">CDCP coverage guide</a> for what's currently included.</p>
+<h2>The only way to get your real number</h2>
+<p>Averages are a starting point, not a quote. A free consultation gets you an actual CBCT scan, an honest read on your bone, and a written number for both the surgery and the denture — no pressure, and we'll tell you plainly if you're not a candidate. See the full <a href="/en/implant-dentures-cost-toronto">interactive cost breakdown</a> or book a visit below.</p>
+${CTA}
+`,
+  },
 ];
 
 export function getAllPosts(): BlogPost[] {

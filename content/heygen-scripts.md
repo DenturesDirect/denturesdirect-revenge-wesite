@@ -175,6 +175,26 @@ seven-four-seven-four and let's talk about getting you to day thirty.
 
 ---
 
+## 10 — How Much Do Implant Dentures Really Cost in Toronto?
+`slug: how-much-do-implant-dentures-cost-toronto-2026`
+
+> **On-screen title:** "What implant dentures actually cost in Toronto — 2026"
+
+Every consultation starts with the same question, and it's the right one — what's this
+actually going to cost? There are really two parts. The overdenture itself is flat and
+predictable: five thousand two hundred fifty dollars per arch, no tax, no "starting at" —
+we mill it ourselves, so we can quote it with certainty. The implant surgery is separate,
+done by an oral surgeon, and it's the part that varies with your bone and whether you need a
+graft. Last year our patients averaged about two thousand three hundred seventy dollars per
+implant. So for a typical lower arch with three implants, you're looking at roughly twelve
+thousand dollars all-in; an upper arch with four is closer to fifteen. If you already have
+implants placed elsewhere, your only cost is often just the overdenture. Averages are a
+starting point, not a quote — a free consultation and a CBCT scan gets you your real number.
+I'm Damien at Dentures Direct in North York. Call four-one-six, two-four-five,
+seven-four-seven-four.
+
+---
+
 ### Optional universal outro (swap in if you want a consistent sign-off)
 "Honest assessment, clear pricing, and if you're not a candidate — I'll tell you that too.
 That's the Dentures Direct difference."
