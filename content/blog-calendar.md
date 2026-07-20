@@ -9,7 +9,6 @@ with supporting digital/partial/CDCP/local topics to build topical authority.
 
 ## Queue (implant-focused first)
 - [ ] How Much Do Implant Dentures Really Cost in Toronto? (2026 breakdown) — *implant, high intent*
-- [ ] Life With Snap-On Dentures: What the First 30 Days Are Really Like — *implant, experience/E-E-A-T*
 - [ ] How Many Implants Do You Need for Snap-On Dentures? — *implant, question keyword*
 - [ ] Do You Need a Bone Graft for Implant Dentures? — *implant, candidacy*
 - [ ] Why Your Lower Denture Won't Stay Put (and the Only Real Fix) — *implant, pain point*
@@ -43,3 +42,4 @@ with supporting digital/partial/CDCP/local topics to build topical authority.
 - [x] Acrylic vs. Cast vs. Flexible Partial Dentures: A Complete Guide
 - [x] Denture Relines: How to Fix Loose Dentures (Hard vs. Soft)
 - [x] What to Do If Your Denture Breaks: Emergency Repair Guide
+- [x] Life With Snap-On Dentures: What the First 30 Days Are Really Like
