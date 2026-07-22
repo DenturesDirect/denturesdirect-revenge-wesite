@@ -33,7 +33,7 @@
   body {
     color: var(--brand-dark);
     background-color: var(--brand-ice);
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Poppins', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -43,9 +43,9 @@
     letter-spacing: -0.025em;
   }
 
-  /* Playfair display headings — apply class="font-display" */
+  /* Accent headings — apply class="font-display" */
   .font-display {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Poppins', sans-serif;
   }
 }
 
@@ -205,7 +205,7 @@
   font-weight: 900;
   line-height: 1;
   color: rgba(59,130,246,0.07);
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Poppins', sans-serif;
   pointer-events: none;
   user-select: none;
 }
@@ -237,7 +237,7 @@
   outline: none;
   background: white;
   color: var(--brand-dark);
-  font-family: 'Outfit', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 1rem;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }

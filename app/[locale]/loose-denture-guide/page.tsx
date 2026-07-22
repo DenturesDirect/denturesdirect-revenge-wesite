@@ -43,7 +43,7 @@ export default function LooseDentureGuidePage() {
   }
 
   return (
-    <div className="w-full min-h-screen bg-[#f8fafc] font-sans" style={{ fontFamily: "'Outfit', sans-serif" }}>
+    <div className="w-full min-h-screen bg-[#f8fafc] font-sans" style={{ fontFamily: "'Poppins', sans-serif" }}>
 
       {/* Main content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

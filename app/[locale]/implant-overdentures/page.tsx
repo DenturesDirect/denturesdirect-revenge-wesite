@@ -101,7 +101,7 @@ function FAQItem({ q, a }: { q: string; a: React.ReactNode }) {
 export default function ImplantOverdenturesLandingPage() {
   const locale = useLocale();
   return (
-    <div className="w-full font-sans bg-white" style={{ fontFamily: "'Outfit', sans-serif" }}>
+    <div className="w-full font-sans bg-white" style={{ fontFamily: "'Poppins', sans-serif" }}>
       {/* ── Hero ── */}
       <section className="relative pt-16 pb-0 min-h-[85vh] flex items-center bg-brand-dark overflow-hidden">
         {/* Background image */}

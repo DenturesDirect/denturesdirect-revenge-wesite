@@ -78,7 +78,7 @@ export default function WoodbridgeClient() {
   const locale = useLocale();
 
   return (
-    <div className="w-full font-sans bg-white" style={{ fontFamily: "'Outfit', sans-serif" }}>
+    <div className="w-full font-sans bg-white" style={{ fontFamily: "'Poppins', sans-serif" }}>
 
       {/* ── Hero ── */}
       <section className="relative pt-28 pb-20 bg-brand-dark overflow-hidden">
@@ -235,7 +235,7 @@ export default function WoodbridgeClient() {
       </section>
 
       {/* Google Fonts */}
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap');`}</style>
+      <style>{`@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');`}</style>
     </div>
   );
 }
