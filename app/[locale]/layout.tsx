@@ -80,7 +80,7 @@ export default async function LocaleLayout({children, params: {locale}}: Props) 
                   <img
                     src="/dentures-direct-toronto-logo.png"
                     alt="Dentures Direct Toronto"
-                    className="h-10 w-auto brightness-0 invert opacity-90"
+                    className="h-16 w-auto brightness-0 invert opacity-90"
                   />
                   <p className="text-white/50 text-sm leading-relaxed max-w-xs">
                     {tf('blurb')}
@@ -147,7 +147,7 @@ export default async function LocaleLayout({children, params: {locale}}: Props) 
                 <div>
                   <div className="flex items-center gap-2 mb-4">
                     <h4 className="text-white font-semibold text-sm uppercase tracking-widest">{tf('hours')}</h4>
-                    <span className="text-[10px] font-semibold uppercase tracking-wide text-amber-300 bg-amber-400/10 border border-amber-300/30 rounded-full px-2 py-0.5">{tf('summer_hours')}</span>
+                    <span className="whitespace-nowrap text-[10px] font-semibold uppercase tracking-wide text-amber-300 bg-amber-400/10 border border-amber-300/30 rounded-full px-2 py-0.5">{tf('summer_hours')}</span>
                   </div>
                   <ul className="space-y-2 text-sm text-white/60">
                     <li className="flex justify-between"><span>{tf('mon_thu')}</span><span className="text-white/80 font-medium">8:00 AM – 6:00 PM</span></li>
