@@ -49,7 +49,7 @@ export default function Header() {
               <img
                 src="/dentures-direct-toronto-logo.png"
                 alt="Dentures Direct Toronto"
-                className={`w-auto brightness-0 invert transition-all duration-300 group-hover:opacity-80 ${scrolled ? 'h-[38px]' : 'h-[44px]'}`}
+                className={`w-auto brightness-0 invert transition-all duration-300 group-hover:opacity-80 ${scrolled ? 'h-[48px]' : 'h-[60px]'}`}
               />
             </Link>
 
@@ -59,14 +59,14 @@ export default function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="nav-link text-white/70 hover:text-white transition-colors duration-200 px-3 py-1.5 text-sm font-medium rounded-md hover:bg-white/5"
+                  className="nav-link whitespace-nowrap text-white/70 hover:text-white transition-colors duration-200 px-3 py-1.5 text-sm font-medium rounded-md hover:bg-white/5"
                 >
                   {link.label}
                 </Link>
               ))}
               <Link
                 href={`/${locale}/contact`}
-                className="ml-1 px-4 py-1.5 rounded-full text-sm font-semibold text-white border border-brand-blue/50 hover:border-brand-blue hover:bg-brand-blue/15 transition-all duration-200"
+                className="ml-1 px-4 py-1.5 rounded-full text-sm font-semibold text-white border border-brand-blue/50 hover:border-brand-blue hover:bg-brand-blue/15 transition-all duration-200 whitespace-nowrap"
               >
                 {t('book_online')}
               </Link>

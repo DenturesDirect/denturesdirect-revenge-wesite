@@ -17,7 +17,7 @@ const differences = [
   },
   {
     traditional: 'Outsourced to a third-party lab — weeks of waiting',
-    digital: 'Fabricated in our North York lab by Luisa RDT',
+    digital: 'Fabricated in our North York lab by Luisa, RDT Candidate',
     icon: '🏭',
   },
   {
@@ -41,7 +41,7 @@ const whyCards = [
   },
   {
     title: 'Milled Right Here.',
-    desc: 'Your digital design goes directly to the CNC mill in our North York lab. Luisa RDT oversees fabrication personally. We do not ship your mouth to a stranger.',
+    desc: 'Your digital design goes directly to the CNC mill in our North York lab. Luisa, our RDT Candidate, oversees fabrication personally. We do not ship your mouth to a stranger.',
     img: '/cnc-milling-lab.png',
     imgAlt: 'CNC milling machine fabricating a denture in-house',
   },
@@ -128,7 +128,7 @@ export default function DigitalDenturesPage() {
                 </div>
                 <div className="mt-6 flex items-center gap-3 bg-emerald-500/10 border border-emerald-500/20 rounded-xl p-4">
                   <span className="text-2xl">🏅</span>
-                  <p className="text-emerald-300 text-sm font-semibold">Luisa Gomez RDT oversees every fabrication — fewer than 5% of clinics have an RDT on staff.</p>
+                  <p className="text-emerald-300 text-sm font-semibold">Luisa Gomez, RDT Candidate, oversees every fabrication — fewer than 5% of clinics have an RDT candidate on staff.</p>
                 </div>
                 <div className="mt-4 flex items-center gap-3 bg-amber-500/10 border border-amber-500/20 rounded-xl p-4">
                   <span className="text-2xl">⚠️</span>
