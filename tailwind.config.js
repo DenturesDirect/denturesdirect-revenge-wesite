@@ -21,8 +21,8 @@ module.exports = {
         }
       },
       fontFamily: {
-        sans:    ['Outfit', 'sans-serif'],
-        display: ['Playfair Display', 'serif'],
+        sans:    ['Poppins', 'sans-serif'],
+        display: ['Poppins', 'sans-serif'],
       },
       boxShadow: {
         'card':       '0 4px 24px 0 rgba(59,130,246,0.08), 0 1px 4px 0 rgba(29,41,57,0.06)',
