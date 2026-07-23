@@ -40,6 +40,21 @@ export default function GalleryPage() {
       title: "Premium Digital Full Dentures",
       before: "/gallery-6-before.jpg",
       after: "/gallery-6-after.jpg",
+    },
+    {
+      title: "Front Tooth Restoration",
+      before: "/gallery-7-before.jpg",
+      after: "/gallery-7-after.jpg",
+    },
+    {
+      title: "Full Smile Makeover",
+      before: "/gallery-8-before.jpg",
+      after: "/gallery-8-after.jpg",
+    },
+    {
+      title: "Natural-Looking Tooth Replacement",
+      before: "/gallery-9-before.jpg",
+      after: "/gallery-9-after.jpg",
     }
   ];
 
