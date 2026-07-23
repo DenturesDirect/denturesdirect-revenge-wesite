@@ -21,6 +21,7 @@ export default function Header() {
     { href: `/${locale}`,                              label: t('home') },
     { href: `/${locale}/denture-services/implant-retained-overdentures-toronto`, label: t('implant_dentures') },
     { href: `/${locale}/denture-services`,             label: t('services') },
+    { href: `/${locale}/gallery`,                      label: t('gallery') },
     { href: `/${locale}/about-us`,                     label: t('team') },
     { href: `/${locale}/happy-patients`,               label: t('reviews') },
     { href: `/${locale}/first-time-patients`,          label: t('new_patients') },
@@ -54,19 +55,19 @@ export default function Header() {
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-1">
+            <nav className="hidden xl:flex items-center">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="nav-link whitespace-nowrap text-white/70 hover:text-white transition-colors duration-200 px-3 py-1.5 text-sm font-medium rounded-md hover:bg-white/5"
+                  className="nav-link whitespace-nowrap text-white/70 hover:text-white transition-colors duration-200 px-2 py-1.5 text-[13px] font-medium rounded-md hover:bg-white/5"
                 >
                   {link.label}
                 </Link>
               ))}
               <Link
                 href={`/${locale}/contact`}
-                className="ml-1 px-4 py-1.5 rounded-full text-sm font-semibold text-white border border-brand-blue/50 hover:border-brand-blue hover:bg-brand-blue/15 transition-all duration-200 whitespace-nowrap"
+                className="ml-1 px-3 py-1.5 rounded-full text-[13px] font-semibold text-white border border-brand-blue/50 hover:border-brand-blue hover:bg-brand-blue/15 transition-all duration-200 whitespace-nowrap"
               >
                 {t('book_online')}
               </Link>
@@ -87,7 +88,7 @@ export default function Header() {
               {/* Mobile hamburger */}
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
-                className="lg:hidden p-2 rounded-md text-white/70 hover:text-white hover:bg-white/10 transition-colors"
+                className="xl:hidden p-2 rounded-md text-white/70 hover:text-white hover:bg-white/10 transition-colors"
                 aria-label="Toggle menu"
               >
                 <div className="w-5 h-4 flex flex-col justify-between">
@@ -103,7 +104,7 @@ export default function Header() {
 
       {/* Mobile Drawer */}
       <div
-        className={`fixed inset-0 z-40 lg:hidden transition-all duration-300 ${mobileOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
+        className={`fixed inset-0 z-40 xl:hidden transition-all duration-300 ${mobileOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
       >
         {/* Backdrop */}
         <div

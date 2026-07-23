@@ -40,6 +40,21 @@ export default function GalleryPage() {
       title: "Premium Digital Full Dentures",
       before: "/gallery-6-before.jpg",
       after: "/gallery-6-after.jpg",
+    },
+    {
+      title: "Front Tooth Restoration",
+      before: "/gallery-7-before.jpg",
+      after: "/gallery-7-after.jpg",
+    },
+    {
+      title: "Full Smile Makeover",
+      before: "/gallery-8-before.jpg",
+      after: "/gallery-8-after.jpg",
+    },
+    {
+      title: "Natural-Looking Tooth Replacement",
+      before: "/gallery-9-before.jpg",
+      after: "/gallery-9-after.jpg",
     }
   ];
 
@@ -167,15 +182,24 @@ export default function GalleryPage() {
         <motion.div initial="hidden" animate="visible" variants={staggerContainer} className="grid md:grid-cols-2 gap-8">
           {galleryItems.map((item, idx) => (
             <motion.div key={idx} variants={fadeUp} className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group">
-              <div className="relative w-full aspect-[3/4] flex flex-col">
-                <div className="relative w-full h-1/2 bg-gray-200">
+              <div className="relative w-full grid grid-cols-2 gap-0.5 bg-white">
+                <div className="relative w-full aspect-square bg-gray-200">
                   <Image src={item.before} alt={`Before - ${item.title}`} fill className="object-cover" />
                   <div className="absolute top-2 left-2 bg-black/60 text-white px-3 py-1 text-xs font-bold uppercase rounded tracking-wider backdrop-blur-sm z-10">Before</div>
                 </div>
-                <div className="relative w-full h-1/2 bg-gray-100 border-t-2 border-white">
+                <div className="relative w-full aspect-square bg-gray-100">
                   <Image src={item.after} alt={`After - ${item.title}`} fill className="object-cover" />
-                  <div className="absolute top-2 left-2 bg-brand-blue/90 text-white px-3 py-1 text-xs font-bold uppercase rounded tracking-wider backdrop-blur-sm z-10">After</div>
+                  <div className="absolute top-2 right-2 bg-brand-blue/90 text-white px-3 py-1 text-xs font-bold uppercase rounded tracking-wider backdrop-blur-sm z-10">After</div>
                 </div>
+                {/* Direction indicator */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white shadow-lg flex items-center justify-center">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="#0EA5E9" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+              <div className="px-5 py-4">
+                <h3 className="font-bold text-brand-dark">{item.title}</h3>
               </div>
             </motion.div>
           ))}
