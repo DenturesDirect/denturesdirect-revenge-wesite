@@ -55,20 +55,20 @@ export default function GalleryPage() {
 
   const featuredVideos = [
     {
-      title: 'Upper Immediate Denture',
-      caption: 'From heavy decay and staining to a bright, even smile with an upper immediate denture.',
+      title: 'Upper & Lower Snap-On Dentures',
+      caption: 'Heavy decay and staining treated with snap-on (implant-retained) dentures for both arches.',
       src: '/videos/smile-transformation-3-before-after-toronto.mp4',
       poster: '/videos/smile-transformation-3-before-after-toronto.jpg',
     },
     {
-      title: 'Upper Immediate Denture',
-      caption: 'Gapped, missing upper teeth restored with an upper immediate denture.',
+      title: 'Upper Immediate Dentures',
+      caption: 'Gapped, missing upper teeth restored with upper immediate dentures.',
       src: '/videos/smile-transformation-2-before-after-toronto.mp4',
       poster: '/videos/smile-transformation-2-before-after-toronto.jpg',
     },
     {
-      title: 'Upper & Lower Snap-On Denture',
-      caption: 'Worn, uneven teeth replaced with a snap-on (implant-retained) denture for both arches.',
+      title: 'Upper Digital Denture',
+      caption: 'Worn, uneven teeth restored with an upper digital denture.',
       src: '/videos/smile-transformation-before-after-toronto.mp4',
       poster: '/videos/smile-transformation-before-after-toronto.jpg',
     },
@@ -78,9 +78,9 @@ export default function GalleryPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'VideoObject',
-      name: 'Upper Immediate Denture — Before & After | Dentures Direct Toronto',
+      name: 'Upper & Lower Snap-On Dentures — Before & After | Dentures Direct Toronto',
       description:
-        'A real Dentures Direct patient, before and after — heavy decay and staining transformed into a bright, even smile with an upper immediate denture. Filmed at our North York, Toronto denture clinic.',
+        'A real Dentures Direct patient, before and after — heavy decay and staining treated with snap-on (implant-retained) dentures for both arches. Filmed at our North York, Toronto denture clinic.',
       thumbnailUrl: ['https://www.denturesdirect.ca/videos/smile-transformation-3-before-after-toronto.jpg'],
       uploadDate: '2026-07-18',
       duration: 'PT11S',
@@ -99,9 +99,9 @@ export default function GalleryPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'VideoObject',
-      name: 'Upper Immediate Denture — Before & After | Dentures Direct Toronto',
+      name: 'Upper Immediate Dentures — Before & After | Dentures Direct Toronto',
       description:
-        'A real Dentures Direct patient, before and after — gapped, missing upper teeth restored with an upper immediate denture. Filmed at our North York, Toronto denture clinic.',
+        'A real Dentures Direct patient, before and after — gapped, missing upper teeth restored with upper immediate dentures. Filmed at our North York, Toronto denture clinic.',
       thumbnailUrl: ['https://www.denturesdirect.ca/videos/smile-transformation-2-before-after-toronto.jpg'],
       uploadDate: '2026-07-18',
       duration: 'PT10S',
@@ -120,9 +120,9 @@ export default function GalleryPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'VideoObject',
-      name: 'Upper & Lower Snap-On Denture — Before & After | Dentures Direct Toronto',
+      name: 'Upper Digital Denture — Before & After | Dentures Direct Toronto',
       description:
-        'A real Dentures Direct patient, before and after treatment — worn, uneven teeth replaced with a snap-on (implant-retained) denture for both the upper and lower arches. Filmed at our North York, Toronto denture clinic.',
+        'A real Dentures Direct patient, before and after treatment — worn, uneven teeth restored with an upper digital denture. Filmed at our North York, Toronto denture clinic.',
       thumbnailUrl: ['https://www.denturesdirect.ca/videos/smile-transformation-before-after-toronto.jpg'],
       uploadDate: '2026-07-17',
       duration: 'PT11S',
