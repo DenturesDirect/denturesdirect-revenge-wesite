@@ -67,8 +67,8 @@ export default function GalleryPage() {
       poster: '/videos/smile-transformation-2-before-after-toronto.jpg',
     },
     {
-      title: 'A smile renewed',
-      caption: 'From uneven, worn teeth to a straight, natural smile.',
+      title: 'Upper & Lower Immediate Dentures',
+      caption: 'Worn, uneven teeth replaced with immediate dentures for both arches.',
       src: '/videos/smile-transformation-before-after-toronto.mp4',
       poster: '/videos/smile-transformation-before-after-toronto.jpg',
     },
@@ -110,9 +110,9 @@ export default function GalleryPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'VideoObject',
-      name: 'Real Denture Smile Transformation — Before & After | Dentures Direct Toronto',
+      name: 'Upper & Lower Immediate Dentures — Before & After | Dentures Direct Toronto',
       description:
-        'A real Dentures Direct patient, before and after treatment — from uneven, worn teeth to a natural, confident smile. Filmed at our North York, Toronto denture clinic.',
+        'A real Dentures Direct patient, before and after treatment — worn, uneven teeth replaced with immediate dentures for both the upper and lower arches. Filmed at our North York, Toronto denture clinic.',
       thumbnailUrl: ['https://www.denturesdirect.ca/videos/smile-transformation-before-after-toronto.jpg'],
       uploadDate: '2026-07-17',
       duration: 'PT11S',
