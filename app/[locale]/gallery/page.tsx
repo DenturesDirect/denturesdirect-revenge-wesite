@@ -12,17 +12,17 @@ export default function GalleryPage() {
 
   const galleryItems = [
     {
-      title: "Digital Denture Restoration",
+      title: "Cast Partial Denture",
       before: "/digital-dentures-before-treatment-toronto.jpg",
       after: "/digital-dentures-after-treatment-toronto.jpg",
     },
     {
-      title: "Implant Retained Overdentures",
+      title: "Acrylic Partial Denture",
       before: "/implant-retained-overdentures-before-toronto.jpg",
       after: "/implant-retained-overdentures-after-toronto.jpg",
     },
     {
-      title: "Missing Front Teeth Restored",
+      title: "Flexible Partial Denture",
       before: "/gallery-1-before.jpg",
       after: "/gallery-1-after.jpg",
     },
@@ -32,22 +32,22 @@ export default function GalleryPage() {
       after: "/gallery-2-after.jpg",
     },
     {
-      title: "Acrylic Partial Denture",
+      title: "Flexible Partial Denture",
       before: "/gallery-3-before.jpg",
       after: "/gallery-3-after.jpg",
     },
     {
-      title: "Flexible Partial Denture",
+      title: "Immediate Partial Denture",
       before: "/gallery-6-before.jpg",
       after: "/gallery-6-after.jpg",
     },
     {
-      title: "Front Tooth Restoration",
+      title: "Cast Partial Denture",
       before: "/gallery-7-before.jpg",
       after: "/gallery-7-after.jpg",
     },
     {
-      title: "Full Smile Makeover",
+      title: "Smile Transformation",
       before: "/gallery-8-before.jpg",
       after: "/gallery-8-after.jpg",
     },
