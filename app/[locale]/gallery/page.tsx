@@ -22,7 +22,7 @@ export default function GalleryPage() {
       after: "/implant-retained-overdentures-after-toronto.jpg",
     },
     {
-      title: "Complete Maxillary Restoration",
+      title: "Missing Front Teeth Restored",
       before: "/gallery-1-before.jpg",
       after: "/gallery-1-after.jpg",
     },
@@ -32,12 +32,12 @@ export default function GalleryPage() {
       after: "/gallery-2-after.jpg",
     },
     {
-      title: "Emergency Repair & Reline",
+      title: "Chipped Tooth Repair",
       before: "/gallery-3-before.jpg",
       after: "/gallery-3-after.jpg",
     },
     {
-      title: "Premium Digital Full Dentures",
+      title: "Smile Brightening & Realignment",
       before: "/gallery-6-before.jpg",
       after: "/gallery-6-after.jpg",
     },
@@ -51,11 +51,6 @@ export default function GalleryPage() {
       before: "/gallery-8-before.jpg",
       after: "/gallery-8-after.jpg",
     },
-    {
-      title: "Natural-Looking Tooth Replacement",
-      before: "/gallery-9-before.jpg",
-      after: "/gallery-9-after.jpg",
-    }
   ];
 
   const featuredVideos = [
@@ -66,8 +61,8 @@ export default function GalleryPage() {
       poster: '/videos/smile-transformation-3-before-after-toronto.jpg',
     },
     {
-      title: 'Complete digital denture',
-      caption: 'Missing, worn upper teeth restored with a complete digital denture.',
+      title: 'Missing teeth, restored',
+      caption: 'From gapped, missing upper teeth to a full, even smile.',
       src: '/videos/smile-transformation-2-before-after-toronto.mp4',
       poster: '/videos/smile-transformation-2-before-after-toronto.jpg',
     },
@@ -99,9 +94,9 @@ export default function GalleryPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'VideoObject',
-      name: 'Complete Digital Denture Transformation — Before & After | Dentures Direct Toronto',
+      name: 'Missing Teeth, Restored — Before & After | Dentures Direct Toronto',
       description:
-        'A real Dentures Direct patient, before and after — missing, worn upper teeth restored with a complete digital denture. Filmed at our North York, Toronto denture clinic.',
+        'A real Dentures Direct patient, before and after — gapped, missing upper teeth restored to a full, even smile. Filmed at our North York, Toronto denture clinic.',
       thumbnailUrl: ['https://www.denturesdirect.ca/videos/smile-transformation-2-before-after-toronto.jpg'],
       uploadDate: '2026-07-18',
       duration: 'PT10S',
