@@ -22,22 +22,22 @@ export default function GalleryPage() {
       after: "/implant-retained-overdentures-after-toronto.jpg",
     },
     {
-      title: "Complete Maxillary Restoration",
+      title: "Missing Front Teeth Restored",
       before: "/gallery-1-before.jpg",
       after: "/gallery-1-after.jpg",
     },
     {
-      title: "Partial Denture Integration",
+      title: "Cast Partial Denture",
       before: "/gallery-2-before.jpg",
       after: "/gallery-2-after.jpg",
     },
     {
-      title: "Emergency Repair & Reline",
+      title: "Acrylic Partial Denture",
       before: "/gallery-3-before.jpg",
       after: "/gallery-3-after.jpg",
     },
     {
-      title: "Premium Digital Full Dentures",
+      title: "Flexible Partial Denture",
       before: "/gallery-6-before.jpg",
       after: "/gallery-6-after.jpg",
     },
@@ -51,29 +51,24 @@ export default function GalleryPage() {
       before: "/gallery-8-before.jpg",
       after: "/gallery-8-after.jpg",
     },
-    {
-      title: "Natural-Looking Tooth Replacement",
-      before: "/gallery-9-before.jpg",
-      after: "/gallery-9-after.jpg",
-    }
   ];
 
   const featuredVideos = [
     {
-      title: 'A complete turnaround',
-      caption: 'From heavy decay and staining to a bright, even smile.',
+      title: 'Upper Immediate Denture',
+      caption: 'From heavy decay and staining to a bright, even smile with an upper immediate denture.',
       src: '/videos/smile-transformation-3-before-after-toronto.mp4',
       poster: '/videos/smile-transformation-3-before-after-toronto.jpg',
     },
     {
-      title: 'Complete digital denture',
-      caption: 'Missing, worn upper teeth restored with a complete digital denture.',
+      title: 'Upper Immediate Denture',
+      caption: 'Gapped, missing upper teeth restored with an upper immediate denture.',
       src: '/videos/smile-transformation-2-before-after-toronto.mp4',
       poster: '/videos/smile-transformation-2-before-after-toronto.jpg',
     },
     {
-      title: 'A smile renewed',
-      caption: 'From uneven, worn teeth to a straight, natural smile.',
+      title: 'Upper & Lower Snap-On Denture',
+      caption: 'Worn, uneven teeth replaced with a snap-on (implant-retained) denture for both arches.',
       src: '/videos/smile-transformation-before-after-toronto.mp4',
       poster: '/videos/smile-transformation-before-after-toronto.jpg',
     },
@@ -83,13 +78,18 @@ export default function GalleryPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'VideoObject',
-      name: 'Smile Turnaround: Decay to Bright Even Smile — Before & After | Dentures Direct Toronto',
+      name: 'Upper Immediate Denture — Before & After | Dentures Direct Toronto',
       description:
-        'A real Dentures Direct patient, before and after — heavy decay and staining transformed into a bright, even smile. Filmed at our North York, Toronto denture clinic.',
+        'A real Dentures Direct patient, before and after — heavy decay and staining transformed into a bright, even smile with an upper immediate denture. Filmed at our North York, Toronto denture clinic.',
       thumbnailUrl: ['https://www.denturesdirect.ca/videos/smile-transformation-3-before-after-toronto.jpg'],
       uploadDate: '2026-07-18',
       duration: 'PT11S',
       contentUrl: 'https://www.denturesdirect.ca/videos/smile-transformation-3-before-after-toronto.mp4',
+      contentLocation: {
+        '@type': 'Place',
+        name: 'Dentures Direct',
+        address: { '@type': 'PostalAddress', streetAddress: '2833 Weston Road', addressLocality: 'North York', addressRegion: 'ON', postalCode: 'M9M 2S1', addressCountry: 'CA' },
+      },
       publisher: {
         '@type': 'Organization',
         name: 'Dentures Direct',
@@ -99,13 +99,18 @@ export default function GalleryPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'VideoObject',
-      name: 'Complete Digital Denture Transformation — Before & After | Dentures Direct Toronto',
+      name: 'Upper Immediate Denture — Before & After | Dentures Direct Toronto',
       description:
-        'A real Dentures Direct patient, before and after — missing, worn upper teeth restored with a complete digital denture. Filmed at our North York, Toronto denture clinic.',
+        'A real Dentures Direct patient, before and after — gapped, missing upper teeth restored with an upper immediate denture. Filmed at our North York, Toronto denture clinic.',
       thumbnailUrl: ['https://www.denturesdirect.ca/videos/smile-transformation-2-before-after-toronto.jpg'],
       uploadDate: '2026-07-18',
       duration: 'PT10S',
       contentUrl: 'https://www.denturesdirect.ca/videos/smile-transformation-2-before-after-toronto.mp4',
+      contentLocation: {
+        '@type': 'Place',
+        name: 'Dentures Direct',
+        address: { '@type': 'PostalAddress', streetAddress: '2833 Weston Road', addressLocality: 'North York', addressRegion: 'ON', postalCode: 'M9M 2S1', addressCountry: 'CA' },
+      },
       publisher: {
         '@type': 'Organization',
         name: 'Dentures Direct',
@@ -115,13 +120,18 @@ export default function GalleryPage() {
     {
       '@context': 'https://schema.org',
       '@type': 'VideoObject',
-      name: 'Real Denture Smile Transformation — Before & After | Dentures Direct Toronto',
+      name: 'Upper & Lower Snap-On Denture — Before & After | Dentures Direct Toronto',
       description:
-        'A real Dentures Direct patient, before and after treatment — from uneven, worn teeth to a natural, confident smile. Filmed at our North York, Toronto denture clinic.',
+        'A real Dentures Direct patient, before and after treatment — worn, uneven teeth replaced with a snap-on (implant-retained) denture for both the upper and lower arches. Filmed at our North York, Toronto denture clinic.',
       thumbnailUrl: ['https://www.denturesdirect.ca/videos/smile-transformation-before-after-toronto.jpg'],
       uploadDate: '2026-07-17',
       duration: 'PT11S',
       contentUrl: 'https://www.denturesdirect.ca/videos/smile-transformation-before-after-toronto.mp4',
+      contentLocation: {
+        '@type': 'Place',
+        name: 'Dentures Direct',
+        address: { '@type': 'PostalAddress', streetAddress: '2833 Weston Road', addressLocality: 'North York', addressRegion: 'ON', postalCode: 'M9M 2S1', addressCountry: 'CA' },
+      },
       publisher: {
         '@type': 'Organization',
         name: 'Dentures Direct',
@@ -130,10 +140,40 @@ export default function GalleryPage() {
     },
   ];
 
+  const clinicLocation = {
+    '@type': 'Place',
+    name: 'Dentures Direct',
+    address: { '@type': 'PostalAddress', streetAddress: '2833 Weston Road', addressLocality: 'North York', addressRegion: 'ON', postalCode: 'M9M 2S1', addressCountry: 'CA' },
+  };
+
+  const imageSchemas = galleryItems.flatMap((item) => ([
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ImageObject',
+      name: `${item.title} — Before | Dentures Direct Toronto`,
+      description: `Before photo — ${item.title}, a real Dentures Direct patient case at our North York, Toronto denture clinic.`,
+      contentUrl: `https://www.denturesdirect.ca${item.before}`,
+      contentLocation: clinicLocation,
+      creator: { '@type': 'Organization', name: 'Dentures Direct' },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'ImageObject',
+      name: `${item.title} — After | Dentures Direct Toronto`,
+      description: `After photo — ${item.title}, a real Dentures Direct patient case at our North York, Toronto denture clinic.`,
+      contentUrl: `https://www.denturesdirect.ca${item.after}`,
+      contentLocation: clinicLocation,
+      creator: { '@type': 'Organization', name: 'Dentures Direct' },
+    },
+  ]));
+
   return (
     <div className="w-full pt-20 pb-24 bg-[#f8fafc] font-sans min-h-screen">
       {videoSchemas.map((schema, i) => (
-        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+        <script key={`video-schema-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
+      {imageSchemas.map((schema, i) => (
+        <script key={`image-schema-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial="hidden" animate="visible" variants={fadeUp} className="text-center mb-16">
@@ -184,11 +224,11 @@ export default function GalleryPage() {
             <motion.div key={idx} variants={fadeUp} className="bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 group">
               <div className="relative w-full grid grid-cols-2 gap-0.5 bg-white">
                 <div className="relative w-full aspect-square bg-gray-200">
-                  <Image src={item.before} alt={`Before - ${item.title}`} fill className="object-cover" />
+                  <Image src={item.before} alt={`Before - ${item.title} - Toronto Denture Clinic`} fill className="object-cover" />
                   <div className="absolute top-2 left-2 bg-black/60 text-white px-3 py-1 text-xs font-bold uppercase rounded tracking-wider backdrop-blur-sm z-10">Before</div>
                 </div>
                 <div className="relative w-full aspect-square bg-gray-100">
-                  <Image src={item.after} alt={`After - ${item.title}`} fill className="object-cover" />
+                  <Image src={item.after} alt={`After - ${item.title} - Toronto Denture Clinic`} fill className="object-cover" />
                   <div className="absolute top-2 right-2 bg-brand-blue/90 text-white px-3 py-1 text-xs font-bold uppercase rounded tracking-wider backdrop-blur-sm z-10">After</div>
                 </div>
                 {/* Direction indicator */}
