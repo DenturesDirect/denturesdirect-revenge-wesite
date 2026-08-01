@@ -47,7 +47,7 @@ export default function BlogPostPage({ params: { locale, slug } }: { params: { l
     description: post.metaDescription,
     image: `${BASE}${post.image}`,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.dateModified ?? post.date,
     inLanguage: locale,
     author: { '@type': 'Person', name: 'Damien John Hiorth DD', url: `${BASE}/${locale}/about-us` },
     publisher: {
@@ -84,6 +84,16 @@ export default function BlogPostPage({ params: { locale, slug } }: { params: { l
     },
   } : null;
 
+  const faqSchema = post.faq && post.faq.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: post.faq.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  } : null;
+
   const related = getAllPosts().filter((p) => p.slug !== post.slug && p.category === post.category).slice(0, 2);
 
   return (
@@ -91,6 +101,7 @@ export default function BlogPostPage({ params: { locale, slug } }: { params: { l
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {videoSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />}
+      {faqSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />}
 
       {/* Hero */}
       <section className="relative pt-24 pb-14 bg-gradient-hero overflow-hidden">
@@ -133,6 +144,24 @@ export default function BlogPostPage({ params: { locale, slug } }: { params: { l
       {/* Body */}
       <article className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="blog-prose" dangerouslySetInnerHTML={{ __html: post.body }} />
+
+        {/* FAQ — visible content backing the FAQPage schema */}
+        {post.faq && post.faq.length > 0 && (
+          <section className="mt-12" aria-label="Frequently asked questions">
+            <h2 className="text-2xl font-bold text-brand-dark mb-6">Frequently asked questions</h2>
+            <div className="space-y-3">
+              {post.faq.map((f) => (
+                <details key={f.q} className="group rounded-2xl border border-brand-border bg-brand-ice/50 px-6 py-4">
+                  <summary className="cursor-pointer list-none font-bold text-brand-dark flex items-start justify-between gap-4">
+                    <span>{f.q}</span>
+                    <span className="text-brand-blue shrink-0 transition-transform group-open:rotate-45 text-xl leading-none" aria-hidden>+</span>
+                  </summary>
+                  <p className="mt-3 text-brand-gray leading-relaxed">{f.a}</p>
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Author card */}
         <div className="mt-12 flex items-center gap-4 p-6 rounded-3xl bg-brand-ice border border-brand-border">
