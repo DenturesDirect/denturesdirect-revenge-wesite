@@ -1,19 +1,14 @@
 ﻿import { Metadata } from 'next';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
-  const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `https://www.denturesdirect.ca/${lang}/denture-services`;
-    return acc;
-  }, {} as Record<string, string>);
 
   return {
     title: 'Denture Services Toronto | Digital Dentures, Partials & Implants | Dentures Direct',
     description: 'Comprehensive denture services in Toronto and North York. Digital full dentures, Digital partial dentures, implant-retained overdentures, and same-day emergency repairs. CDCP accepted. No referral needed.',
     keywords: 'denture services Toronto, denture clinic North York, Digital full dentures Toronto, Digital partial dentures Toronto, implant dentures Toronto, emergency denture repair Toronto, CDCP dentures, denturist North York',
     alternates: {
-      canonical: `https://www.denturesdirect.ca/${locale}/denture-services`,
-      languages,
-    },
+      canonical: `https://www.denturesdirect.ca/en/denture-services`,
+      },
     openGraph: {
       title: 'Denture Services Toronto | Digital Dentures, Partials & Implants',
       description: 'Comprehensive denture services in Toronto and North York. Digital full dentures, Digital partial dentures, implant-retained overdentures, and same-day emergency repairs.',

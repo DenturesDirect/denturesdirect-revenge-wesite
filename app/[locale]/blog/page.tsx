@@ -8,16 +8,12 @@ const PATH = '/blog';
 const BASE = 'https://www.denturesdirect.ca';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
-  const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `${BASE}/${lang}${PATH}`;
-    return acc;
-  }, { 'x-default': `${BASE}/en${PATH}` } as Record<string, string>);
 
   return {
     title: 'Denture & Implant Blog | Expert Guides from Dentures Direct Toronto',
     description: 'Expert guides on implant-retained dentures, digital dentures, partials, relines, and emergency repairs — written by Damien John Hiorth DD, denturist in North York Toronto.',
     keywords: 'denture blog Toronto, implant denture guide, digital denture articles, denturist advice North York',
-    alternates: { canonical: `${BASE}/${locale}${PATH}`, languages },
+    alternates: { canonical: `${BASE}/en${PATH}` },
     openGraph: {
       title: 'Denture & Implant Blog | Dentures Direct Toronto',
       description: 'Expert guides on implant dentures, digital dentures, partials, relines, and repairs from Dentures Direct, North York.',

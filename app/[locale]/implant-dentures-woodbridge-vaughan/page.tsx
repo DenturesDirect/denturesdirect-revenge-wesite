@@ -5,19 +5,14 @@ const PATH = '/implant-dentures-woodbridge-vaughan';
 const BASE = 'https://www.denturesdirect.ca';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
-  const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `${BASE}/${lang}${PATH}`;
-    return acc;
-  }, { 'x-default': `${BASE}/en${PATH}` } as Record<string, string>);
 
   return {
     title: 'Premium Implant Overdentures Woodbridge & Vaughan | Dentures Direct',
     description: 'Tired of slipping dentures? Get custom, secure snap-on implant-retained overdentures near Woodbridge & Vaughan. Designed by Damien DD in-house. Flat fee: $5,250/arch.',
     keywords: 'implant overdentures woodbridge, snap-on dentures vaughan, denturist woodbridge, implant dentures vaughan, premium dentures woodbridge, dentures direct woodbridge',
     alternates: {
-      canonical: `${BASE}/${locale}${PATH}`,
-      languages,
-    },
+      canonical: `${BASE}/en${PATH}`,
+      },
   };
 }
 

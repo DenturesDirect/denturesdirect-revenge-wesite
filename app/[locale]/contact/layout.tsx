@@ -1,19 +1,14 @@
 ﻿import { Metadata } from 'next';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
-  const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `https://www.denturesdirect.ca/${lang}/contact`;
-    return acc;
-  }, {} as Record<string, string>);
 
   return {
     title: 'Contact Dentures Direct Toronto | Book a Free Consultation | (416) 245-7474',
     description: 'Contact Dentures Direct at 2833 Weston Road, Toronto (North York). Call (416) 245-7474 or book online. Accepting new patients. CDCP direct billing available. Serving North York, Etobicoke, and the GTA.',
     keywords: 'contact Dentures Direct, book denture appointment Toronto, denture clinic phone number, denturist appointment North York, book dentures GTA, 416-245-7474',
     alternates: {
-      canonical: `https://www.denturesdirect.ca/${locale}/contact`,
-      languages,
-    },
+      canonical: `https://www.denturesdirect.ca/en/contact`,
+      },
     openGraph: {
       title: 'Contact Dentures Direct Toronto | Book a Free Consultation',
       description: 'Book a free consultation at Dentures Direct, 2833 Weston Road Toronto. Call (416) 245-7474. Accepting new patients. CDCP direct billing available.',

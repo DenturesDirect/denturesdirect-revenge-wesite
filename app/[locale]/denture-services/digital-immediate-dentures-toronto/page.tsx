@@ -6,10 +6,6 @@ const PATH = '/denture-services/digital-immediate-dentures-toronto';
 const BASE = 'https://www.denturesdirect.ca';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
-  const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `${BASE}/${lang}${PATH}`;
-    return acc;
-  }, { 'x-default': `${BASE}/en${PATH}` } as Record<string, string>);
 
   return {
     title: 'Immediate Dentures Toronto | Same-Day Teeth After Extraction | Dentures Direct',
@@ -18,9 +14,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     keywords:
       'immediate dentures Toronto, same day dentures Toronto, dentures after extraction Toronto, temporary dentures Toronto, immediate denture North York, healing dentures Toronto, teeth in a day dentures GTA',
     alternates: {
-      canonical: `${BASE}/${locale}${PATH}`,
-      languages,
-    },
+      canonical: `${BASE}/en${PATH}`,
+      },
     openGraph: {
       title: 'Immediate Dentures Toronto | Same-Day Teeth After Extraction',
       description:

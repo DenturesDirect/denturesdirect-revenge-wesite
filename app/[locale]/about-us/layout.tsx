@@ -4,19 +4,14 @@ type Props = {
 };
 
 export async function generateMetadata({ params: { locale } }: Props) {
-  const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `https://www.denturesdirect.ca/${lang}/about-us`;
-    return acc;
-  }, {} as Record<string, string>);
 
   return {
     title: 'About Us | Damien John Hiorth DD — Implant Overdenture Specialist | Dentures Direct Toronto',
     description: 'Meet the team at Dentures Direct in North York Toronto. Damien John Hiorth DD (Founder, 25+ years) specializes in implant-retained overdentures and digital dentures. Luisa Gomez, RDT Candidate, runs the in-house CNC milling lab. Free consultations — (416) 245-7474.',
     keywords: 'denturist Toronto, Damien John Hiorth DD, Luisa Gomez RDT, best denturist Toronto, implant overdenture specialist North York, experienced denturist GTA, Dentures Direct team, in-house denture lab Toronto',
     alternates: {
-      canonical: `https://www.denturesdirect.ca/${locale}/about-us`,
-      languages,
-    },
+      canonical: `https://www.denturesdirect.ca/en/about-us`,
+      },
     openGraph: {
       title: 'Meet Our Team | Damien John Hiorth DD & Luisa Gomez RDT Candidate | Dentures Direct',
       description: 'Damien John Hiorth DD — 25+ years, implant overdenture specialist. Luisa Gomez — RDT Candidate, in-house lab. Dentures Direct, North York Toronto.',

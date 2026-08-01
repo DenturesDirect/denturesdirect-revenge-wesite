@@ -7,15 +7,11 @@ const BASE = 'https://www.denturesdirect.ca';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const c = getCdcpContent(locale).apply;
-  const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `${BASE}/${lang}${PATH}`;
-    return acc;
-  }, { 'x-default': `${BASE}/en${PATH}` } as Record<string, string>);
 
   return {
     title: c.metaTitle,
     description: c.metaDescription,
-    alternates: { canonical: `${BASE}/${locale}${PATH}`, languages },
+    alternates: { canonical: `${BASE}/en${PATH}` },
     openGraph: {
       title: c.metaTitle,
       description: c.metaDescription,

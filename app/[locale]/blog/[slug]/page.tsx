@@ -6,22 +6,17 @@ import { notFound } from 'next/navigation';
 import { getAllPosts, getBlogPost } from '@/content/blog';
 
 const BASE = 'https://www.denturesdirect.ca';
-const LOCALES = ['en', 'fr', 'vi', 'es', 'it'];
 
 export async function generateMetadata({ params: { locale, slug } }: { params: { locale: string; slug: string } }): Promise<Metadata> {
   const post = getBlogPost(slug);
   if (!post) return {};
   const path = `/blog/${slug}`;
-  const languages = LOCALES.reduce((acc, lang) => {
-    acc[lang] = `${BASE}/${lang}${path}`;
-    return acc;
-  }, { 'x-default': `${BASE}/en${path}` } as Record<string, string>);
 
   return {
     title: post.metaTitle,
     description: post.metaDescription,
     keywords: post.keywords,
-    alternates: { canonical: `${BASE}/${locale}${path}`, languages },
+    alternates: { canonical: `${BASE}/en${path}` },
     openGraph: {
       title: post.metaTitle,
       description: post.metaDescription,

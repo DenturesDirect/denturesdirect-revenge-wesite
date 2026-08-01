@@ -7,19 +7,14 @@ const BASE = 'https://www.denturesdirect.ca';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const c = getImplantCostContent(locale);
-  const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `${BASE}/${lang}${PATH}`;
-    return acc;
-  }, { 'x-default': `${BASE}/en${PATH}` } as Record<string, string>);
 
   return {
     title: c.meta.title,
     description: c.meta.description,
     keywords: 'implant dentures cost Toronto, how much do implant dentures cost, snap on denture cost Toronto, implant overdenture price Ontario, cost of denture implants Toronto, implant retained denture cost GTA, overdenture cost North York, $5250 implant denture, flat rate implant dentures Toronto, affordable implant dentures GTA, implant overdenture North York',
     alternates: {
-      canonical: `${BASE}/${locale}${PATH}`,
-      languages,
-    },
+      canonical: `${BASE}/en${PATH}`,
+      },
     openGraph: {
       title: c.meta.ogTitle,
       description: c.meta.ogDescription,

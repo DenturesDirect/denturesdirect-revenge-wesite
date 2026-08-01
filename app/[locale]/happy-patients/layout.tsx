@@ -1,19 +1,14 @@
 ﻿import { Metadata } from 'next';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
-  const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `https://www.denturesdirect.ca/${lang}/happy-patients`;
-    return acc;
-  }, {} as Record<string, string>);
 
   return {
     title: 'Patient Reviews | 5-Star Denture Clinic Toronto | Dentures Direct',
     description: 'Read verified 5-star Google reviews from real patients at Dentures Direct in Toronto and North York. Over 150 happy patients share their experiences with Damien John Hiorth DD and our team.',
     keywords: 'Dentures Direct reviews, best denturist Toronto reviews, denture clinic reviews North York, Damien Hiorth reviews, Google reviews denturist Toronto, 5 star denture clinic GTA',
     alternates: {
-      canonical: `https://www.denturesdirect.ca/${locale}/happy-patients`,
-      languages,
-    },
+      canonical: `https://www.denturesdirect.ca/en/happy-patients`,
+      },
     openGraph: {
       title: 'Patient Reviews | 5-Star Denture Clinic Toronto | Dentures Direct',
       description: 'Read verified 5-star Google reviews from real patients at Dentures Direct Toronto. Over 150 happy patients across the Greater Toronto Area.',

@@ -13,20 +13,14 @@ type Props = {
 
 export async function generateMetadata({params: {locale}}: Omit<Props, 'children'>) {
   const t = await getTranslations({locale, namespace: 'Index'});
- 
-  const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `https://www.denturesdirect.ca/${lang}`;
-    return acc;
-  }, {} as Record<string, string>);
 
   return {
     metadataBase: new URL('https://www.denturesdirect.ca'),
     title: t('title'),
     description: t('description'),
     alternates: {
-      canonical: `https://www.denturesdirect.ca/${locale}`,
-      languages: { ...languages, 'x-default': 'https://www.denturesdirect.ca/en' },
-    },
+      canonical: `https://www.denturesdirect.ca/en`,
+      },
     keywords: 'digital dentures, intraoral scanning, CNC milled dentures, CDCP denturist Toronto, CDCP denturist North York, denturist North York, denture clinic North York, dentures Toronto, Digital Partial Dentures Toronto, Digital Full Dentures Toronto, implant dentures Toronto, implant overdentures Toronto, emergency denture repair Toronto, same day denture repair, denture repairs North York, affordable dentures Toronto, senior dentures Toronto, in house lab, denturist near me, denture clinic near me, Weston Road denturist, Humber Summit denturist',
     openGraph: {
       title: t('title'),

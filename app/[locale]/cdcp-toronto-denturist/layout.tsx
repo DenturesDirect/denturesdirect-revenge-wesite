@@ -6,16 +6,12 @@ const BASE = 'https://www.denturesdirect.ca';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
   const c = getCdcpContent(locale).meta;
-  const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `${BASE}/${lang}${PATH}`;
-    return acc;
-  }, { 'x-default': `${BASE}/en${PATH}` } as Record<string, string>);
 
   return {
     title: c.title,
     description: c.description,
     keywords: 'CDCP denturist Toronto, Canadian Dental Care Plan dentures, CDCP dentures North York, CDCP covered dentures GTA, CDCP provider Toronto, government dental plan dentures Toronto',
-    alternates: { canonical: `${BASE}/${locale}${PATH}`, languages },
+    alternates: { canonical: `${BASE}/en${PATH}` },
     openGraph: {
       title: c.ogTitle,
       description: c.ogDescription,

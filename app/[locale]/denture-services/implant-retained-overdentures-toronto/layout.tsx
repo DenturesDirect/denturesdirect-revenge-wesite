@@ -6,10 +6,6 @@ const BASE = 'https://www.denturesdirect.ca';
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const c = getImplantPillarContent(locale);
-  const languages = ['en', 'fr', 'vi', 'es', 'it'].reduce((acc, lang) => {
-    acc[lang] = `${BASE}/${lang}${PATH}`;
-    return acc;
-  }, { 'x-default': `${BASE}/en${PATH}` } as Record<string, string>);
 
   return {
     title: c.meta.title,
@@ -17,9 +13,8 @@ export async function generateMetadata({ params: { locale } }: { params: { local
     keywords:
       'implant retained dentures Toronto, implant dentures Toronto, snap on dentures Toronto, snap in dentures Toronto, implant overdentures Toronto, implant supported dentures Toronto, All-on-4 Toronto, overdentures North York, implant dentures GTA, denture implants Toronto cost, locator attachment dentures Toronto',
     alternates: {
-      canonical: `${BASE}/${locale}${PATH}`,
-      languages,
-    },
+      canonical: `${BASE}/en${PATH}`,
+      },
     openGraph: {
       title: c.meta.ogTitle,
       description: c.meta.ogDescription,
