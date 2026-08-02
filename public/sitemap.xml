@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
     <loc>https://www.denturesdirect.ca/en</loc>
     <lastmod>2026-07-09</lastmod>
@@ -212,48 +212,120 @@
   </url>
   <url>
     <loc>https://www.denturesdirect.ca/en/blog/are-you-a-candidate-for-implant-dentures</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/pWbsCvyIpEE/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Are You a Candidate for Implant Dentures? | Toronto Eligibility Guide</video:title>
+      <video:description>Are you a candidate for implant-retained dentures in Toronto? Learn the bone, health, and gum factors that determine eligibility for snap-on implant dentures. Free assessment at Dentures Direct, North York.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/pWbsCvyIpEE</video:player_loc>
+      <video:publication_date>2026-06-21</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.denturesdirect.ca/en/blog/implant-dentures-vs-traditional-dentures</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/wOA5BzztvUc/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Implant Dentures vs. Traditional Dentures | Toronto Comparison</video:title>
+      <video:description>Implant dentures vs. traditional dentures compared: stability, chewing power, bone preservation, comfort, and cost. Make the right choice — Dentures Direct, North York Toronto.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/wOA5BzztvUc</video:player_loc>
+      <video:publication_date>2026-06-22</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.denturesdirect.ca/en/blog/impression-free-digital-dentures</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/zVkvgjp-O9s/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>What Are Digital Dentures? Impression-Free 3D Scanning | Toronto</video:title>
+      <video:description>Digital dentures in Toronto: no goop, no messy trays. Learn how intraoral 3D scanning and CNC milling create precise, better-fitting dentures at Dentures Direct, North York.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/zVkvgjp-O9s</video:player_loc>
+      <video:publication_date>2026-06-23</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.denturesdirect.ca/en/blog/all-on-4-vs-snap-on-dentures</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/oMsDbse8ykw/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>All-on-4 vs. Snap-On Dentures: Cost, Pros &amp; Cons | Toronto</video:title>
+      <video:description>All-on-4 vs. snap-on implant dentures compared: cost, comfort, cleaning, and stability. Which is right for you? Honest guidance from Dentures Direct, North York Toronto.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/oMsDbse8ykw</video:player_loc>
+      <video:publication_date>2026-06-20</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.denturesdirect.ca/en/blog/implant-retained-dentures-toronto-guide</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/S1a906ztMpA/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Implant-Retained Dentures Toronto: The Ultimate Guide | Snap-On Teeth</video:title>
+      <video:description>The complete guide to implant-retained (snap-on) dentures in Toronto: how they work, the 5-stage process, cost, and benefits. Dentures Direct, North York.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/S1a906ztMpA</video:player_loc>
+      <video:publication_date>2026-06-20</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.denturesdirect.ca/en/blog/acrylic-vs-cast-vs-flexible-partial-dentures</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/96o_cmvx3ho/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Acrylic vs. Cast vs. Flexible Partial Dentures | Toronto Guide</video:title>
+      <video:description>Acrylic vs. cast metal vs. flexible partial dentures compared: comfort, durability, looks, and cost. Find the right partial in Toronto — Dentures Direct, North York.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/96o_cmvx3ho</video:player_loc>
+      <video:publication_date>2026-06-20</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.denturesdirect.ca/en/blog/denture-relines-hard-vs-soft</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/x_j5se22vxY/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Denture Relines Explained: Hard vs. Soft | Fix Loose Dentures Toronto</video:title>
+      <video:description>Denture reline guide: hard vs. soft relines, when you need one, and how they fix loose, sore-causing dentures. Same-week relines at Dentures Direct, North York Toronto.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/x_j5se22vxY</video:player_loc>
+      <video:publication_date>2026-06-20</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.denturesdirect.ca/en/blog/what-to-do-if-your-denture-breaks</loc>
+    <video:video>
+      <video:thumbnail_loc>https://i.ytimg.com/vi/xIP1UNhDbGM/hqdefault.jpg</video:thumbnail_loc>
+      <video:title>Denture Broke? Emergency Repair Guide | Same-Day Repairs Toronto</video:title>
+      <video:description>Broke your denture? Step-by-step emergency guide: what to do, what to avoid (no super glue!), and how to get a same-day repair in Toronto. Dentures Direct, North York.</video:description>
+      <video:player_loc>https://www.youtube.com/embed/xIP1UNhDbGM</video:player_loc>
+      <video:publication_date>2026-06-20</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:live>no</video:live>
+    </video:video>
     <lastmod>2026-08-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

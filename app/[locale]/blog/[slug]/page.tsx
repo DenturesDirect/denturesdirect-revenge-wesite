@@ -68,7 +68,7 @@ export default function BlogPostPage({ params: { locale, slug } }: { params: { l
     '@type': 'VideoObject',
     name: post.title,
     description: post.metaDescription,
-    thumbnailUrl: [`https://i.ytimg.com/vi/${post.youtubeId}/maxresdefault.jpg`, `${BASE}${post.image}`],
+    thumbnailUrl: [`https://i.ytimg.com/vi/${post.youtubeId}/maxresdefault.jpg`, `https://i.ytimg.com/vi/${post.youtubeId}/hqdefault.jpg`, `${BASE}${post.image}`],
     uploadDate: post.date,
     contentUrl: `https://www.youtube.com/watch?v=${post.youtubeId}`,
     embedUrl: `https://www.youtube.com/embed/${post.youtubeId}`,
